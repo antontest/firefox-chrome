@@ -1,0 +1,84 @@
+!  -----更新时间:  2015-10-24 16:25:03   by:xwhyc-----------------------------------------------
+!  -----广告反馈:http://bbs.kafan.cn/thread-1730471-1-1.html   QQ群: 79547134(满), 364066294(满)，470705224--------------
+|http://apk.zhangyu.tv/fit.json$s@"length": 30@"length": 0@
+|http://image.baidu.com/search/$s@app.setData('fcadData', {"fcData":[{"type":"FCAD"*})@app.setData('fcadData', {})@
+|http://www.kayouzhan.com/down$s@<div id="down_box" style="display:none">@<div id="down_box">@
+
+
+
+
+
+!--------------------------------------------------
+|http://www.kaola.com/iframe/adv-1.htm
+|http://www.lofter.com/ursEntry
+|http://*/duilian.js|$script
+|http://www.xghylt.com/api.php?mod=ad&adid=
+|http://g2.ousns.net/$script
+|http://drivers.160.com/UploadFile/ad/
+||98fen.com/wordpress/head.js
+||imgur.com^*.gif$domain=18p2p.com
+||t70123.com
+|http://*_pop.js|$script
+||892155.com
+|http://money.bumimi.com/top.js$script
+|http://www.viidii.info/web/post.js?v=
+|http://videowood.tv/pop
+||0xxd.com
+|http://*/bd1.js|$script
+|http://www.aqy103.com/js/aqy/$script
+@@|http://www.aqy103.com/js/aqy/main.js$script
+|http://*.net/s.php?id=
+|http://www.dilidili.com/js/w960.js$script
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!-------------------------------------------------------
+163.com##img[width="278"][height="69"]
+www.myrepospace.com##div#color_seperator
+yczbb.com##div#noad
+xghylt.com##div[class="mb5"],.index_fivead,div.a_pr,div.a_pb,.ad,div.mt10
+www.xgrb.cn##div[class^="liebiao_ad"],div#aa,div.bl_gg,div.new_gg1,div.gsgg_gg,div.advert div[style]
+landiannews.com##ins.adsbygoogle,div.widget_ads_inner
+oschina.net##img[src^="http://static.oschina.net/uploads/ad/"]
+abcsub.com##div#ad6cn,ins.adsbygoogle
+share.popgo.org##div#bottom_ads
+drivers.160.com##div#sideBox
+btmee.net##div.good
+fei3d.com##div#aktuals_field,div.content-wrapper
+3dpianyuan.net##div#frameWu92km,div#djscontent,div[style="float:left;margin-top:5px"]
+www.mytvbt.net##div#ad_headerbanner
+cili006.com##div#ad6cn,ins.adsbygoogle
+18p2p.com##img[src^="http://i.imgur.com"],A[href^="http://www.yin2288.com/"],A[href^="http://www.372444.com"]
+zhenhaolt.com,xinqixi.com##div.a_mu
+cnblogs.com##div[id^="google_ad_"]
+bbs.taiyule.cn##div.bus_tads.busbb,div#sitefocus.focus
+izzs.cc##div.top_r,div.textwidget,IFRAME[src^="http://5a.rznzz.com:88/"],div#listas
+sosaw.com##A[href^="http://union.click.jd.com/jdc?"]
+www.sdbeta.com##div#ads_c_tpc.cc.mb10
+www.hcyy.org##div.a_mu
+51cto.com##div.g_39.mb10,div#close_box_img,div#f_close_box,div.postinfo06
+tgbus.com##div.db.mar5,div.db.mb10,div.db.mb20,div[style="width: 300px; height: 250px; background: #ccc;"]
+fbook.net##div.gg_t,div.head-d,.readads,div.tlgg
+xingk.cc##div.a_pt
+china.com.cn##DIV.ad_new1,IFRAME[width="316"][height="266"],div#gg
+kayouzhan.com##DIV.fmright,DIV.banner_2,DIV#code_box,DIV.ad
+daman.cc##DIV#p-left,DIV#p-right
+xizhi.com##div.xzc1,div.sidebarright,div.slistAdv,div.relapre,div.fornewproinfo
+www.1kkk.com##div.lanrenzhijia
+www.xbiquge.com##div.dahengfu
+www.baidu.com##DIV#content_right TD[align="left"] > DIV:first-child
+www.dilidili.com##IMG#imgs
+
+
