@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+    <Description about="urn:mozilla:install-manifest">
+        <em:type>2</em:type> <!-- 2 : Extension -->
+        <em:id>mynewtab@developer.com</em:id>
+        <em:version>1.5.4</em:version>
+        <em:name>myNewTab</em:name>
+        <em:description>newTab</em:description>
+        <em:creator>defpt、ywzhaiqi、w13998686967</em:creator>
+        <em:homepageURL>http://bbs.kafan.cn/thread-1759418-1-1.html</em:homepageURL>
+        <em:iconURL>chrome://mynewtab/skin/icon.png</em:iconURL>
+        <em:targetApplication>
+            <Description>
+                <!-- Firefox -->
+                <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+                <em:minVersion>17.0</em:minVersion>
+                <em:maxVersion>44</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+        <em:bootstrap>true</em:bootstrap>
+        <em:unpack>true</em:unpack>
+    </Description>
+</RDF>

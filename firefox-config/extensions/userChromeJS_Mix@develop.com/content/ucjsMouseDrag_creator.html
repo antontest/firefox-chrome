@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>鼠标拖拽 UserChromeJS 脚本生成器 -- 紫云飞</title>
+    <link type="text/css" rel="stylesheet" href="style/ziyunfei_creator.css">
+</head>
+<body>
+    <!-- 来源：http://www.cnblogs.com/ziyunfei/archive/2011/12/15/2289504.html -->
+    <div id="topics">
+        <div class="post">
+            <div class="postTitle">
+                <h1>鼠标拖拽 UserChromeJS 脚本生成器</h1>
+                <em>
+                    <a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/ziyunfei/archive/2011/12/20/2293928.html">作者：紫云飞</a>
+                    （修改版）
+                    &nbsp;&nbsp;
+                    <span>更新日期：2014年9月6日</span>
+                </em>
+            </div>
+
+            <div class="postBody">
+                <div id="cnblogs_post_body">
+                    <form id="ucjsMouseDrag">
+                        <label>拖拽方式:
+                            <select id="dragStyle" style="width: 100px;" onchange="MouseDrag.changeDragCommand()">
+                                <option value="t">文字</option>
+                                <option value="ct">文字 + ctrl</option>
+                                <option value="at">文字 + alt</option>
+                                <option value="st">文字 + shift</option>
+                                <option value="l">链接</option>
+                                <option value="cl">链接 + ctrl</option>
+                                <option value="al">链接 + alt</option>
+                                <option value="sl">链接 + shift</option>
+                                <option value="i">图片</option>
+                                <option value="ci">图片 + ctrl</option>
+                                <option value="ai">图片 + alt</option>
+                                <option value="si">图片 + shift</option>
+                                <option value="ete">文字 + 任意</option>
+                                <option value="etu">文字 + 上</option>
+                                <option value="etd">文字 + 下</option>
+                                <option value="etl">文字 + 左</option>
+                                <option value="etr">文字 + 右</option>
+                                <option value="ele">链接 + 任意</option>
+                                <option value="elu">链接 + 上</option>
+                                <option value="eld">链接 + 下</option>
+                                <option value="ell">链接 + 左</option>
+                                <option value="elr">链接 + 右</option>
+                                <option value="eie">图片 + 任意</option>
+                                <option value="eiu">图片 + 上</option>
+                                <option value="eid">图片 + 下</option>
+                                <option value="eil">图片 + 左</option>
+                                <option value="eir">图片 + 右</option>
+                                <option title="U" value="ptu">文字 + 上</option>
+                                <option title="D" value="ptd">文字 + 下</option>
+                                <option title="L" value="ptl">文字 + 左</option>
+                                <option title="R" value="ptr">文字 + 右</option>
+                                <option title="UD" value="ptud">文字 + 上下</option>
+                                <option title="UL" value="ptul">文字 + 上左</option>
+                                <option title="UR" value="ptur">文字 + 上右</option>
+                                <option title="DU" value="ptdu">文字 + 下上</option>
+                                <option title="DL" value="ptdl">文字 + 下左</option>
+                                <option title="DR" value="ptdr">文字 + 下右</option>
+                                <option title="LR" value="pdlr">文字 + 左右</option>
+                                <option title="LU" value="ptlu">文字 + 左上</option>
+                                <option title="LD" value="ptld">文字 + 左下</option>
+                                <option title="RL" value="ptrl">文字 + 右左</option>
+                                <option title="RU" value="ptru">文字 + 右上</option>
+                                <option title="RD" value="ptrd">文字 + 右下</option>
+                                <option title="U" value="plu">链接 + 上</option>
+                                <option title="D" value="pld">链接 + 下</option>
+                                <option title="L" value="pll">链接 + 左</option>
+                                <option title="R" value="plr">链接 + 右</option>
+                                <option title="UD" value="plud">链接 + 上下</option>
+                                <option title="UL" value="plul">链接 + 上左</option>
+                                <option title="UR" value="plur">链接 + 上右</option>
+                                <option title="DU" value="pldu">链接 + 下上</option>
+                                <option title="DL" value="pldl">链接 + 下左</option>
+                                <option title="DR" value="pldr">链接 + 下右</option>
+                                <option title="LR" value="pdlr">链接 + 左右</option>
+                                <option title="LU" value="pllu">链接 + 左上</option>
+                                <option title="LD" value="plld">链接 + 左下</option>
+                                <option title="RL" value="plrl">链接 + 右左</option>
+                                <option title="RU" value="plru">链接 + 右上</option>
+                                <option title="RD" value="plrd">链接 + 右下</option>
+                                <option title="U" value="piu">图片 + 上</option>
+                                <option title="D" value="pid">图片 + 下</option>
+                                <option title="L" value="pil">图片 + 左</option>
+                                <option title="R" value="pir">图片 + 右</option>
+                                <option title="UD" value="piud">图片 + 上下</option>
+                                <option title="UL" value="piul">图片 + 上左</option>
+                                <option title="UR" value="piur">图片 + 上右</option>
+                                <option title="DU" value="pidu">图片 + 下上</option>
+                                <option title="DL" value="pidl">图片 + 下左</option>
+                                <option title="DR" value="pidr">图片 + 下右</option>
+                                <option title="LR" value="pdlr">图片 + 左右</option>
+                                <option title="LU" value="pilu">图片 + 左上</option>
+                                <option title="LD" value="pild">图片 + 左下</option>
+                                <option title="RL" value="pirl">图片 + 右左</option>
+                                <option title="RU" value="piru">图片 + 右上</option>
+                                <option title="RD" value="pird">图片 + 右下</option>
+                            </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <label>拖拽命令:
+                            <select id="dragCommand" style="width: 200px;"></select>
+                        </label>&nbsp;&nbsp;&nbsp;
+                        <label>
+                            <input id="generateMouseDragScript" onclick="MouseDrag.generateScript()" type="button" value="添加" />
+                        </label>&nbsp;
+                        <label>
+                            <input id="clear" onclick="MouseDrag.clear()" type="button" value="清空" />
+                        </label>&nbsp;
+                        <label title="打开chrome目录">
+                            <input id="openChromeDir" onclick="MouseDrag.openChrome()" type="button" value="打开chrome" />
+                        </label>&nbsp;&nbsp;&nbsp;
+                        <label title="直接保存到 chrome 目录下">
+                            <input id="saveUC" onclick="MouseDrag.saveUC()" type="button" value="生成uc" />
+                        </label>&nbsp;
+                        <label title="在桌面生成xpi文件">
+                            <input id="makeXPI" onclick="MouseDrag.makeXPI()" type="button" value="生成扩展" />
+                        </label>
+                        <div id="setting">
+                            <label title="没有拖拽方向,只有修饰键">
+                                <input id="quickdrag" onclick="MouseDrag.changeDragStyle()" type="radio" name="dragtype" />QuickDrag模式</label>&nbsp;
+                            <label title="没有修饰键,可拖拽四向">
+                                <input id="easydrag" onclick="MouseDrag.changeDragStyle()" type="radio" name="dragtype" />EasyDrag模式</label>&nbsp;
+                            <label title="没有修饰键,支持拖拽路径">
+                                <input id="superdrag" onclick="MouseDrag.changeDragStyle()" type="radio" name="dragtype" />SuperDrag模式</label>
+                        </div>
+                        <script type="text/javascript">
+                        // <![CDATA[
+                        navigator.product != "Gecko" && ($("#dragStyle").closest(".postCon").length ? $("#dragStyle").closest(".postCon") : $("#dragStyle").closest(".postBody")).html('<b style="color:black;line-height:1em;font-size: 100px;">FIREFOX ONLY</b>').css({
+                            "padding": "50px"
+                        })
+                         // ]]>
+                        </script>
+                    </form>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/js_beautify.js"></script>
+    <script type="text/javascript" src="script/ucjsMouseDrag_creator.js"></script>
+</body>
+
+</html>

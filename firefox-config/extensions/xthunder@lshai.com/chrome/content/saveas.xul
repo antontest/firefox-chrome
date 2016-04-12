@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://xthunder/locale/xthunder.dtd" >
+<overlay id="xThunder-saveas" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="application/javascript" src="chrome://xthunder/content/xThunder.js" />
+    <script type="application/javascript" src="chrome://xthunder/content/pref.js" />
+    <script type="application/javascript" src="chrome://xthunder/content/saveas.js"/>
+
+    <radiogroup id="mode">
+        <stringbundleset id="stringbundleset">
+            <stringbundle id="xThunderAgentStrings" src="chrome://xthunder/locale/agent.properties"/>
+        </stringbundleset>
+        <hbox id="xThunderDown" insertbefore="save" >
+            <radio id="xThunderRadio" label="xThunder"/>
+            <menulist id="xThunderAgentList" flex="1">
+                <menupopup id="xThunderAgentPopup" />
+            </menulist>
+        </hbox>
+    </radiogroup>
+</overlay>

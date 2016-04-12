@@ -89,10 +89,10 @@
 			var ins = $("menu_ToolsPopup").firstChild;
 			ins.parentNode.insertBefore($C("menuitem", {
 				id: "FeiRuoTabplus_set",
-				label: "FeiRuoTabplus配置",
+				label: "标签页打开方式配置",
 				tooltiptext: "左键：打开配置窗口\n中键：重载配置文件\n右键：打开配置文件",
 				onclick: "FeiRuoTabplus.IconClick(event);",
-				image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAxUlEQVQ4jaXSsW0CQRCF4U+OyC4hgqvARZAQUgUNEOEaXAIt4EZIXIJD3wEHLWAfgeckZPZgESM9aaSd949mdmCAJWq0Cf3iG29RexUz7HvMlzpgmgKsMsyd3lOArwcAG7xijCFexIy5gFOMW+MTc/HwgyaWdUtVmI/RuO4ADSYYobyjUdQ24dUGvUwtqCfK8PQCikTnIhdQYI1dzFhHvr6A3AV8/ANsHwE8PUJOXAGe+sbK31HkHFKnJjwVLCLJPedOFRZnf9aScov1PDsAAAAASUVORK5CYII=",
+				image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAMAAADarb8dAAAAb1BMVEUAAACj0iGj0iCj0iCj0iGk0x+i0iCj0iGj0iGj0iGj0iGj0iG32lmj0iGj0iGj0iGj0iGj0iG/32Y+W2SEqUlpjUgZPUCj0iGj0iHJ17Kj0iHb5cayvbsVOEQTNkUVOESj0iGx2ESv1z+u1zun1CqdAl1JAAAAIHRSTlMABvXn4mJO8ex6WUb+25JuRD366uno2NjT0r62sZNuWCBNdDsAAABySURBVAjXVc5HFoMwDEVRyRUTAumV8in7XyNgwzF+M92BJGpaIwGoE211r2cxATjvoh/3+oYlZQKI/vsvsCZzD8A4IJRp9hCzFacA4ZhKkUhJ7I5iHRFXFkjWss6A/XAol4iv+YwKz8cub3yuREf5bfMMmmMPkBlCtcwAAAAASUVORK5CYII=",
 				class: "menuitem-iconic",
 			}), ins);
 
@@ -591,20 +591,20 @@
 		},
 
 		Listener: function(e, tag, btn, command, tkey, keys, CN) {
-			if (btn == 'MouseScrollUp' && e.detail < 0) {
-				if (tag === "Tab" && e.target.localName == "tab")
+			if (btn == "MouseScrollUp") {
+				if (tag === "Tab" && e.target.localName == "tab" && e.detail < 0)
 					FeiRuoTabplus.Listen_AidtKey(e, command, tkey, keys, CN);
-				if (tag === 'TabBar' && e.target.localName != "tab")
+				if (tag === "TabBar" && e.target.localName != "tab" && e.detail < 0)
 					FeiRuoTabplus.Listen_AidtKey(e, command, tkey, keys, CN);
-			} else if (btn == 'MouseScrollDown' && e.detail > 0) {
-				if (tag === "Tab" && e.target.localName == "tab")
+			} else if (btn == "MouseScrollDown") {
+				if (tag === "Tab" && e.target.localName == "tab" && e.detail > 0)
 					FeiRuoTabplus.Listen_AidtKey(e, command, tkey, keys, CN);
-				if (tag === 'TabBar' && e.target.localName != "tab")
+				if (tag === "TabBar" && e.target.localName != "tab" && e.detail > 0)
 					FeiRuoTabplus.Listen_AidtKey(e, command, tkey, keys, CN);
 			} else {
 				if (tag === "Tab" && e.target.localName == "tab" && e.button == btn)
 					FeiRuoTabplus.Listen_AidtKey(e, command, tkey, keys, CN);
-				if (tag === 'TabBar' && e.target.localName != "tab" && e.button == btn)
+				if (tag === "TabBar" && e.target.localName != "tab" && e.button == btn)
 					FeiRuoTabplus.Listen_AidtKey(e, command, tkey, keys, CN);
 			}
 		},
@@ -658,7 +658,6 @@
 		Listen_Command: function(e, command, CN) {
 			e.stopPropagation();
 			e.preventDefault();
-			ShowStatus(command);
 			switch (command) {
 				case 'AddTab':
 					BrowserOpenTab();
@@ -685,12 +684,12 @@
 					break;
 				case 'LoadWithIE':
 					try {
-						var file = Cc["@mozilla.org/file/directory_service;1"].getService(Ci.nsIProperties).get("ProgF", Ci.nsILocalFile);
+						var file = Components.classes["@mozilla.org/file/directory_service;1"].getService(Components.interfaces.nsIProperties).get("ProgF", Components.interfaces.nsILocalFile);
 						file.append("Internet Explorer");
 						file.append("iexplore.exe");
 						var process = Cc["@mozilla.org/process/util;1"].createInstance(Ci.nsIProcess);
 						process.init(file);
-						var url = gBrowser.selectedBrowser.currentURI.spec;
+						var url = window.content ? content.location.href : gBrowser.selectedBrowser.contentDocumentAsCPOW.location.href;
 						process.run(false, [url], 1);
 					} catch (ex) {
 						alert("打开IE失败!\n" + ex);
@@ -1409,8 +1408,10 @@
 				window.openDialog("data:application/vnd.mozilla.xul+xml;charset=UTF-8," + option, '', 'chrome,titlebar,toolbar,centerscreen,dialog=no');
 			}
 		},
-		option: function() {
-			var xul = '<?xml version="1.0"?><?xml-stylesheet href="chrome://global/skin/" type="text/css"?>\
+	};
+
+	FeiRuoTabplus.option = function() {
+		var xul = '<?xml version="1.0"?><?xml-stylesheet href="chrome://global/skin/" type="text/css"?>\
 					<prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"\
 					id="FeiRuoTabplus_Settings"\
 					ignorekeys="true"\
@@ -1644,8 +1645,7 @@
 					</prefpane>\
 					</prefwindow>\
           			';
-			return encodeURIComponent(xul);
-		}
+		return encodeURIComponent(xul);
 	};
 
 	FeiRuoTabplus.OptionScript = {
@@ -1906,7 +1906,7 @@
 									opener.FeiRuoTabplus.getWindow(0).focus();\
 							}\
 							function MouseChanged(type){\
-								opener.FeiRuoTabplus.Detaill_OptionScript.MouseChanged(type);\
+								opener.FeiRuoTabplus.Detaill_OptionScript.MouseChanged();\
 							}\
 						</script>\
 							<vbox style = "width:400px; min-height:275px;">\
@@ -2285,8 +2285,6 @@
 
 			_$D("MouseBtn").selectedIndex = param["btn"] || 0;
 
-			_$D("MouseScroll").selectedIndex = (param["action"] == 'MouseScrollDown' ? 1 : 0);
-
 			_$D("MouseDblClick").checked = (param["action"] == "dblclick" ? true : false);
 
 			if (param["action"] == "dblclick" || param["action"] == "click" || !param["action"])
@@ -2294,7 +2292,7 @@
 			else
 				_$D("MouseAction").value = "MouseMidScroll";
 
-			this.MouseChanged(_$D("MouseAction").value == "MouseMidScroll" ? 1 : false);
+			this.MouseChanged();
 
 			_$D("EventTag").value = param["tag"] || "Tab";
 
@@ -2579,13 +2577,6 @@
 	function alert(aString, aTitle) {
 		Cc['@mozilla.org/alerts-service;1'].getService(Ci.nsIAlertsService)
 			.showAlertNotification("", aTitle || "FeiRuoTabplus", aString, false, "", null);
-	}
-
-	function ShowStatus(str, time) {
-		XULBrowserWindow.statusTextField.label = '[FeiRuoTabplus]' + str;
-		setTimeout(function() {
-			XULBrowserWindow.statusTextField.label = '';
-		}, time || 1500)
 	}
 
 	function $C(name, attr) {

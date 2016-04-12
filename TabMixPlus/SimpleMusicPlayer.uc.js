@@ -28,7 +28,7 @@
         },
         logo: {  // 感谢 defpt 提供图标
             //main: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEtSURBVDhPYyAFSElJyWpqapYZGxtf1NXVnQgVxg/4+fkFVVVVU42MjA4ANf4F4v8grK+vvxqqBBPIy8tzKCoqhhgaGq4HKv4B0wTDQMN+6+nprYIqRwUSEhKaQAVv0TUB8VNtbe1eSUlJY5BmnAYA/RkG0wQ06CNQ4Xw5OTkXoBQTRAUDA14DpKWlQ0GaVVRUQmVkZDihwiiAkAEhIAOgXKxgiBsgKCgoa2BgsINkA8TFxcWA6WIvUO4fSB6rAUDT+dXU1AqxGQC0dTtIHIaBKXERVAoCdHR0WoAS8FQHFYYDZDkg/qugoOAGlWJgAMZ5EpIkKAF9h0rBAdCCZqD4J6D8NaD6YKgwBABz1mJkA4D+mwWVIg4AnWMPNP0xUPMroGHdQCE2iAwhwMAAAP8QgByLBig2AAAAAElFTkSuQmCC",
-            main: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQCAYAAAAmlE46AAABSElEQVQokX1TsZGEMAx0RAnXAzk5NVzgFhjg5AwsBQSSUsqgkauADiiAAi6+D4z8MH/3mmHGHrTS7kp27p+AyFUgeQLJBqhLH6fyY6L3XHSj1t5z0Q58A5Q9kL7tA5LNey4uoD5OZUBdU4I23ah1IH0Dyg6kTUBdAXW5APs4lefqQNr0cSoN+JGi91wEkqcldaPWqZAuZ5qB5PkguWfgg+R+8H9B5Kod+AYk2xV01qlNcu6oDKjL5X44aefM6mjgzBCjYd0eJPd24JslJ80mSRdnpkDk6gzsRq0Tg9//JiugrpcOzjlnVc1+09YOfMtOk2x/NUaugOR1MQR5PhsZUNeLqzYviFwB8gyoS3bxxAZQlzTHvDGyfdtHQJ6Ngem/0AOUHZDnbtS6G7UG0ibrPtHOkZK+D/4jyCK9CJ6To7KnBU+LkOkd8QOTm2Sby5kMlwAAAABJRU5ErkJggg==",
+            main: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAANwAAADcBYx2BhQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGbSURBVDiNjdNPaM9xHMfxx89EuRGHHZSU7KLkoMZuS1tK0g44MTUXObz9CatxQGoO74uU0ywcRfl34UBzYC7cJP0O1FzNRsufr4PPT9/9THwur3r/eb7/fD6fRlVV/nUiYjm68TgzZ+u+Rf+RPIAm7qEZEb11/+IFElbiCqYzcxBH0IFz6EcXHi0IiIhtGEcnLhTzRkxk5ghG2gs2WjuIiG48xRSGMvN+RHRiEitwFtcz893fABPYjPWZ2YyI7biKVbX4H7iGwcysKEuMiB3YirGS3IW7mMFwSR7HHezDaIvYuoVNRS8X7UMDh0vwNNZiN57jWET01AHLin6sLQ5eZuZ3vMW6zJzD0VqRPwBfi74oejoiDhXgh2KbKbq6DpgsuqvoWIEM4RK+4HjxfSv6ug64jTmcjIilmfkZPRjAQWzIzIcldk/RV8y/xmGcxw3sz8xWpd8nIvpKsSfoz8yqDmjgFnaWkS6WMWb9er4HsBefSkdT8zookA6cwBksae8AN3EqM9+0DI2FvnNErEEvtqDCezzIzGftsT8BsKKaQ8DaP5cAAAAASUVORK5CYII=",
             playPause: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACOSURBVDhPYxg8wNjY+D8Ig9h6enqtCgoKdmAJYgGaAauA7L9AeqqwsDAvWAEhgMUAMB/IfqisrOwBVoQP4DIAiv8BxRbw8fEJgRVjAzDFIDYWA8BYX1//uYqKSjBYAzqAKQKxcRkAw0CDVoM1IQOYJIhNyABDQ0PyDKDEC+QHIpBNdjRSlJBIT8oDBBgYAPBVgtchO+kXAAAAAElFTkSuQmCC",
             play: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACtSURBVDhPY6AakJKSMpCXlzeEckkH0tLSIUZGRn/09PRmiYuLi0GFiQcgA4yNjf9D8QctLa1ioDArRJYIgGYAGANddENVVdUbqgQ/wGYADBsaGm6TlJTUgCrFDvAZAMJA1/wChk8/Pz+/AFQLKiBkABJ+BQyfdKAWJohOKCDFAHV1ddINAHlBR0eHPC+QHYhAjTcUFRXJisYPQH+SnpAoSsqgzATE5Gcm8gADAwC38IBnl19y/AAAAABJRU5ErkJggg==",
             pause: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAuSURBVDhPYxg8wNjY+D8y1tPTWwWVYgCx0eWhUgiArmDUgFEDQHgIGjBAgIEBAAR/teH6mMe/AAAAAElFTkSuQmCC",
@@ -171,21 +171,6 @@
                 isPlaying: "return doc.querySelector('#g_player .ply').classList.contains('pas')",
             }
         },
-        {    
-            name: "网易云音乐FM",
-            url: "http://music.163.com/demo/fm",
-            iframeStyle: "width: 330px; height: 410px;",
-            css: "body{width:330px;overflow:hidden;}.m-top,.m-demofm h2{display:none!important}.m-demofm{margin-left:-330px!important;margin-right:-330px!important;margin-top:-40px!important;margin-bottom:-280px!important;}",
-            control: {
-                playPause: ".play-pause",
-                love: ".f-fr > .j-flag",
-                hate: ".icon-hate",
-                next: ".icon-next",
-            },
-            state: {
-                isLoved: "return win.$('.f-fr > .j-flag').hasClass('icon-liked');",
-            }
-        },
 
         /*
             下面两个在 iframe 无法点击播放？
@@ -271,6 +256,22 @@
                 next: ".c_next",
                 prev: ".c_previous",
             },
+        },
+		{
+            name: "阳光盒子电台",
+            url: "http://sunbox.cc/sunbox-fm.html",
+            iframeStyle: "width: 540px; height: 664px;",
+            //旧css: ".site-title, .nm-page-header, container group, #nav-topbar.nav-container.group, footer{display:none;}#header{background-color: #DDDDDD;margin-top:-50px !important;}.nmplaybar.appear{height: 40px}.nmplayer-info,.nmplayer-control{line-height:2px}.play-thumb{right:0}",
+            css: ".site-title, .nm-page-header, container group, #masthead,#footer-widget-box,#nav-topbar.nav-container.group,.breadcrumb, #scroll li a.scroll-b,#scroll li a#gb2big5, footer{display:none;}.page-id-168{background: #f6f6f6 !important;border:none;}.page-template-default #content {border:0px !important;}.nm-wrapper {width: 600px;margin-left: -155px;}#nm-wrapper{margin-top:-30px !important;}.nm-songs-title,.album--nice-list, .nm-songs-list {margin-left: 6% !important;}#nm_container.nmplaybar.appear{background-color:rgba(0,0,0,0.95) !important;height: 40px !important;}.nmplayer-cover{display:none !important;}.nmplayer-control, .nmplayer-info {line-height: 33px !important;}.nm-previous.fxfont.sunboxico,.nms-play-btn.nm-pause.fxfont.sunboxico,.nm-next.fxfont.sunboxico,.nms-play-btn.fxfont.sunboxico.nm-play{color: #fff !important;}.music-page-navi{padding-bottom: 40px !important;}",
+            control: {
+                play: ".grobalPlayer",
+                pause: ".pauseBtn",
+                next: "#next",
+                prev: "#prev",
+            },
+            state: {
+                isPlaying: "return doc.querySelector('#g_player .ply').classList.contains('pas')",
+            }
         },
         // {
         // 	name: "AOP音乐网址导航",

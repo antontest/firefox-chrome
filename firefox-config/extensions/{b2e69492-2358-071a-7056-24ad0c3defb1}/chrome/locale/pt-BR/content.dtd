@@ -1,0 +1,10 @@
+
+<!ENTITY bamboo.toolbar.tooltip.feed "Abrir Bamboo">
+<!ENTITY bamboo.toolbar.tooltip.error "Exibir o Modulo de Erros do Bamboo">
+
+<!ENTITY bamboo.dialog.error.label.report "Envie isso para o desenvolvedor">
+<!ENTITY bamboo.dialog.error.label.clear "Limpar e fechar">
+<!ENTITY bamboo.dialog.error.label.close "Fechar">
+<!ENTITY bamboo.dialog.error.title "Modulo de Erros do Bamboo">
+
+<!ENTITY bamboo.contextmenu.message.blockimage "Bloquear esta imagem no Bamboo">

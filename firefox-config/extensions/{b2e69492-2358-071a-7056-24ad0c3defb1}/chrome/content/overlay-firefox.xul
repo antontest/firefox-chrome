@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet href="chrome://bamboo/skin/style.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://bamboo/locale/content.dtd">
+
+<overlay id="bamboo-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" xmlns:html="http://www.w3.org/1999/xhtml">
+
+    <!-- Scripts -->
+
+    <script src="chrome://global/content/globalOverlay.js"/>
+    <script src="loader-firefox.js"/>
+
+    <!-- String bundle -->
+
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="bamboo-bundle" src="chrome://bamboo/locale/content.properties"/>
+    </stringbundleset>
+
+    <!-- Palette -->
+
+    <toolbarpalette id="BrowserToolbarPalette">
+        <toolbaritem id="bamboo-toolbar" class="bamboo-toolbar-button" label="Bamboo">
+            <toolbarbutton id="bamboo-toolbar-button-feed" news="false" tooltiptext="&bamboo.toolbar.tooltip.feed;" class="bamboo-toolbar-button toolbarbutton-1 chromeclass-toolbar-additional" label="" style="list-style-image: url('chrome://bamboo/skin/img/feed.png');" onclick="if(event.button == 0){ bamboo.ui.run('show', [event]); }"  />
+            <toolbarbutton id="bamboo-toolbar-button-error" hidden="true" tooltiptext="&bamboo.toolbar.tooltip.error;" class="bamboo-button-error bamboo-toolbar-button bamboo-toolbar-button-nolabel toolbarbutton-1 chromeclass-toolbar-additional" label="" />
+        </toolbaritem>
+    </toolbarpalette>
+
+    <!-- Popups -->
+
+    <popupset id="mainPopupSet">
+        <panel id="bamboo-popup" position="after_start">
+          <keyset>
+            <key id="bamboo-key-open" modifiers="alt shift" key="B" oncommand="bamboo.ui.run('show');"/>
+          </keyset>
+        </panel>
+    </popupset>
+
+    <menupopup id="menu_ToolsPopup">
+        <menuitem id="bamboo-toolmenu" class="menuitem-iconic bamboo-toolbar-menu-button" oncommand="bamboo.ui.run('openTab');" label="Bamboo Feed Reader" accesskey="b"/>
+    </menupopup>
+
+    <popup id="contentAreaContextMenu">
+      <menuitem id="bamboo-contextmenu-blockimage" hidden="true" class="menuitem-iconic bamboo-context-menu-button-blocklink" label="&bamboo.contextmenu.message.blockimage;" />
+    </popup>
+
+</overlay>

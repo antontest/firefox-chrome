@@ -1,0 +1,136 @@
+body {
+    overflow:auto;
+    background-color: #EDEDED;
+    background-image: url(img/default.jpg);
+    background-repeat: no-repeat;
+    background-size:auto; /* 如果屏幕没有铺满，请把auto改为你自己显示器分辨率 */
+    font-family:'Microsoft YaHei';
+    font-size: 62.5%;
+}
+img {max-width: 100%;}
+
+/* ===========搜索模块========= */
+#searchModule{
+    margin-top:5em;
+}
+/* 搜索引擎 */
+#Searchtype {
+  display:block;
+	overflow:visible;
+	font-size:1.8em;
+	font-weight:bold;
+	text-align:center;
+  text-indent: 0.8em;
+  margin-right:3em;
+}
+#Searchtype ul {display:inline-block;list-style: none outside none;}
+#Searchtype li {float:left;vertical-align: baseline;}
+#Searchtype a {color:#fff;}/* 未激活搜索引擎字体 */
+#Searchtype a:hover,
+#Searchtype .active a {color:#ffb643;text-decoration:none;} /* 激活搜索引擎字体 */
+    
+/*设置搜索框*/
+ #Searchbox {
+	width:56%;
+  margin:0 auto;
+}
+
+.search_wd {
+	border:0;
+  padding:0 0.3em;
+	float:left;
+	font-size:2em;
+	height:2em;
+	width:85%;
+	-moz-box-sizing:border-box;
+	opacity:0.5;
+}
+.search_go {
+	background:linear-gradient(to bottom,#DDD,#EEE);
+  border:0;
+	color:#555;
+	cursor:pointer;
+	float:right;
+	font-size:2em;
+	font-weight:bold;
+	height:2em;
+	text-shadow:1px 1px 1px rgba(0, 0, 0, .2);
+	width:15%;
+}
+
+.bdsug_copy {display:none}
+
+/*设置导航整体面板*/
+#navs {
+position:relative;
+float:left;
+top: 5em;/*导航整体面板到搜索框的距离*/
+left: 15%;/*导航整体面板到窗口左边的距离*/
+width:70%;/*导航整体面板宽度*/
+margin:auto;
+padding: 0.6em;
+/*background-color: #000;*/
+background-color:rgba(0,0,0,0.7);/*黑色底版透明度*/
+border:0.1em solid #000;
+}
+
+/*设置导航标题字体*/
+ #navtitle {
+    font-size:1.8em;
+    font-weight: bold;
+    color:white;
+    border-bottom: 0.1em solid #555;
+}
+/*设置编辑、定位、切换按钮*/
+ #nav_openfolder, #nav_edit, #nav_random {
+    float:right;
+    position:relative;
+    padding:0 0.2em;
+    font-size:0.85em;
+    opacity:0.3;
+}
+#nav_openfolder:hover, #nav_edit:hover, #nav_random:hover {
+    opacity:1;
+}
+/*设置导航地址间距*/
+ #navtable {
+    font-size:1.5em;
+    padding-top:0.6em;
+    margin-left: 1em;
+}
+/*设置导航单元大小*/
+ #navtable td {
+    list-style: none;
+    float:left;
+    height:1.6em;
+    width:8em;
+    text-align:left;
+}
+/*设置导航分类*/
+ #navtable th {
+    width: 5.4em;
+    text-align:left;
+    vertical-align:top;
+    color: gray;
+}
+/*设置导航链接字体*/
+ #navs a {
+    color: #FFF;
+    text-decoration:none;
+}
+/*设置导航链接图标*/
+ #navs img {
+    margin-right:0.25em;
+    margin-bottom: -0.1em;
+}
+/*设置导航链接hover时*/
+ #navtable a:hover {
+    text-decoration: none;
+
+	border-bottom:1px solid #fff;
+
+
+    transition:color 0.423s ease, text-shadow 0.423s ease;
+	 position : relative; left : 4px
+
+}

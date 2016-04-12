@@ -170,7 +170,7 @@ var KeyChanger = {
 		menuitem.setAttribute('tooltiptext', '左键：重载配置\n右键：编辑配置');
 		menuitem.setAttribute('oncommand', 'KeyChanger.makeKeyset(true);');
 		menuitem.setAttribute('onclick', 'if (event.button == 2) { event.preventDefault(); KeyChanger.edit(KeyChanger.file); }');
-		menuitem.setAttribute('image', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAATlBMVEUAAAAzR18zR18zR18zR18zR18zR18zR18zR18zR18zR18zR18zR18zR18zR18zR18zR18zR18zR18zR18zR18zR18zR18zR18zR18zR18W7/kRAAAAGnRSTlMAF/Do2AhoKOFfMEM4hVMcDZqTb0syJQXOxo0AOowAAAB0SURBVBjTfcxJFgIhDEXRRIGSEPqmdP8bNSp6LAb1Rvl3EDgrmgUoL9A8zJI1kr+Pud2jvsDtn7nr3PU3sXQ5hIA36BEJI6VBoDaBVELLzRZnPL5BvnJlVykATKARth4i/wC8kgpMQES2EsshoNX1L4Ww9gRm4wT4RB0kOwAAAABJRU5ErkJggg==');
+		menuitem.setAttribute('image', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAhFBMVEUAAAA4P0Scpay6wcZ0g46TnaONmJ9GUFV7iZJseIKep625wMSRnKNqdoBrd4C2vcKdpay5wMRlcntjb3iCjZRodX6AipFcZ29VXmZeaXFLVVtqeIEzODskKCu/xcnIzNC5wMW1vMK8w8i0vcOyu8DN0dTFys7Bx8u7wsbJzdG1vsTX2dvmv0ZcAAAAHnRSTlMAPezjG5mZJAwF7eR8ZS7x6+iklouHgoBpY0Q5HhUYYvVDAAAAkklEQVQY012LCRKCMAxFo1IWWdx3TUIpLdX73890UAZ48yeT/yaBniyFKVU5bllUnW7jXh4u19dQ0+ixvydJ9COFIt9tVgN5Aco2TfOWGCPTKlDOI5LEGIfEIjTXXS35uLAoiLVjZIk3mjEIbPsX7CxSHcuFZfJEtmMka4Ig3QqE2rVexHG9/CPb9gzJYsIT5nwBc64P9eGlUkIAAAAASUVORK5CYII=');
 		var insPos = document.getElementById('devToolsSeparator');
 		insPos.parentNode.insertBefore(menuitem, insPos);
 	},

@@ -1,0 +1,347 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+	body{
+		background: #fff;
+	}
+	.option{
+		display: block;
+		width: 100%;
+		margin: 8px 0;
+	}
+	.optiongrp{
+		display: none;
+	}
+	.time{
+		float: right;
+	}
+	span.time{
+		margin-right: 24px;
+	}
+
+	.separator{ /*分割线*/
+		width: 100%;
+		margin: 2px 4px;
+		padding: 0;
+		border-bottom: 1px solid transparent;
+		border-image: url("chrome://browser/skin/menuseparator.png") 1 0 stretch;
+		clear: both;
+	}
+
+	.label{float: left;}
+	.clear{clear: both;}
+
+	.onoffswitch { /*滑动条*/
+		float: right;
+		position: relative;
+        width: 28px;
+        -webkit-user-select: none; -moz-user-select:none; -ms-user-select: none;
+    }
+    .onoffswitch-checkbox {
+        display: none;
+    }
+    .onoffswitch-label {
+        display: block; overflow: hidden; cursor: pointer;
+        border: none; border-radius: 8px;
+    }
+    .onoffswitch-inner {
+        display: block; width: 200%; margin-left: -100%;
+        -moz-transition: margin 0.1s ease-in 0s; -webkit-transition: margin 0.1s ease-in 0s;
+        -o-transition: margin 0.1s ease-in 0s; transition: margin 0.1s ease-in 0s;
+    }
+    .onoffswitch-inner:before, .onoffswitch-inner:after {
+        display: block; float: left; width: 50%; height: 16px; padding: 0; line-height: 16px;
+        font-size: 4px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+        -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    }
+    .onoffswitch-inner:before { /*文字ON OFF*/
+        content: "ON";
+        padding-left: 4px;
+        background-color: rgb(0, 150, 221); color: #FFFFFF;
+    }
+    .onoffswitch-inner:after {
+        content: "OFF";
+        padding-right: 4px;
+        background-color: #EEEEEE; color: #999999;
+        text-align: right;
+    }
+    .onoffswitch-switch {
+        display: block; width: 12px; margin: 2px;
+        background: #FFFFFF;
+        border: 0px solid #999999; border-radius: 6px;
+        position: absolute; top: 0; bottom: 0; right: 12px;
+        -moz-transition: all 0.1s ease-in 0s; -webkit-transition: all 0.1s ease-in 0s;
+        -o-transition: all 0.1s ease-in 0s; transition: all 0.1s ease-in 0s;
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+        margin-left: 0;
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+        right: 0px;
+    }
+</style>
+
+
+<body>
+	<div class="option">
+		<div class="label">
+			夜间模式
+		</div>
+		<div class="onoffswitch">
+			<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="activeswitch1">
+			<label class="onoffswitch-label" for="activeswitch1">
+				<span class="onoffswitch-inner"></span>
+				<span class="onoffswitch-switch"></span>
+			</label>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="separator"></div>
+	<div class="option">
+		<div class="label">
+			对界面生效:
+		</div>
+		<div class="onoffswitch">
+			<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="activeswitch2">
+			<label class="onoffswitch-label" for="activeswitch2">
+				<span class="onoffswitch-inner"></span>
+				<span class="onoffswitch-switch"></span>
+			</label>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="separator"></div>
+	<div class="option">
+		<div class="label">
+			对网页生效:
+		</div>
+		<div class="onoffswitch">
+			<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="activeswitch3">
+			<label class="onoffswitch-label" for="activeswitch3">
+				<span class="onoffswitch-inner"></span>
+				<span class="onoffswitch-switch"></span>
+			</label>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="separator"></div>
+	<div class="option">
+		<div class="label">
+			降低图像亮度:
+		</div>
+		<div class="onoffswitch">
+			<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="activeswitch4">
+			<label class="onoffswitch-label" for="activeswitch4">
+				<span class="onoffswitch-inner"></span>
+				<span class="onoffswitch-switch"></span>
+			</label>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="separator"></div>
+	<div class="option">
+		<div class="label">
+			自动切换时间:
+		</div>
+		<div class="onoffswitch">
+			<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="activeswitch5">
+			<label class="onoffswitch-label" for="activeswitch5">
+				<span class="onoffswitch-inner"></span>
+				<span class="onoffswitch-switch"></span>
+			</label>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="option optiongrp" id="autotime">
+		<div class="time">
+			<select name="beginh" id="beginh">
+					<option value="0">00</option>
+					<option value="1">01</option>
+					<option value="2">02</option>
+					<option value="3">03</option>
+					<option value="4">04</option>
+					<option value="5">05</option>
+					<option value="6">06</option>
+					<option value="7">07</option>
+					<option value="8">08</option>
+					<option value="9">09</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20" selected>20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+			</select>
+			:
+			<select name="beginm" id="beginm">
+					<option value="0" selected>00</option>
+					<option value="1">01</option>
+					<option value="2" >02</option>
+					<option value="3">03</option>
+					<option value="4">04</option>
+					<option value="5">05</option>
+					<option value="6">06</option>
+					<option value="7">07</option>
+					<option value="8">08</option>
+					<option value="9">09</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="26">26</option>
+					<option value="27">27</option>
+					<option value="28">28</option>
+					<option value="29">29</option>
+					<option value="30">30</option>
+					<option value="31">31</option>
+					<option value="32">32</option>
+					<option value="33">33</option>
+					<option value="34">34</option>
+					<option value="35">35</option>
+					<option value="36">36</option>
+					<option value="37">37</option>
+					<option value="38">38</option>
+					<option value="39">39</option>
+					<option value="40">40</option>
+					<option value="41">41</option>
+					<option value="42">42</option>
+					<option value="43">43</option>
+					<option value="44">44</option>
+					<option value="45">45</option>
+					<option value="46">46</option>
+					<option value="47">47</option>
+					<option value="48">48</option>
+					<option value="49">49</option>
+					<option value="50">50</option>
+					<option value="51">51</option>
+					<option value="52">52</option>
+					<option value="53">53</option>
+					<option value="54">54</option>
+					<option value="55">55</option>
+					<option value="56">56</option>
+					<option value="57">57</option>
+					<option value="58">58</option>
+					<option value="59">59</option>
+				</select>
+			</div>
+			<span class="time">开始时间 (hh:mm)</span>
+		<div class="clear"></div>
+	</div>
+	<div class="option optiongrp">
+
+		<div class="time">
+		<select name="endh" id="endh">
+                <option value="0">00</option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+				<option value="4">04</option>
+				<option value="5">05</option>
+				<option value="6" selected>06</option>
+				<option value="7">07</option>
+				<option value="8">08</option>
+				<option value="9">09</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+        </select>
+		:
+		<select name="endm" id="endm">
+                <option value="0" selected>00</option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+				<option value="4">04</option>
+				<option value="5">05</option>
+				<option value="6">06</option>
+				<option value="7">07</option>
+				<option value="8">08</option>
+				<option value="9">09</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="24">24</option>
+				<option value="25">25</option>
+				<option value="26">26</option>
+				<option value="27">27</option>
+				<option value="28">28</option>
+				<option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+                <option value="32">32</option>
+                <option value="33">33</option>
+				<option value="34">34</option>
+				<option value="35">35</option>
+				<option value="36">36</option>
+				<option value="37">37</option>
+				<option value="38">38</option>
+				<option value="39">39</option>
+				<option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+				<option value="44">44</option>
+				<option value="45">45</option>
+				<option value="46">46</option>
+				<option value="47">47</option>
+				<option value="48">48</option>
+				<option value="49">49</option>
+				<option value="50">50</option>
+                <option value="51">51</option>
+                <option value="52">52</option>
+                <option value="53">53</option>
+				<option value="54">54</option>
+				<option value="55">55</option>
+				<option value="56">56</option>
+				<option value="57">57</option>
+				<option value="58">58</option>
+				<option value="59">59</option>
+        </select>
+		</div>
+		<span class="time">结束时间 (hh:mm)</span>
+		<div class="clear"></div>
+	</div>
+</body>
+</html>

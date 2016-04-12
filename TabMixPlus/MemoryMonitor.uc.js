@@ -3,6 +3,7 @@
 // @description    简单的FF内存监视器
 // @include        main
 // @charset        UTF-8
+// @note           2014.09.18 设置其位置在地址栏地址前
 // @note           2014.05.09 修复内存超过1G时候的颜色显示错误问题
 // @note           2014.02.10 删除自动重启功能，修复分级颜色显示：正常显示为绿色，超过预警值的0.6倍为蓝色，超出预警值显示为红色
 // @note           2014.02.08 基于原MemoryMonitorMod.uc.js修改，兼容FF28+
@@ -21,12 +22,20 @@ var ucjsMM = {
 
 	interval : null,
 	init : function () {
-		var toolbar = document.getElementById('urlbar');//identity-box urlbar-icons
+		var toolbar = document.getElementById('identity-box').parentNode;
 		var memoryPanel = document.createElement('statusbarpanel');
 		memoryPanel.id = 'MemoryDisplay';
 		memoryPanel.setAttribute('label', ucjsMM._MemoryValue + ucjsMM._prefix);
 		memoryPanel.setAttribute('tooltiptext', '内存监视器，点击打开about:memory');
-		toolbar.insertBefore(memoryPanel, toolbar.firstChild);
+		toolbar.insertBefore(memoryPanel, toolbar.childNodes[3]);
+		document.insertBefore(document.createProcessingInstruction('xml-stylesheet', 'type="text/css" href="data:text/css;utf-8,' + encodeURIComponent('\
+			#MemoryDisplay{\
+				padding-left:1px;\
+				font-size:13px;\
+				margin-right:-2px;\
+			}\
+			#MemoryDisplay .statusbarpanel-text{margin:0;}\
+		') + '"'), document.documentElement);
 		this.start();
 		this.interval = setInterval(this.start, this._interval);
 	},
@@ -40,7 +49,7 @@ var ucjsMM = {
 			var displayValue = ucjsMM.addFigure(ucjsMM._MemoryValue);
 			var memoryPanel = document.getElementById('MemoryDisplay');
 			memoryPanel.setAttribute('label', displayValue + ucjsMM._prefix);
-			memoryPanel.setAttribute('onclick', "openUILinkIn('about:memory','tab')"); 
+			memoryPanel.setAttribute('onclick', "if(event.button==0)openUILinkIn('about:memory','tab');"); 
 			if (ucjsMM._MemoryValue <= ucjsMM._Warningvalue * 0.6){
 				memoryPanel.style.color = 'green';
 			}

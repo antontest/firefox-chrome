@@ -1,0 +1,5 @@
+1 干掉百度重定向
+    https://greasyfork.org/zh-CN/scripts/14178
+2 AC-百度谷歌搜索结果Favicon
+    https://greasyfork.org/zh-CN/scripts/18387
+3 搜索引擎跳转脚本【searchEngineJump】

@@ -1,0 +1,14 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+
+@-moz-document regexp("^(https?|ftps?|file|about):(?!((.*).pdf)).*$") {
+	img {
+		filter: brightness(70%) !important;
+    }
+    img:hover {
+		filter: brightness(100%) !important;
+    }
+	canvas {
+		filter: brightness(40%) !important;
+    }
+}

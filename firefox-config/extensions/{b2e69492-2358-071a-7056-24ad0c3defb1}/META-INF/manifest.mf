@@ -1,0 +1,1192 @@
+Manifest-Version: 1.0
+
+Name: install.rdf
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: i/N0GNWmG9Bm6V6/oLFd2A==
+SHA1-Digest: hDZGt7jmI809FHf6qW9EDNdWDVY=
+
+Name: chrome.manifest
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Rt4c1D8XWByIjJ/gXqmpbw==
+SHA1-Digest: intcPTiKQHCr2Pvrha0MWGI0k+I=
+
+Name: chrome/content/application.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: k9nBqMZxJQf1ZTkaQh2xag==
+SHA1-Digest: SuuRReLVPK1J7SmL4TKLfrVRTzA=
+
+Name: chrome/content/component.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: aXHaYVw0mbvVFXgsu5Vm/Q==
+SHA1-Digest: A5s7UAL1gSKTbsxT8zr6RlkTN5U=
+
+Name: chrome/content/factory.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: jNn1u2SmtXFyKJODhg35jg==
+SHA1-Digest: Kt+0Pw1UvlFksnU8ACG+oDuQZ6o=
+
+Name: chrome/content/feedhandler.html
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: E8R3kopwCKzmpWlmvDzKqw==
+SHA1-Digest: buglOJdys2tIFgRd7DTZ6vqKjB0=
+
+Name: chrome/content/google-jsapi.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: k1XPhqSfb3TWpXrtq/CE3w==
+SHA1-Digest: 238pEXTK3BfTl5bYK+bZ807DH7c=
+
+Name: chrome/content/google.html
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 7sGb10MoOig/4JivbLTXlQ==
+SHA1-Digest: F75lBcLpBdnwRbyngz9sbRpL16s=
+
+Name: chrome/content/loader-firefox.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 63DTjVzJPo6r13IJA0fAtw==
+SHA1-Digest: 0/22gKNuKWjYOtbCi/VmXbZVt0w=
+
+Name: chrome/content/loader-thunderbird.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: WBoiKT1AF3hpV27UaoyQhw==
+SHA1-Digest: /IbWzWCaiQuEjP+UURYqFefrA4E=
+
+Name: chrome/content/option.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: vmfKBdNn1i3vuPZwhmIcYA==
+SHA1-Digest: Vg0rzQfUAzDpeRLjGAhjOVZ/RPU=
+
+Name: chrome/content/overlay-firefox.xul
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 9dtl4OuoZ6HiAIywtH55Zg==
+SHA1-Digest: 0b9LdHLwB0PNitGykJkvKE57lK8=
+
+Name: chrome/content/overlay-thunderbird.xul
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 8/HQ4Ky5c9X0WuehO6QVhw==
+SHA1-Digest: dGsjnxLC4Bn52Rs2hdcor4xqNEk=
+
+Name: chrome/content/page.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: vlZWjN9Kz7Js6kL8WmAfMQ==
+SHA1-Digest: TDWr4FIOjdOCt+1kvIf3W4fyLjY=
+
+Name: chrome/content/page.xul
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: yP0PP3XJHhFD+G28lgom9g==
+SHA1-Digest: vXTOUKAjPYoKcbPZn83A/bfifL8=
+
+Name: chrome/content/runnable.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: WJDYUqoBtmCWff39eaT6QA==
+SHA1-Digest: KBbZBuGFB2xPMqs+FIp2zZmicws=
+
+Name: chrome/content/template-page.html
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: /UmTee0ETdqUcuhx7EPiPg==
+SHA1-Digest: Nx3JnnXjAOUjrSaJ0nZcFle/2cM=
+
+Name: chrome/content/windowError.xul
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 50LpnwJ/unU0S87g4Sx4aw==
+SHA1-Digest: UtveLfRh33BDsWyvg5AuAI4zXgo=
+
+Name: chrome/content/data/_data.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: nZocTmfBGTFAQYIt11R+Ng==
+SHA1-Digest: Vkanvwr7hf1HJ3zRcbDkb4zQlqA=
+
+Name: chrome/content/data/base.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 8kLtlBMsdLz4TnTor1Q6oA==
+SHA1-Digest: r/IjfFtkiWsLQbQ+8Y0Xlx8ofBo=
+
+Name: chrome/content/data/feed.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Btef0dZJg7ty94miqSgrYA==
+SHA1-Digest: MSWwtOKay1JHhHWNYGEkpKJYo+4=
+
+Name: chrome/content/data/filter.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: E53quTmSzRM2rC5wC4bHSw==
+SHA1-Digest: v16c3kTiaej0uhk752Oq2bpyVvc=
+
+Name: chrome/content/data/group.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: m5H6XAi+HyZMrYsOKnsTfQ==
+SHA1-Digest: TULE7+3MfOr0iE76ld2GSspXvjE=
+
+Name: chrome/content/data/item.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: wHZM9W++/rMqw63IIyvcZg==
+SHA1-Digest: KxvpoXg1CVhagHlGxgHvFnc+TOU=
+
+Name: chrome/content/data/library.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: zyQoEh7QfBFNb03KHhgI5g==
+SHA1-Digest: OL3kL8W+c3fsMvBw7cerJ1fh61c=
+
+Name: chrome/content/data/paginator.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 8XyZA4DZak8slNmLUx/NpQ==
+SHA1-Digest: PSa9suobhb8PmZ0EBw/OtwRc3y0=
+
+Name: chrome/content/data/root.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: XXjta5L97OMP2f84llwlxg==
+SHA1-Digest: AcEFsrFvKLt7VbmPx8mGtZevkDs=
+
+Name: chrome/content/data/search.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: FjzCKWWUHD+cxfhZLcTTXw==
+SHA1-Digest: n1BCJz5Bm+h7BZF9uhx7nql7kAU=
+
+Name: chrome/content/data/searchfeed.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: E18bXn6AthPJ6OpAHQdu9A==
+SHA1-Digest: ZzxiVi/0Kmek/ZywqQyT7y8Zsb4=
+
+Name: chrome/content/ui/_ui.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: TwGz9W0CLeBOCJNZsRLsrA==
+SHA1-Digest: aZxY9x5mbXbtaBsSZyIpzpPY4uI=
+
+Name: chrome/content/ui/component.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 5i4sU+wRzrAk4pBNETAz2A==
+SHA1-Digest: ui4eNtDK3yzNrgwYoUMMHpF2WE4=
+
+Name: chrome/content/ui/dialog.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Cm4OETEt+nS4bHVtC5lMpQ==
+SHA1-Digest: IlkLmgFdmvIom4oiYHUbCblzrAo=
+
+Name: chrome/content/ui/error.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: GOTmTB6X008NAAvDhKiDeg==
+SHA1-Digest: B9noq6i1iBHqp8CAPTrqz3Cx7/A=
+
+Name: chrome/content/ui/links.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: L/J6+7lPwziQyocaggcDpA==
+SHA1-Digest: p1FnFPYYez9KFPZu13nnkSS/1QI=
+
+Name: chrome/content/ui/notification.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: tFdcMb9zRcLbgPAQZqd4EQ==
+SHA1-Digest: 718l+jTNeuJI3rQH5gv9mXl4CVk=
+
+Name: chrome/content/ui/toolbar.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: OPsaQcGGbPAYKmFzt0OLRw==
+SHA1-Digest: lqxT+WCCc54D91y+yI97dgTjtaM=
+
+Name: chrome/content/ui/contextMenu/_contextMenu.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: ZR0T3yRGERD7f/Pzj59+IQ==
+SHA1-Digest: wPMdst0sUAicjUyt11x/agg3hww=
+
+Name: chrome/content/ui/contextMenu/base.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: y/Mkx/IkdjJFK5UZjW1ttg==
+SHA1-Digest: AXJ+jayabOJrTigIatTpUap7q/k=
+
+Name: chrome/content/ui/contextMenu/feed.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: j06AatH7s+q2vpwBkT8d5w==
+SHA1-Digest: zxnoTqxfMzsI/Yo8UbL/bf9psGc=
+
+Name: chrome/content/ui/contextMenu/group.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: WPYIjLKekpe+o9nzTayP1g==
+SHA1-Digest: iY29NV/3PNsBLuWJFGqzgff2JpY=
+
+Name: chrome/content/ui/contextMenu/library.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: s6+kbGaTvOBwVtPApqRPlA==
+SHA1-Digest: nW0awLtCj7KWgK1Y1duEjZIiQDw=
+
+Name: chrome/content/ui/contextMenu/root.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: PwHeSOhapAUBrscNa/mn6A==
+SHA1-Digest: JZLowfivf8Q5FWhuzb6z+fHgOVg=
+
+Name: chrome/content/ui/dd/_dd.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: mTrpx86ZoMM+IekRnFJD2Q==
+SHA1-Digest: iqwDvPUIVaEkdGlQ90lkMRD2iME=
+
+Name: chrome/content/ui/dd/base.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: P8lEHT6q+ssfwgcTx7YjeQ==
+SHA1-Digest: N3U64261t+F2olb+619zIpn8CG0=
+
+Name: chrome/content/ui/dd/feed.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: SDVL9SbQyz2pplpoivfKwQ==
+SHA1-Digest: LcyWnxFzICcqwoO4Ts/BrEhwGEo=
+
+Name: chrome/content/ui/dd/group.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: bSQ0pMcAap//QvExa28RrA==
+SHA1-Digest: UrTRKuAk7Lp8BAmNMJXwNVularc=
+
+Name: chrome/content/ui/dd/root.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: dEvpwG2fpUXMH2Ew0z9LyA==
+SHA1-Digest: r0WGcI/sCitBPPO44HnpoBloRFM=
+
+Name: chrome/content/ui/panel/_panel.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: T5UXI+1JRwk9ixZ+6ZQGtA==
+SHA1-Digest: Sbv7IQJRRRrvx6NUM3VActLAJLo=
+
+Name: chrome/content/ui/panel/add.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: px8Kk3hv2rESNU0ORO679Q==
+SHA1-Digest: XlruG5RMPTaBuV3PePUEnhOrj8A=
+
+Name: chrome/content/ui/panel/base.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: xS5maXd0S/yq3VuSjC3znA==
+SHA1-Digest: dzW5ki7+Z1wLeZAKlUC7R3Hx334=
+
+Name: chrome/content/ui/panel/error.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: vB+AgpEwR4YxK/DrIuu5qQ==
+SHA1-Digest: uLa0b0G7mVMHIqG6RuPuUI+yC8Y=
+
+Name: chrome/content/ui/panel/help.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 4g60pW+z6KHYi9KZ+e8Eqg==
+SHA1-Digest: HWtmgztRBsSkr9+bvA5CadFOEOs=
+
+Name: chrome/content/ui/panel/import.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: kUFppUHT7LZ6Ka4JSzjuyQ==
+SHA1-Digest: 6zKOAjSfjW2+Sk6JtPBe6nbZhvo=
+
+Name: chrome/content/ui/panel/option.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: IEQPmIsyuYbma1QTLP35hA==
+SHA1-Digest: 9mH29fLug+QUv9cYkXvu8fvGv2I=
+
+Name: chrome/content/ui/panel/reader.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: fZ1FBc4QT2Ojjr+jwXW+gw==
+SHA1-Digest: k9yTuZmBUbMJ6uJkc61bzMPqpss=
+
+Name: chrome/content/ui/panel/search.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: NKFfTt7NwIXYb0Sso9Yo+w==
+SHA1-Digest: FRVqG0gQD2wrpzN4hsMYFwfWhlw=
+
+Name: chrome/content/ui/view/base.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 5zuCjTz/mzbpis7McniqrQ==
+SHA1-Digest: ZzMbArxZfbpeGhanchmCm06F8xg=
+
+Name: chrome/content/ui/view/feed.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: w8ictfnUMhxywWPFhRp+1Q==
+SHA1-Digest: Ju3szQlwHhG3vyxylbKHYYcpbvI=
+
+Name: chrome/content/ui/view/group.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 4cOcEy1acTbf6BwslXSEzg==
+SHA1-Digest: S/5RPwk9ghAZz5v2OtbjqOEAjeg=
+
+Name: chrome/content/ui/view/item.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: AfImotwIyb1X4wtwKnU27g==
+SHA1-Digest: AFejlp0gaXiQFRw1ADsh2RkSseI=
+
+Name: chrome/content/ui/view/library.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 0tG3Akf0/AjB/aQDWBewrw==
+SHA1-Digest: jMk3Ungwehud9NsbuZXLSveIJq0=
+
+Name: chrome/content/ui/view/paginator.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: tUowQRTxAY+2MvG/n3G6GQ==
+SHA1-Digest: 4Ec/kh82n5YNzepLaNsZ/9oK618=
+
+Name: chrome/content/ui/view/root.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: ZcFAJMgsC+GKyO0VlnVvMQ==
+SHA1-Digest: 4RA1cUzzGMtcP56Z8yoUF835NDs=
+
+Name: chrome/content/ui/view/search.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: WZt1mTzD5J1d9mwU6tNFVg==
+SHA1-Digest: +NtVK21q02yG/0z2S6vNmwVMCTg=
+
+Name: chrome/content/ui/view/searchfeed.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: XO+yUBTAojVYAYal2w0gsA==
+SHA1-Digest: r82z5fAbj/91phPOQSfgBHQP654=
+
+Name: chrome/content/ui/zone/menu.player.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: iEAExiMLSTbsqd6/t5eE4w==
+SHA1-Digest: 7KopIFbJGNCRh10iKOR/XwmdRd4=
+
+Name: chrome/content/ui/zone/menu.popup.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: EjvLO6FfjxL7VnvI/ExKzg==
+SHA1-Digest: EV9cD72U6vIrpd4lV6rdGtUwlQ8=
+
+Name: chrome/content/ui/zone/menu.reader.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: zoPX6dRaNg3dpu91qeuqjg==
+SHA1-Digest: lPHcUaX4UmwWJWIRxW/pfg1e2LM=
+
+Name: chrome/content/ui/zone/menu.readerSearch.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 9ZjIK4BjDV8WKJnDd28Yqw==
+SHA1-Digest: XU74nhgrlkaksZIlISyCX70iRuI=
+
+Name: chrome/content/ui/zone/menu.search.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: JMig1fgXjkUcFSspP7Cqhw==
+SHA1-Digest: sE8Xrwb6+MI7f/FdoauSA+R3Oq0=
+
+Name: chrome/content/ui/zone/tree.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: hhU5mp7L+ZDBfWKqGmzPzw==
+SHA1-Digest: 1YqqmJk2tfAMuWPbNRZ5sIE70dY=
+
+Name: chrome/content/ui/zone/view.data.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: slxBhFznnY+lDjf8lsq0dw==
+SHA1-Digest: 0iSPB24DX2jbKuU69FfTdjs8y24=
+
+Name: chrome/content/ui/zone/view.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: IpGEGIHpY0QIJk1dmfHdTw==
+SHA1-Digest: SmRBHrGjDGZXzeCYRf589RZiKRo=
+
+Name: chrome/content/utils/_utils.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: vYdeviZ12hRogUYPuUuORw==
+SHA1-Digest: mUyitYdH/bg5pW+nNb2VPOsl2jE=
+
+Name: chrome/content/utils/ajax.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: RAALA6w0mGBFxNgC92pgQA==
+SHA1-Digest: e6AgFSQonp3uM4xB/acD3kXhizw=
+
+Name: chrome/content/utils/blacklist.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 4J765BXo+n3yyZyOxKZeiQ==
+SHA1-Digest: NiKUuf1H15uPpJt5rQtlj1CelZ8=
+
+Name: chrome/content/utils/browser.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: CL2ntmuVjsYpn7MeIma5Ng==
+SHA1-Digest: qr726t2rS+MarASgceAEULNFotg=
+
+Name: chrome/content/utils/error.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: ckjCuJZyajYjyVAANZvMbQ==
+SHA1-Digest: POj6IIyhC29WjCsRe5irXGMcmUU=
+
+Name: chrome/content/utils/export.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Po1IQNUd35QvkceWGXivFw==
+SHA1-Digest: HPvxbB6D+7Y42sR7EqKLVocrh5s=
+
+Name: chrome/content/utils/import.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: qM9WtcIsyZsfelKTxAGVHA==
+SHA1-Digest: KWw6Bqgm+Dhhl3XJQ/Vs9p3xl0E=
+
+Name: chrome/content/utils/io.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: uKGEj9ntSLpFWwRPWrVIIA==
+SHA1-Digest: iFiikZFEbRzBWfAxGu4eqwMfrqs=
+
+Name: chrome/content/utils/parser.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: XE/DmCrHelzrSyZKA0+MfQ==
+SHA1-Digest: lIZ2N2JKHfs8Nf4GwV+SkHSInLk=
+
+Name: chrome/content/utils/search.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: AH7xI79CTW1oP0dbcldHnQ==
+SHA1-Digest: CCTDHAg4Hky6g/9a3dqUFbLe+hI=
+
+Name: chrome/content/utils/sharing.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 9eCegPrDcV/obZ6AL+bemw==
+SHA1-Digest: lbLYJ6zCV8a+tYwUzi9cslNFyVQ=
+
+Name: chrome/content/utils/timer.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: fcZ2HFiuVHoWimtp3KvH4A==
+SHA1-Digest: oWhM+6yChA555uC9KPF9esBLzAo=
+
+Name: chrome/content/utils/ui.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: FhwcS5VFjNu/mZ7c9YVheQ==
+SHA1-Digest: p38lYbsEdIeX62YPk3UFaS3GwQ8=
+
+Name: chrome/content/utils/updater.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: wb66UhFN07S1LyM/Jw5wlg==
+SHA1-Digest: C3nzc3MwMKFRXa98crDI+3sD8J8=
+
+Name: chrome/locale/de-DE/content.dtd
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: rlzy+XY5YV5isAV4AleeiA==
+SHA1-Digest: M+hQGCR3uId+Eh8xRzqhTUZ/sV0=
+
+Name: chrome/locale/de-DE/content.properties
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: h98pRnxKyn4WAwxF3HwMZw==
+SHA1-Digest: j0lNlE5J7wGYU0+/y/N24H3i7xw=
+
+Name: chrome/locale/el-GR/content.dtd
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: J9k2mcU5RIvTUTF+iSkdWA==
+SHA1-Digest: KMwJi3Dxg/zSaVr9uWoX9ks8gac=
+
+Name: chrome/locale/el-GR/content.properties
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: l/BSkBQ2/YP4h0AykEb3hw==
+SHA1-Digest: 90Yy6ZRVok9bBpAk/csQPg7+FSg=
+
+Name: chrome/locale/en-US/content.dtd
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: JHiuYeMAzz1AWhM/Zv7oLQ==
+SHA1-Digest: 6j7H4GAGizUCDfHD/bFh36dxCXg=
+
+Name: chrome/locale/en-US/content.properties
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: LhRQyfmwpvDhhlqFvgFQPA==
+SHA1-Digest: yFKzbp7AKN0TRY47emxneOADmSs=
+
+Name: chrome/locale/es-AR/content.dtd
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: XOzj4msE6iWhwpBewNwB6Q==
+SHA1-Digest: h9MBiidtKqGzgJ6kAtj6cTT5zd8=
+
+Name: chrome/locale/es-AR/content.properties
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: +uq1ai8nBWcaqItTqBhOMg==
+SHA1-Digest: XEYZ/LgvQfatXLNR3lA+Z6MppKY=
+
+Name: chrome/locale/es-MX/content.dtd
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 3nUWyURQwB2o/f1KPsPFDw==
+SHA1-Digest: w+SOFw+qP7ZBpwhXHFRRHRsIbwM=
+
+Name: chrome/locale/es-MX/content.properties
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: XEVNGYPLEA66ZfVfb0w24Q==
+SHA1-Digest: 1jcTMJ1gi9MKmM7tP5vxou/Bn/E=
+
+Name: chrome/locale/fr-FR/content.dtd
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: WXL/L/VOcF/XkPfKkxg42w==
+SHA1-Digest: ZuKcBIe/8/Av9xXtcKg7fB3ulsQ=
+
+Name: chrome/locale/fr-FR/content.properties
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: gO2Hy2b9T6z0J5rLNsTdtQ==
+SHA1-Digest: NJ8M/jDt5seubdZrS00V7dEW+mU=
+
+Name: chrome/locale/id-ID/content.dtd
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: DHn+LXIsO/xuOhYe/QKLVA==
+SHA1-Digest: QMPUpvVRnaoL3ZBJ5V76MOXSxjo=
+
+Name: chrome/locale/id-ID/content.properties
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: aEf4AAAAzEx7qlvCSekHzQ==
+SHA1-Digest: yAxXPsWI0/+HLAG6d+HtBLORGh8=
+
+Name: chrome/locale/it-IT/content.dtd
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: klXr8pKXc627iLtJiYGjIA==
+SHA1-Digest: HG899lgbTJ7RN2N16yQO9pU3ByI=
+
+Name: chrome/locale/it-IT/content.properties
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: HHPWK0vDYF31XRWnSvfd4A==
+SHA1-Digest: 1eZK3nnaF0PkQYV+T4RPhWJo8PM=
+
+Name: chrome/locale/pl-PL/content.dtd
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: jHIIRIJtROEarTTrY4FbIw==
+SHA1-Digest: qcB1DdFQevlswFYAOCUozkSocEI=
+
+Name: chrome/locale/pl-PL/content.properties
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: DGnQb/EwaZMLmZbZPwXYIw==
+SHA1-Digest: QXVnidbYRYYota63oRcKjvAZXyg=
+
+Name: chrome/locale/pt-BR/content.dtd
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: YFhOogx4FBDheCPw12SoJA==
+SHA1-Digest: ATeQ5EsTWO4/u1dlALeXDxoOtW4=
+
+Name: chrome/locale/pt-BR/content.properties
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: ZTh5Yv0/RQr6HZkIaGeOBw==
+SHA1-Digest: ONxqRC4SJMqQj58RUJHuNXs17BQ=
+
+Name: chrome/locale/ru/content.dtd
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: zG0h8NcLdMFNeFRxdaFSUg==
+SHA1-Digest: PstwvOr2h7NWynpzmzWnmfeuW/I=
+
+Name: chrome/locale/ru/content.properties
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: SkiBmY71wVq7huNC9H6rrw==
+SHA1-Digest: B6YcMgOC8Hfupq0uWEMSOtKfrRo=
+
+Name: chrome/locale/sv-SE/content.dtd
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: TN0lImp2p6Z8n1fuq6/8Xg==
+SHA1-Digest: QeODILYFahKvX+EEmTl+aVVjWDY=
+
+Name: chrome/locale/sv-SE/content.properties
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: gQkgiwtW0MhLb6O3qCsGmw==
+SHA1-Digest: dgaP2WUXuEY3JNcALwQNHR79Otw=
+
+Name: chrome/locale/zh-CN/content.dtd
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: R0buN5oZXCgZm9kkhVrNEw==
+SHA1-Digest: h2RpoievMZhh4s/xsBl2o2UB9LM=
+
+Name: chrome/locale/zh-CN/content.properties
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: vsCb9kwNhd8dY0BCYkhXzg==
+SHA1-Digest: oi5bwr334+1tIVvvqcq+iD91lC4=
+
+Name: chrome/skin/style.css
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: snUPDj6p+VPO3aTlXiFEzA==
+SHA1-Digest: dvj5T1/2jJmE3e5iMx5MyJCc9CA=
+
+Name: chrome/skin/fonts/OpenSans-Light-webfont.woff
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: lj6zKQd0TZoNa5gScWKAjw==
+SHA1-Digest: x6y84AbgyROWCPB4y+Owh2yazmY=
+
+Name: chrome/skin/fonts/OpenSans-Regular-webfont.woff
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: VbjOH5oyuw+D8UgT6sC3yg==
+SHA1-Digest: wNBHjcFtWKAvFpGY2GLmhKK1kes=
+
+Name: chrome/skin/img/arrow-down.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: FeUqvibZhCgKglOWK4AjNg==
+SHA1-Digest: aRvjcJmfjuDdrCttU9aEnn34T5o=
+
+Name: chrome/skin/img/arrow-in.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 3GGemyATmb9OliRLbQd2Aw==
+SHA1-Digest: G/x1oMRmw8BDxPr+D3B9H51dS3s=
+
+Name: chrome/skin/img/arrow-up.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: uDYTReoWQWRhP8eOHR/lhA==
+SHA1-Digest: 06R+KunYY5tKTfQ3ZhNmx36LC4c=
+
+Name: chrome/skin/img/audio.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: d088Yd5wrGkLkajF9X/wKQ==
+SHA1-Digest: AFRuJcCs6muqsdXrfrvT/2rXwf4=
+
+Name: chrome/skin/img/dailymotion.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 6BCeXKvTflnNA1dy3f0R2w==
+SHA1-Digest: 81RKrbx/Y9Ze8FjU/L7+kxvOijs=
+
+Name: chrome/skin/img/feed-32.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Ytdz9OjtR9dZ9CLH4V6X+Q==
+SHA1-Digest: zH7ilwbdKgRk/cdEzjrbnH+Xvxo=
+
+Name: chrome/skin/img/feed-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: YPHYCH9JV0Org2Ceg3Qw8A==
+SHA1-Digest: YBmvCQ2hFijFt/9bszc3djkDH1w=
+
+Name: chrome/skin/img/feed-new.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: dlBYX7napY6Y2pI0WII1Pw==
+SHA1-Digest: YIar6aB068Q0AkU4WqN7waQZTrI=
+
+Name: chrome/skin/img/feed.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: /5PAGiLmrc9CARFOYOnOjA==
+SHA1-Digest: WMFWvbGFU597q/dsi8wNh7cWaVM=
+
+Name: chrome/skin/img/file.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Di2J2UH44mBIhd0RH3jVhQ==
+SHA1-Digest: 8ixh6a2oAQkiTQIvEFNdvE7/6ng=
+
+Name: chrome/skin/img/google.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: WdTEZd2TvgmYkKq0MqbGGA==
+SHA1-Digest: 65PQo+E147ZRQxq5ocSmHgziYTk=
+
+Name: chrome/skin/img/icon-audio-pause-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: c129HhjAocGZ1FbKfDIP1Q==
+SHA1-Digest: EQC/buBdLi1qh/qoc7fRyB1Nh7s=
+
+Name: chrome/skin/img/icon-audio-pause.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: WAdODXyMl8iwB52EaKlVcQ==
+SHA1-Digest: Myy5UHGGa+xDLWChV9FpMarAmHc=
+
+Name: chrome/skin/img/icon-audio-play-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: eTyCvJIWsI69eu0vmCSuQA==
+SHA1-Digest: gkM8CzDe4tWEUMiCz00Cbv0Sqag=
+
+Name: chrome/skin/img/icon-audio-play.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: dIiLX1dx2z0AJn44vFwPWg==
+SHA1-Digest: vaS1h2Io/JDhPmowbeH1r4F51yE=
+
+Name: chrome/skin/img/icon-audio-visu-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: uoa5D4SkMa/PllyUs8V4lg==
+SHA1-Digest: 6FmyPeu/94DWueHtCJoDC30Z++c=
+
+Name: chrome/skin/img/icon-audio-visu.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: rDKGFkV5chApGIAdpnSEiw==
+SHA1-Digest: i5HrGqUyj1urxWp5EWIUCRJ9elI=
+
+Name: chrome/skin/img/icon-author-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: QuU03DvxPazEvt9hkYsaVQ==
+SHA1-Digest: kO3b21ucF9KAclLOgkJyZh8qQFc=
+
+Name: chrome/skin/img/icon-author.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: sJWZhB1U4asK0MV51VwRWw==
+SHA1-Digest: MlZATsvaWUu+Ug88YOb70YWj31k=
+
+Name: chrome/skin/img/icon-block.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: OLx61Q2jXwHAGvrNQ0RMjw==
+SHA1-Digest: uwhE3CTpHf9OmCzVqShRkhsHHC0=
+
+Name: chrome/skin/img/icon-check-light.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: RLBvRtBEGDkA5AV/sRgGhQ==
+SHA1-Digest: e4E8PFe14h4SPtESh//muuh/Yck=
+
+Name: chrome/skin/img/icon-check.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: zYUqMJrgsw8JITz8FxNHfg==
+SHA1-Digest: jtIwqk5fnGFjwiIUUCBWMEgIWDQ=
+
+Name: chrome/skin/img/icon-close-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 5qpGqpuszWQe4E22aK1lDQ==
+SHA1-Digest: Vlz9c8aX68DNsYmTDKHQLdIiS18=
+
+Name: chrome/skin/img/icon-close-item-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: lq52133T0uC3pbwoiIbwjw==
+SHA1-Digest: fRx7IVAqVLz1a0n+k6Z9QLKUzes=
+
+Name: chrome/skin/img/icon-close-item.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: NfO8XxQRy5nP5CCfu4DMnA==
+SHA1-Digest: kRt09Jz40MD/cgEEiuT4+JaRT9w=
+
+Name: chrome/skin/img/icon-close.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: OXC4dH7VVObD5fhnFHvEtw==
+SHA1-Digest: jCUQnPGDd9F3nw+2OFAwrjfLIW0=
+
+Name: chrome/skin/img/icon-combo-open-light.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: GOpMt+4Fe8bNp4Mh8etASA==
+SHA1-Digest: snV4909bs78RpCAs7xzzdqmC3BE=
+
+Name: chrome/skin/img/icon-combo-open.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: pFV7+LwzEG+d++y3SIE4uA==
+SHA1-Digest: e1vbfmD9zTvvZcTWdwECcTEvmDM=
+
+Name: chrome/skin/img/icon-combo-select-light.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: JkbzzXbAYXjlHhYrNmm7lw==
+SHA1-Digest: Nj0J5xJI0c9Bs+YTfEi3N1FhPIs=
+
+Name: chrome/skin/img/icon-combo-select.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Jo0M0w3qXZw1oFYMKbpTBQ==
+SHA1-Digest: y1gQlMONZd3SdyK6f65XDYua95k=
+
+Name: chrome/skin/img/icon-delete-item.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 6uFRQcpc/Y8bQ0uiOLoGIA==
+SHA1-Digest: kOeUQ8VR3OtFgM/NgEILrOTjNWk=
+
+Name: chrome/skin/img/icon-error.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: ZiycuIdnusYDNGKilinbng==
+SHA1-Digest: NOMnvf8XPDiteyFliCqaFUNtg8Y=
+
+Name: chrome/skin/img/icon-folder.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: zbVgIQRhohZdpI8HEk83Jg==
+SHA1-Digest: OijCv2FoGmYc41EW3zCXvK+kQPQ=
+
+Name: chrome/skin/img/icon-lib.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 5IA3kIJQN4wul25FwuYoQg==
+SHA1-Digest: gZqfjBWnDXcxifHAe21ZMpCouEE=
+
+Name: chrome/skin/img/icon-menu-error-clear-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: l8YKQEFDDXHaTJVKZ1/eNQ==
+SHA1-Digest: LhRngtgc0Xfcjc/HYbOwgBT2vYU=
+
+Name: chrome/skin/img/icon-menu-error-clear.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: jEzdiGZNETBUI7YMZhzV8A==
+SHA1-Digest: rtsw2f37siZKHY+qfuqTzMTBj+w=
+
+Name: chrome/skin/img/icon-menu-export-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: r0uOkjvR0yW+UrJCqvnE8Q==
+SHA1-Digest: dvid0/ymrBez6J5n/jB8NLoTym0=
+
+Name: chrome/skin/img/icon-menu-export.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: hGiaDG/zx/H8WgHKXAAxgw==
+SHA1-Digest: eTUwyrmAVQpZBu8MX2eiqKWlYL8=
+
+Name: chrome/skin/img/icon-menu-help-group-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Vu1k2/5Hx4LwIY7rl/u2Fw==
+SHA1-Digest: vfXx5JmSSYvrxyYRQzPAoSxBts4=
+
+Name: chrome/skin/img/icon-menu-help-group.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: ofPfk8s1l2GJPi1RqVKHOg==
+SHA1-Digest: gkn6Dux/kJ64iEKb8vPnNv6A2UA=
+
+Name: chrome/skin/img/icon-menu-help-mail-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: eFLD8B++LYk9EovEsgNE7g==
+SHA1-Digest: pcXSNaXC8+pLGw+7LG0+vXcaeGU=
+
+Name: chrome/skin/img/icon-menu-help-mail.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: rFmlmJIRIoxeFOca4Vmtow==
+SHA1-Digest: RX3eUxABiQ+IGwj3dF5vYTvbPOs=
+
+Name: chrome/skin/img/icon-menu-help-review-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: wPoT7jLGxJd6iIQVg5jGxQ==
+SHA1-Digest: /ZNbNovWfVVONjFSyUPNHNZ7kVM=
+
+Name: chrome/skin/img/icon-menu-help-review.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: raqRPgTJniR0/cMrod6z8w==
+SHA1-Digest: /C1g3EM36h2tDTPwrAQnVQO1bnM=
+
+Name: chrome/skin/img/icon-menu-help-support-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 47XhqXPSYAWkmnKChHAeuw==
+SHA1-Digest: ObEHpe9U2A67bO3Ozwpr6h1qdIg=
+
+Name: chrome/skin/img/icon-menu-help-support.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Y81sInjgTw7xPLd8zSIL7A==
+SHA1-Digest: gLsHZRFW8QkVMr0NN1122Loa250=
+
+Name: chrome/skin/img/icon-menu-import-file-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 1ktKgMRzfMS5WFY5cYa8mg==
+SHA1-Digest: nulPR0iuW36O8alVGeV1HkHDZDs=
+
+Name: chrome/skin/img/icon-menu-import-file.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: uYG0yaP/7ZCaa3NaclEmKw==
+SHA1-Digest: ieb3ohgDAxqvPEuQkX2A35FJsI8=
+
+Name: chrome/skin/img/icon-menu-import-live-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: O/8F2Vov9ZKPLeEtH7GdFA==
+SHA1-Digest: 6MR0sf26wPtKtWAkvmzKAEUtFfI=
+
+Name: chrome/skin/img/icon-menu-import-live.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: sM07H+ogapotREvvV1DO8Q==
+SHA1-Digest: 3q6j56nksd4YdySQmKKI1mA8F54=
+
+Name: chrome/skin/img/icon-menu-new-group-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: CZjum2pMwAnQbBDtcUpL4Q==
+SHA1-Digest: Opq+9JdcMhR5PTupR/Nfst2nzlA=
+
+Name: chrome/skin/img/icon-menu-new-group.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: E7K0aSAhUV9Xw2Y3GiItlQ==
+SHA1-Digest: xpixacTUjR/3BFF/jJ4mms6s0xI=
+
+Name: chrome/skin/img/icon-menu-subscribe-page-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: ijHFCrY60XSpkGMINuu5tg==
+SHA1-Digest: EAbQ1PQAYSwJaOadBkyMXl+8UPI=
+
+Name: chrome/skin/img/icon-menu-subscribe-page.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Ru0sYv/QJZ8qEBV0qnb6TA==
+SHA1-Digest: KpKBMfs5aPvwgiXoCgDCdRkk/Gs=
+
+Name: chrome/skin/img/icon-menu-subscribe-url-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: N6zBeetYR3sfiZtJruNfOQ==
+SHA1-Digest: CFAJTBrmeLrSMZPh8w7jHpRyoH0=
+
+Name: chrome/skin/img/icon-menu-subscribe-url.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: FopEt7KVwkxG94okiLYhOw==
+SHA1-Digest: VsYothOpXzNQRai/cbYZilj+3DU=
+
+Name: chrome/skin/img/icon-page-mark-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: HsSUciGnvE0J/5G3+SR6jQ==
+SHA1-Digest: Nhz3sKEEUQZY471SbD14JsCC/68=
+
+Name: chrome/skin/img/icon-page-mark-small-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: GMjEJHI0vDXnugI+/EwlSQ==
+SHA1-Digest: MCs6F/UVoArIlWIt2Nkns77/NTE=
+
+Name: chrome/skin/img/icon-page-mark-small.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: BIzFXYiXse3lx7VPRxf9Ng==
+SHA1-Digest: Qto+rqXjX8BKGhlSb5RE9vSr6Wc=
+
+Name: chrome/skin/img/icon-page-mark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: vH6GsRA+EUZiO3fyPJK5qg==
+SHA1-Digest: v6mSvfH7PLj944VnpFid9O9oQ4I=
+
+Name: chrome/skin/img/icon-page-next-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: kwJgUluNYmCFL4gt6ADaOQ==
+SHA1-Digest: 30p24UesgvQhnPB0NCeuhVjgew8=
+
+Name: chrome/skin/img/icon-page-next-small-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: +bqVJJmGQnc4V7Se4PhfRw==
+SHA1-Digest: sh7U7Vd48naiAEBd/n++eTiyKEo=
+
+Name: chrome/skin/img/icon-page-next-small.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: yr955VZeUy9qvYKd+h6Gcw==
+SHA1-Digest: JoPV/jdTbUl+95fqHei3ZvRbw5E=
+
+Name: chrome/skin/img/icon-page-next.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: v5ZR/M0dbOoCzND5Z4dNFA==
+SHA1-Digest: jZT8qIu4GonHQXDxY8Xg4JEU2iM=
+
+Name: chrome/skin/img/icon-page-prev-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: U1xBs2AEEoAormIaIQJruA==
+SHA1-Digest: 9n47ZpT32n+AgDm/XA4zjPmrybw=
+
+Name: chrome/skin/img/icon-page-prev-small-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: NsxOnQZC/He44byHzMn3WQ==
+SHA1-Digest: 0GjZSpZpWSq2HhCDDgu2nC4tPic=
+
+Name: chrome/skin/img/icon-page-prev-small.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 3O3qM8E6HqdwsAm7q2QkOA==
+SHA1-Digest: t/45LqWAlXwzrsroFMpsbpyBb5E=
+
+Name: chrome/skin/img/icon-page-prev.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: RrBG/xa4NrP2b9flZ1FcIQ==
+SHA1-Digest: LWPwVqaw0BvvENS0gFlrv1LBuD0=
+
+Name: chrome/skin/img/icon-play-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: SGhdvx1Oa27WtID8PiIvhw==
+SHA1-Digest: mHr9yewZ5xXDMfcVjLRrOEdHR0U=
+
+Name: chrome/skin/img/icon-play.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: lht7ywu0Gc/TCI2WUuxg9g==
+SHA1-Digest: 7wBfE9rWPjk+C8kVESAJvMJOEws=
+
+Name: chrome/skin/img/icon-root.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: GW4PZLWHmXJUjs7SFU7VMw==
+SHA1-Digest: wQANtsUkMM1v8y9wDnI9kuoY6xI=
+
+Name: chrome/skin/img/icon-share-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: M6QL7dPmvA9ONccwsB+0hw==
+SHA1-Digest: kfQvjS5ucor+/WmxsPQb7Ebkzo8=
+
+Name: chrome/skin/img/icon-share.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: CD7BVV+qOHHg9HDec55iJg==
+SHA1-Digest: lRBpaeh+o/Q3SG1WTUM2GocB2Og=
+
+Name: chrome/skin/img/icon-sharing-delicious.ico
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: vd1Q34Aum0jzbYWcSqnAoQ==
+SHA1-Digest: Ho3+aiTchhDGgZ9jlLLhVxKcqCo=
+
+Name: chrome/skin/img/icon-sharing-facebook.gif
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 7LQ+GDwcae+29YsbKBUl6g==
+SHA1-Digest: ZcduxGYGNN2oiAfghcwuWoaNJmA=
+
+Name: chrome/skin/img/icon-sharing-google.ico
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: qeriLXVtacN+7bJegLoWcA==
+SHA1-Digest: R+DBn0osb/hAkfcWLBHFkRcGZ7w=
+
+Name: chrome/skin/img/icon-sharing-linkedin.ico
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: mtVlbpRayog7TSjE0KxLRQ==
+SHA1-Digest: cPUVeopNxakkq62DMJ0oWc8kHvY=
+
+Name: chrome/skin/img/icon-sharing-mail-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: CPUoZt6lkRqxdDzNRLoQOg==
+SHA1-Digest: OzxcIXfJlM6P+fX8aP4a6GVr8Wg=
+
+Name: chrome/skin/img/icon-sharing-mail.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: tCZXz58rzbtoCuYyOVIOsw==
+SHA1-Digest: Dmi/PbN7hSfNmUINE2i5BhK1Rtc=
+
+Name: chrome/skin/img/icon-sharing-pocket.ico
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: SLhW9EWZxXgsaZnGOyq6jQ==
+SHA1-Digest: bW8od1db3Hlp5fXyKu4CdO7vQJQ=
+
+Name: chrome/skin/img/icon-sharing-readability.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Jmz/j6BQqT6SGUpm2gziWw==
+SHA1-Digest: adPSFzD6n1aWb1lfb/DXbnYjjhY=
+
+Name: chrome/skin/img/icon-sharing-twitter.ico
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Yw0gPN66Bt9MDiicjICU9g==
+SHA1-Digest: 7uFOijawUSwSuibAUWtFU2GN6jY=
+
+Name: chrome/skin/img/icon-sound-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: mhyy29LBx/AEdt0E0gQvYA==
+SHA1-Digest: kht8fE03ihcvailGTygF3fPjfSc=
+
+Name: chrome/skin/img/icon-sound.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: wcOzETCn4ufKpckv/xzEOg==
+SHA1-Digest: SHwCjEbNAvSlGQLwtjFbi2DXzPw=
+
+Name: chrome/skin/img/icon-update-tree-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: nq2I2mMKRuar06FPk4SYoA==
+SHA1-Digest: 3LEIB9dBNl2VmrUPdEUfK9MLjKQ=
+
+Name: chrome/skin/img/icon-update-tree.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: jMDuTgqfdOj7ydhIBr08Mg==
+SHA1-Digest: DDBi2/yRagMYxo/6fZkDPELBBJ8=
+
+Name: chrome/skin/img/icon-warning-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: c5/3GOcqigMG3f1eUsA5AQ==
+SHA1-Digest: Va1yuwz7U9pjFdunhappLPetG2E=
+
+Name: chrome/skin/img/icon-warning.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 506Tt1TmQQV50DPsK1KHNA==
+SHA1-Digest: j+6g7T4eIdSJppjB3SE0skrB5d8=
+
+Name: chrome/skin/img/loading.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: G06hf3PW2/B+TbS/zve87A==
+SHA1-Digest: U+irOK6xYgZ5TEyxVbtwr0lxDQ8=
+
+Name: chrome/skin/img/logo.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: IgOqEfYXCsHxi+3KwI9eXQ==
+SHA1-Digest: rX74ufYyCs+pBI+ZFiOcZcmt9xo=
+
+Name: chrome/skin/img/menu-icon-add-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: YHnsoTqddSeOy8w9LDPWyA==
+SHA1-Digest: 8KxJpDdG/FNz9IAUY+iWNHXTRlg=
+
+Name: chrome/skin/img/menu-icon-add.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 3ptDubUu7hRWoj3C8pqxig==
+SHA1-Digest: j9nuPDsf+Vra6QKr3YkgOiqfuU4=
+
+Name: chrome/skin/img/menu-icon-error.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: QQxDccFfIUlm6fCnyGW+Ow==
+SHA1-Digest: ifaPKhO1+MZqki8L2ONDA3Y5exc=
+
+Name: chrome/skin/img/menu-icon-help-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 3zVMQ7iH72EMhbi/+ZaKGg==
+SHA1-Digest: APtbb49trkvpaX7XA56+NHnz3tk=
+
+Name: chrome/skin/img/menu-icon-help.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: /eCjZnoDNot6UwDTip5Kvg==
+SHA1-Digest: uHy98VwmW16zj/3zqEU8vEsaCUI=
+
+Name: chrome/skin/img/menu-icon-import-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: vgYkMDIvLB/1t4MKC9yrLw==
+SHA1-Digest: JbNEhBPK9z5HqJ3PW7FdNKnjgdY=
+
+Name: chrome/skin/img/menu-icon-import.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 5Ce7sKlW+YU0aG4JoyfdKw==
+SHA1-Digest: p1R/BZ7nT4C6Ag4bVQWwdoajBaA=
+
+Name: chrome/skin/img/menu-icon-options-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 5Zv5PqrdEEsX+xn+Mrx2Tw==
+SHA1-Digest: jEVqgAfHNWPPzABrp26F8QcL+fY=
+
+Name: chrome/skin/img/menu-icon-options.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: olm3U3LVb6umj+5Q4+aYbQ==
+SHA1-Digest: emcpv4TTt2xOCbJLFOg47GrXQ9A=
+
+Name: chrome/skin/img/menu-icon-reader-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: U+PHk2cSkAGfDFIGLeWOtw==
+SHA1-Digest: patcH5TBQ3rHbMIKs92vj4fsZ8M=
+
+Name: chrome/skin/img/menu-icon-reader.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: rnBSVteYcCecggiGnp9C0g==
+SHA1-Digest: dRaAUW5R5SkX8miIgO79G9LBvFY=
+
+Name: chrome/skin/img/menu-icon-search-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 7t5PjDCVz2aQf2GEAiUwHQ==
+SHA1-Digest: aJgejoT2CljwBt3QZvbuDvWObds=
+
+Name: chrome/skin/img/menu-icon-search.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: bAL+eU8y0vDh+Qkxg9R4MA==
+SHA1-Digest: BqXOS0HcEe9lzNOMiyBSUgw8yrg=
+
+Name: chrome/skin/img/menu-reader-icon-clear-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 1dRLwRE+7BZ6SDBHynFJYw==
+SHA1-Digest: ZVcxvBuf7hxHoFDkB1Op7bmiy2A=
+
+Name: chrome/skin/img/menu-reader-icon-clear.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: S6wDcez7uCTNl+PKwOt4Og==
+SHA1-Digest: TxUMRqEURK3TFx4MHwQ0BE/kSgE=
+
+Name: chrome/skin/img/menu-reader-icon-export-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: ZaFkdkiHRAORRflses2mhA==
+SHA1-Digest: Mg64TswWPVCKev34hV3ilXWv1FE=
+
+Name: chrome/skin/img/menu-reader-icon-export.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: csW2fTlj71dVyq4BvKgb4g==
+SHA1-Digest: +g0420yMO/x7u9xzf9poTy9GVN4=
+
+Name: chrome/skin/img/menu-reader-icon-mark-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: FI6zhQLGzv8iuhNhbAae5g==
+SHA1-Digest: cqOl0M3KwYK4nGkXrvAqrCibsTo=
+
+Name: chrome/skin/img/menu-reader-icon-mark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: PFWbpPrHRyelqzRa8CIacw==
+SHA1-Digest: Y7xe7CsjEeX27GfGrElanD1QxY8=
+
+Name: chrome/skin/img/menu-reader-icon-open-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: aBeULLTv8OH2bst19TfLcA==
+SHA1-Digest: MHZ3V6OEH58pVHFwEXzljTZ7M6A=
+
+Name: chrome/skin/img/menu-reader-icon-open.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Fv06gOdp7DoMsnPl36XTLQ==
+SHA1-Digest: 4ElEoZY/xNhDHC7ZdRFUVx6Q+AU=
+
+Name: chrome/skin/img/menu-reader-icon-option-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Y1gjgs2bIq1NFEPY3Io7RQ==
+SHA1-Digest: tXIAFD3vsRepwoSGK880kFS/GzI=
+
+Name: chrome/skin/img/menu-reader-icon-option.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: s+v7gBYHbHVWdEctnV4zBQ==
+SHA1-Digest: zoRZZFzkBFrTWYJZaWd+251DPO8=
+
+Name: chrome/skin/img/menu-reader-icon-search-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: r3LJshs3haslXQE8sqZqEQ==
+SHA1-Digest: 2l/Fw5QFBWmUOijumT8Hx+8et1A=
+
+Name: chrome/skin/img/menu-reader-icon-search-options-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 3u2XJwX+B//MnqM08mkzkQ==
+SHA1-Digest: I4rbAQWUshB+VJEeUPeg4D+DxRE=
+
+Name: chrome/skin/img/menu-reader-icon-search-options.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 43gDpSYwXro1l8TzJaDpsg==
+SHA1-Digest: k7wyIlQZDu5xFXIT5BCVP+D+wY8=
+
+Name: chrome/skin/img/menu-reader-icon-search.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: RYd2np8cr4fA2mTbezZXBg==
+SHA1-Digest: jWjUDGdJWsAPa9C9aaK7wSkHedM=
+
+Name: chrome/skin/img/menu-reader-icon-update-dark.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: j1Nl7T1VzPTZWr1bRCYnLQ==
+SHA1-Digest: hF9oom4dG31zGxrPDGBz3iyGEKo=
+
+Name: chrome/skin/img/menu-reader-icon-update.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 9oE5bTrPgcqwSCCcQTR6xA==
+SHA1-Digest: vMlcqrP8fpUSChBxAnxJfkdNMyA=
+
+Name: chrome/skin/img/video.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: CU0RWTZWB+AknMZGgnEMRA==
+SHA1-Digest: TF3fwGhkC/WVD5IG95oXKcu1zt4=
+
+Name: chrome/skin/img/vimeo.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 5IGWIrhTq61VKm1P1wGb6w==
+SHA1-Digest: IFSYLBo39fHWKVJQce3mIjb8aQk=
+
+Name: chrome/skin/img/youtube.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: dLzJxyyi5Z9Ge0bQ0rn0CQ==
+SHA1-Digest: D5JvklRTCXEk27U0KWwZWJN95FM=
+

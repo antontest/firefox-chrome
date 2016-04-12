@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://bamboo/skin/style.css" type="text/css"?>
+
+<page id="bamboo-page" title="Bamboo" onload="onLoad()" onfocus="display()" role="application" disablefastfind="true" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <box>
+    <xhtml:link rel="shortcut icon" href="chrome://bamboo/skin/img/feed.png"/>
+  </box>
+
+  <script>
+
+    function onLoad()
+    {
+      try
+      {
+        var b = getBamboo();
+        var page = document.getElementById('bamboo-page');
+        b.ui.run('displayInTab', [page]);
+      }
+      catch(ex)
+      {
+        var error = '';
+        if( ex.message != null )
+        {
+          error += ex.message + '\n\n';
+        }
+        alert('Impossible to show view. ' + error);
+      }
+    }
+
+    function getBamboo()
+    {
+      var wm = Components.classes["@mozilla.org/appshell/window-mediator;1"].getService(Components.interfaces.nsIWindowMediator);
+      var target = wm.getEnumerator("navigator:browser").getNext();
+      if(!target)
+      {
+        target = wm.getEnumerator("mail:3pane").getNext();
+      }
+
+      return target.bamboo;
+    }
+
+    function display()
+    {
+      try
+      {
+        var page = document.getElementById('bamboo-page');
+        var b = getBamboo();
+
+        if(!document.getElementById('bamboo-stack'))
+        {
+          b.ui.run('displayInTab', [page]);
+        }
+      }
+      catch(ex)
+      {
+        var error = '';
+        if( ex.message != null )
+        {
+          error += ex.message + '\n\n';
+        }
+        alert('Impossible to show view. ' + error);
+      }
+    }
+  </script>
+
+</page>

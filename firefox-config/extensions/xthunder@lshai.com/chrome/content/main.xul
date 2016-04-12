@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://xthunder/skin/menu.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://xthunder/locale/main.dtd" >
+<overlay id="xThunder-overlay"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  
+    <script type="application/javascript" src="chrome://xthunder/content/xThunder.js" />
+    <script type="application/javascript" src="chrome://xthunder/content/pref.js" />
+    <script type="application/javascript" src="chrome://xthunder/content/decode.js"/>
+    <script type="application/javascript" src="chrome://xthunder/content/main.js"/>
+    
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="xThunderAgentStrings" src="chrome://xthunder/locale/agent.properties"/>
+    </stringbundleset>
+
+    <keyset id="mainKeyset">
+        <key id="xThunderAllKey" keycode="VK_F1" modifiers="alt" oncommand="xThunderMain.OnThunderDownloadAll(event);"/>
+    </keyset>
+
+    <popup id="contentAreaContextMenu">
+        <menuseparator id="xThunderDownloadUp"/>
+        <menu id="xThunderCompact" label="xThunder" onclick="if(event.target == this) xThunderMain.OnThunderDownload(event);">
+            <menupopup id="xThunderCompactPopup"/>
+        </menu>
+        <menu id="xThunderDownload" label="&download;" onclick="if(event.target == this) xThunderMain.OnThunderDownload(event);">
+            <menupopup id="xThunderDownloadPopup" onpopupshowing="xThunderMain.OnThunderDownloadPopup(this);"/>
+        </menu>
+        <menuitem id="xThunderDownloadLink" label="&download;" onclick="xThunderMain.OnThunderDownload(event);"/>
+        <menuitem id="xThunderDownloadOffLine" label="&downloadOffLine;" onclick="xThunderMain.OnThunderDownloadOffLine(event);"/>
+        <menuitem id="xThunderDownloadAll" label="&downloadAll;" onclick="xThunderMain.OnThunderDownloadAll(event);"/>
+    </popup>
+
+    <popupset id="mainPopupSet">
+        <!-- Icon's context menu -->
+        <menupopup id="xThunderOptsPopup" onpopupshowing="xThunderMain.OnThunderOptsPopup();">
+            <menuitem id="xThunderOptsMore" label="&moreOptions;" accesskey="O" oncommand="xThunderMain.OnOpenOptionsDlg();" />
+            <menuitem id="xThunderOptsFilterExt" label="&filterExt;" type="checkbox" oncommand="xThunderMain.OnToogleFilterExt();" />
+            <menuitem id="xThunderOptsIncludeImages" label="&includeImages;" type="checkbox" oncommand="xThunderMain.OnToogleIncludeImages();" />
+            <menu id="xThunderOptsDefAgent" label="&defaultAgent;">
+                <menupopup id="xThunderOptsDefAgentPopup"/>
+            </menu>
+        </menupopup>
+    </popupset>
+
+    <toolbarpalette id="BrowserToolbarPalette">
+        <toolbarbutton id="xThunderToolbarBtn" label="xThunder" class="toolbarbutton-1" context="xThunderOptsPopup"
+            tooltiptext="&optionsPrompt;" oncommand="event.target != this || xThunderMain.OnThunderDownloadAll(event);">
+        </toolbarbutton>
+    </toolbarpalette>
+
+    <statusbar id="status-bar">
+        <statusbarpanel id="xThunderStatusBtn" class="statusbarpanel-iconic" context="xThunderOptsPopup"
+            tooltiptext="&optionsPrompt;" oncommand="event.target != this || xThunderMain.OnThunderDownloadAll(event);"/>
+    </statusbar>
+</overlay>

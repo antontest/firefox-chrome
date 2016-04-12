@@ -1,0 +1,707 @@
+<UserScriptConfig>
+	<Script author="ywzhaiqi" basedir="My_Novel_Reader" checkRemoteUpdates="1" dependhash="5542faea576e18e31efecf829ca8f93d4fdbeceb" description="小说阅读脚本，统一阅读样式，内容去广告、修正拼音字、段落整理，自动下一页" enabled="true" filename="My_Novel_Reader.user.js" installTime="1455445775711" modified="1460470367000" name="My Novel Reader" namespace="https://github.com/ywzhaiqi" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="c951e1e1-03e9-45dd-acac-2a65d55a02e8" version="5.3.1" installurl="https://greasyfork.org/scripts/292-my-novel-reader/code/My%20Novel%20Reader.user.js" homepageurl="https://greasyfork.org/scripts/292/" updateurl="https://greasyfork.org/scripts/292-my-novel-reader/code/My%20Novel%20Reader.user.js">
+		<Exclude>http://read.qidian.com/BookReader/vol,*,*.aspx</Exclude>
+		<Exclude>*/List.htm</Exclude>
+		<Exclude>*/List.html</Exclude>
+		<Exclude>*/List.shtml</Exclude>
+		<Exclude>*/index.htm</Exclude>
+		<Exclude>*/index.html</Exclude>
+		<Exclude>*/index.shtml</Exclude>
+		<Exclude>*/Default.htm</Exclude>
+		<Exclude>*/Default.html</Exclude>
+		<Exclude>*/Default.shtml</Exclude>
+		<Grant>GM_xmlhttpRequest</Grant>
+		<Grant>GM_addStyle</Grant>
+		<Grant>GM_getValue</Grant>
+		<Grant>GM_setValue</Grant>
+		<Grant>GM_getResourceURL</Grant>
+		<Grant>GM_openInTab</Grant>
+		<Grant>GM_setClipboard</Grant>
+		<Grant>GM_registerMenuCommand</Grant>
+		<Grant>GM_info</Grant>
+		<Grant>unsafeWindow</Grant>
+		<Include>http://read.qidian.com/*,*.aspx</Include>
+		<Include>http://readbook.qidian.com/bookreader/*,*.html</Include>
+		<Include>http://read.qidian.com/BookReaderOld/*,*.aspx</Include>
+		<Include>http://read.qidian.com/BookReader/*,*.aspx</Include>
+		<Include>http://wwwploy.qidian.com/BookReader/*,*.aspx</Include>
+		<Include>http://free.qidian.com/Free/ReadChapter.aspx?*</Include>
+		<Include>http://www.qdmm.com/BookReader/*,*.aspx</Include>
+		<Include>http://www.qdwenxue.com/BookReader/*,*.aspx</Include>
+		<Include>http://chuangshi.qq.com/read/bookreader/*.html*</Include>
+		<Include>http://chuangshi.qq.com/*bk/*/*-r-*.html*</Include>
+		<Include>http://yunqi.qq.com/*bk/*/*.html</Include>
+		<Include>http://dushu.qq.com/read.html?bid=*</Include>
+		<Include>http://www.jjwxc.net/onebook.php?novelid=*</Include>
+		<Include>http://book.zongheng.com/chapter/*/*.html</Include>
+		<Include>http://www.xxsy.net/books/*/*.html</Include>
+		<Include>http://book.zhulang.com/*/*.html</Include>
+		<Include>http://www.17k.com/chapter/*/*.html</Include>
+		<Include>http://mm.17k.com/chapter/*/*.html</Include>
+		<Include>http://www.kanxia.net/k/*/*/*.html</Include>
+		<Include>http://www.qingdi.com/files/article/html/*/*/*.html</Include>
+		<Include>http://www.xkzw.org/*/*.html</Include>
+		<Include>http://shouda8.com/*/*.html</Include>
+		<Include>http://novel.hongxiu.com/*/*/*.shtml</Include>
+		<Include>http://www.readnovel.com/novel/*.html</Include>
+		<Include>http://tieba.baidu.com/p/*</Include>
+		<Include>http://booklink.me/*</Include>
+		<Include>https://booklink.me/*</Include>
+		<Include>http://www.shumilou.co/*/*.html</Include>
+		<Include>http://www.shumilou.us/*/*.html</Include>
+		<Include>http://www.shumilou.net/*/*/*.html</Include>
+		<Include>http://www.wcxiaoshuo.com/wcxs-*-*/</Include>
+		<Include>http://www.xiaoshuoz.com/wcxs-*-*/</Include>
+		<Include>http://www.quledu.com/wcxs-*-*/</Include>
+		<Include>http://www.ranwen.cc/*/*/*/*.html</Include>
+		<Include>http://www.ranwen.net/files/article/*/*/*.html</Include>
+		<Include>http://www.64mi.com/*/*/*/*.html</Include>
+		<Include>http://www.bxs.cc/*/*.html*</Include>
+		<Include>http://www.laishuwu.com/html/*/*/*.html</Include>
+		<Include>http://www.binhuo.com/html/*/*/*.html</Include>
+		<Include>http://www.haoqi99.com/haoqi99/*/*/*.shtml</Include>
+		<Include>http://www.shuhe.cc/*/*/</Include>
+		<Include>http://www.dudukan.net/html/*/*/*.html</Include>
+		<Include>http://www.hahawx.com/*/*/*.htm</Include>
+		<Include>http://www.zhuzhudao.com/txt/*/*/</Include>
+		<Include>http://www.zhuzhudao.cc/txt/*/*/</Include>
+		<Include>http://www.dahaomen.net/txt/*/*/</Include>
+		<Include>http://www.tadu.com/book/*/*/</Include>
+		<Include>http://www.aishoucang.com/*/*.html</Include>
+		<Include>http://www.wanshuba.com/Html/*/*/*.html</Include>
+		<Include>http://www.zhuishu.net/files/article/html/*/*/*.html</Include>
+		<Include>http://www.sqsxs.com/*/*/*.html*</Include>
+		<Include>http://www.caiwei.tw/html/*/*.html</Include>
+		<Include>http://www.hotsk.com/Html/Book/*/*/*.shtml</Include>
+		<Include>http://www.92to.com/*/*/*.html</Include>
+		<Include>http://www.qirexs.com/read-*-chapter-*.html</Include>
+		<Include>http://www.du00.com/read/*/*/*.html</Include>
+		<Include>http://www.qishuwu.com/*/*/</Include>
+		<Include>http://www.wandoou.com/book/*/*.html</Include>
+		<Include>http://www.6yzw.org/*/*.html</Include>
+		<Include>http://www.6yzw.com/*/*.html</Include>
+		<Include>http://www.daomengren.com/*/*.html</Include>
+		<Include>http://muyuge.com/*/*.html</Include>
+		<Include>http://www.muyuge.net/*/*.html</Include>
+		<Include>http://bbs.vyming.com/novel-read-*-*.html</Include>
+		<Include>http://www.9imw.com/novel-read-*-*.html</Include>
+		<Include>http://www.23zw.com/olread/*/*/*.html</Include>
+		<Include>http://www.50zw.com/book_*/*.html</Include>
+		<Include>http://www.xiangcunxiaoshuo.com/shu/*/*.html</Include>
+		<Include>http://www.lwxs520.com/books/*/*/*.html</Include>
+		<Include>http://www.zashu.net/books/*/*/*.html</Include>
+		<Include>http://www.piaotian.net/html/*/*/*.html</Include>
+		<Include>http://www.yunlaige.com/html/*/*/*.html</Include>
+		<Include>http://www.cfwx.net/files/article/html/*/*/*.html</Include>
+		<Include>http://www.qiuwu.net/html/*/*/*.html</Include>
+		<Include>http://www.fengwu.org/html/*/*/*.html</Include>
+		<Include>http://www.xs84.com/*_*/*</Include>
+		<Include>http://www.geiliwx.com/GeiLi/*/*/*.shtml*</Include>
+		<Include>http://www.123yq.com/read/*/*/*.shtml</Include>
+		<Include>http://www.123yq.org/read/*/*/*.shtml</Include>
+		<Include>http://www.dhzw.com/book/*/*/*.html</Include>
+		<Include>http://www.du00.cc/read/*/*/*.html</Include>
+		<Include>http://www.aszw.com/book/*/*/*.html</Include>
+		<Include>http://www.xsbashi.com/*_*/</Include>
+		<Include>http://www.vodtw.com/Html/Book/*/*/*.html</Include>
+		<Include>http://www.fhxs.com/read/*/*/*.shtml</Include>
+		<Include>http://www.snwx.com/book/*/*/*.html</Include>
+		<Include>http://www.jiaodu8.com/*/*/*/*.html</Include>
+		<Include>http://www.fktxt.com/book/*/*.html</Include>
+		<Include>http://www.186s.cn/files/article/html/*/*/*.html</Include>
+		<Include>http://www.6xs.cn/xs/*/*/*.html</Include>
+		<Include>http://www.chaojiqiangbing.com/book/*/*/*.html</Include>
+		<Include>http://book.moka123.com/book/*/*/*.html</Include>
+		<Include>http://www.suimeng.com/files/article/html/*/*/*.html</Include>
+		<Include>http://www.hao662.com/haoshu/*/*/*.html</Include>
+		<Include>http://www.tsxs.cc/files/article/html/*/*/*.html</Include>
+		<Include>http://www.ziyuge.com/*/*/*/*/*.html</Include>
+		<Include>http://book.sfacg.com/Novel/*/*/*/</Include>
+		<Include>http://www.7dsw.com/book/*/*/*.html</Include>
+		<Include>http://www.d586.com/*/*/</Include>
+		<Include>http://www.bookgew.com/Html/Book/*/*/*.htm</Include>
+		<Include>http://read.shuhaha.com/Html/Book/*/*/*.html</Include>
+		<Include>http://www.shuhaha.com/Html/Book/*/*/*.html</Include>
+		<Include>http://www.biqi.me/files/article/html/*/*/*.html</Include>
+		<Include>http://www.ttzw.com/book/*/*.html</Include>
+		<Include>http://www.uukanshu.com/*/*/*.html</Include>
+		<Include>http://www.173ed.com/read/*/*.html</Include>
+		<Include>http://www.a240.com/read/*/*.html</Include>
+		<Include>http://www.zhuishu.com/*/*.html</Include>
+		<Include>http://www.shuangde.cc/*/*.html</Include>
+		<Include>http://www.shenmaxiaoshuo.com/ml-*-*/</Include>
+		<Include>http://www.86kankan.com/read/*/*.html</Include>
+		<Include>http://www.fkzww.com/*/*/*.html</Include>
+		<Include>http://www.151kan.com/*/*/*/*.html</Include>
+		<Include>http://www.bookabc.net/*/*/*.html</Include>
+		<Include>http://www.xshuotxt.com/*/*/*/*.html</Include>
+		<Include>http://www.doulaidu.com/*/*/*.html</Include>
+		<Include>http://www.d586.com/*/*/</Include>
+		<Include>http://www.kanshu.la/book/*/*html</Include>
+		<Include>http://www.wtcxs.com/files/article/html/*/*/*.html</Include>
+		<Include>http://www.5du5.com/book/*/*/*.html</Include>
+		<Include>http://book.kanunu.org/*/*/*.html</Include>
+		<Include>http://www.kanunu8.com/book*/*.html</Include>
+		<Include>http://paitxt.com/*/*/*.html</Include>
+		<Include>http://www.shunong.com/yuedu/*/*/*.html</Include>
+		<Include>http://book.yayacms.com/*/book_*_*.html</Include>
+		<Include>http://www.yqhhy.cc/*/*/*.html</Include>
+		<Include>http://www.nuoqiu.com/static/*/*.html</Include>
+		<Include>http://www.17yue.com/*/*/*.html</Include>
+		<Include>http://dukeba.com/book/*/*/*.shtml</Include>
+		<Include>http://www.wenchangshuyuan.com/html/*/*/*.html</Include>
+		<Include>http://www.pofeng.net/xiaoshuo/*/*.html</Include>
+		<Include>http://www.epzww.com/book/*/*</Include>
+		<Include>http://*.xiaoshuokan.com/haokan/*/*.html</Include>
+		<Include>http://www.wobudu.com/*/*.html</Include>
+		<Include>http://www.qb5.com/xiaoshuo/*/*/*.html</Include>
+		<Include>http://www.23us.com/html/*/*/*.html</Include>
+		<Include>http://www.23wx.com/html/*/*/*.html</Include>
+		<Include>http://www.xs222.com/html/*/*/*.html</Include>
+		<Include>http://www.bixiage.com/*/*/*/*.html</Include>
+		<Include>http://www.ranwenxiaoshuo.com/files/article/html/*/*/*.html</Include>
+		<Include>http://www.ranwenxiaoshuo.com/*/*-*-*.html</Include>
+		<Include>http://www.bjxiaoshuo.com/bjxs-*-*/</Include>
+		<Include>http://www.59shuku.com/xiaoshuo/*/*.htm</Include>
+		<Include>http://www.16kbook.org/Html/Book/*/*/*.shtml</Include>
+		<Include>http://www.dixiaoshuo.com/Html/*/*.html</Include>
+		<Include>http://www.nieshu.com/Book/*/*/*.shtml</Include>
+		<Include>http://www.tlxsw.com/files/article/html/*/*/*.html</Include>
+		<Include>http://www.1kanshu.com/files/article/html/*/*/*.html</Include>
+		<Include>http://www.uutxt.org/book/*/*/*.html</Include>
+		<Include>http://www.5800.cc/*/*/*/*.html</Include>
+		<Include>http://www.biquge.com/*/*.html</Include>
+		<Include>http://www.biquge.la/book/*/*.html</Include>
+		<Include>http://www.qududu.com/book/*/*/*.html</Include>
+		<Include>http://www.free97.cn/book/*/*/*.html</Include>
+		<Include>http://www.122s.com/book/*/*.html</Include>
+		<Include>http://www.123du.net/dudu-*/*/*.html</Include>
+		<Include>http://www.123du.cc/dudu-*/*/*.html</Include>
+		<Include>http://www.123du.net/book/*/*.html</Include>
+		<Include>http://www.hwafa.com/*/*.html</Include>
+		<Include>http://www.qmshu.com/html/*/*/*.html</Include>
+		<Include>http://dlzw.cc/article-*-*.html</Include>
+		<Include>http://www.shushu5.com/read/*/*.html</Include>
+		<Include>http://www.xiaoyanwenxue.com/files/article/html/*/*/*.html</Include>
+		<Include>http://www.3gsc.com.cn/bookcon/*_*_*</Include>
+		<Include>http://www.bj-ibook.cn/book/*/*/*.htm</Include>
+		<Include>http://www.baoliny.com/*/*.html</Include>
+		<Include>http://www.dajiadu.net/files/article/html/*/*/*.html</Include>
+		<Include>http://www.yankuai.com/files/article/html/*/*/*.html</Include>
+		<Include>http://www.docin.net/*/*.html</Include>
+		<Include>http://www.dushuge.net/html/*/*/*.html</Include>
+		<Include>http://www.xunshu.org/xunshu/*/*/*.html</Include>
+		<Include>http://www.moneyren.com/book/*/*/*.shtml</Include>
+		<Include>http://wemaxfilipino.com/*/*/*.html</Include>
+		<Include>http://www.85618892.cn/xiaoshuo/*/*/*.shtml</Include>
+		<Include>http://www.bookba.net/Html/Book/*/*/*.html</Include>
+		<Include>http://www.moksos.com/*/*/*.html</Include>
+		<Include>http://dudu8.net/novel/*/*/*.html</Include>
+		<Include>http://www.dawenxue.net/html/*/*/*.html</Include>
+		<Include>http://www.yanmoxuan.org/book/*/*/*.html</Include>
+		<Include>http://www.duyidu.com/xiaoshuo/*/*/*.html</Include>
+		<Include>http://www.69zw.com/xiaoshuo/*/*/*.html</Include>
+		<Include>http://www.kan7.com/xiaoshuo/*/*/*.html</Include>
+		<Include>http://www.laishu.com/book/*/*/*.shtml</Include>
+		<Include>http://www.bxwx.org/b/*/*/*.html</Include>
+		<Include>http://www.bxzw.org/*/*/*/*.shtml</Include>
+		<Include>http://www.360118.com/html/*/*/*.html</Include>
+		<Include>http://www.59to.com/files/article/xiaoshuo/*/*/*.html</Include>
+		<Include>http://www.dyzww.com/cn/*/*/*.html</Include>
+		<Include>http://www.9wh.net/*/*/*.html</Include>
+		<Include>http://www.luoqiu.net/html/*/*/*.html</Include>
+		<Include>http://www.luoqiu.com/html/*/*/*.html</Include>
+		<Include>http://www.epzw.com/files/article/html/*/*/*.html</Include>
+		<Include>http://www.dashubao.co/book/*/*/*.html</Include>
+		<Include>http://b.faloo.com/p/*/*.html</Include>
+		<Include>http://www.baikv.com/*/*.html</Include>
+		<Include>http://www.66721.com/*/*/*.html</Include>
+		<Include>http://www.3dllc.com/html/*/*/*.html</Include>
+		<Include>http://www.xstxt.com/*/*/</Include>
+		<Include>http://www.zzzcn.com/3z*/*/</Include>
+		<Include>http://www.zzzcn.com/modules/article/App.php*</Include>
+		<Include>http://www.nilongdao.com/book/*/*/*.html</Include>
+		<Include>http://xs321.net/*/*/</Include>
+		<Include>http://read.guanhuaju.com/files/article/html/*/*/*.html</Include>
+		<Include>http://www.book108.com/*/*/*.html</Include>
+		<Include>http://5ycn.com/*/*/*.html</Include>
+		<Include>http://www.zhaoxiaoshuo.com/chapter-*-*-*/</Include>
+		<Include>http://*zbzw.com/*/*.html</Include>
+		<Include>http://manghuangji.cc/*/*.html</Include>
+		<Include>http://www.aiqis.com/*/*.html</Include>
+		<Include>http://www.fftxt.net/book/*/*.html</Include>
+		<Include>http://www.5kwx.com/book/*/*/*.html</Include>
+		<Include>http://www.uuxiaoshuo.net/html/*/*/*.html</Include>
+		<Include>http://www.sanyyo.org/*.html</Include>
+		<Include>http://www.chinaisbn.com/*/*/*.html</Include>
+		<Include>http://www.caihongwenxue.com/Html/Book/*/*/*.html</Include>
+		<Include>http://www.shushuw.cn/shu/*/*.html</Include>
+		<Include>http://www.78xs.com/article/*/*/*.shtml</Include>
+		<Include>http://www.miaobige.com/*/*/*.html</Include>
+		<Include>http://www.woaixiaoshuo.com/xiaoshuo/*/*/*.html</Include>
+		<Include>http://www.ty2016.com/book/*/*.html</Include>
+		<Include>http://wx.ty2016.com/*/*/*.html</Include>
+		<Include>http://www.my285.com/*/*/*/*.htm</Include>
+		<Include>http://www.5858xs.com/html/*/*/*.html</Include>
+		<Include>http://book.58xs.com/html/*/*/*.html</Include>
+		<Include>http://book.mihua.net/*/*/*/*.html</Include>
+		<Include>http://www.hjwzw.com/Book/Read/*,*</Include>
+		<Include>http://www.hjwzw.com/Book/Read/*_*</Include>
+		<Include>http://www.365essay.com/*/*.htm</Include>
+		<Include>http://www.gengxin8.com/read/*/*.html</Include>
+		<Include>http://www.365xs.org/books/*/*/*.html</Include>
+		<Include>http://www.wuruo.com/files/article/html/*/*/*.html</Include>
+		<Include>http://www.remenxs.com/du_*/*/</Include>
+		<Include>http://*.8shuw.net/book/*/*.html</Include>
+		<Include>http://www.pashuw.com/BookReader/*/*.html</Include>
+		<Include>http://read.shanwen.com/html/*/*/*.html</Include>
+		<Include>http://www.qqxs.cc/xs/*/*/*.html</Include>
+		<Include>http://www.69shu.com/txt/*/*</Include>
+		<Include>http://www.e8zw.com/book/*/*/*.html</Include>
+		<Include>http://www.biquge.tw/*_*/*.html</Include>
+		<Include>http://www.8535.org/*/*/*.html*</Include>
+		<Include>http://www.yfzww.com/books/*/*/*.htm</Include>
+		<Include>http://www.lewen8.com/lw*/*.html</Include>
+		<Include>http://www.pinwenba.com/read/*/*.html</Include>
+		<Include>http://down1.qidian.com/bookall/*.htm*</Include>
+		<Include>http://www.77nt.com/*/*.html</Include>
+		<Include>http://www.quanbenba.com/yuedu/*/*/*.html</Include>
+		<Include>http://*.sto.cc/*-*/</Include>
+		<Include>http://www.151xs.com/wuxiazuoxiong/*/chapter/*/</Include>
+		<Include>http://www.qududu.net/book/*/*/*.html</Include>
+		<Require filename="jquery.min.js"/>
+		<Require filename="underscore-min.js"/>
+		<Require filename="keymaster.min.js"/>
+		<Require filename="Meihua_cn2tw.js"/>
+		<Resource name="fontawesomeWoff" filename="fontawesome-webfont.woff" mimetype="application/octet-stream"/>
+		<Name lang="zh-CN">小说阅读脚本</Name>
+		<Description lang="zh-CN">小说阅读脚本，统一阅读样式，内容去广告、修正拼音字、段落整理，自动下一页</Description>
+		<Name lang="zh-TW">小說閱讀腳本</Name>
+		<Description lang="zh-TW">小說閱讀腳本，統一閱讀樣式，內容去廣告、修正拼音字、段落整理，自動下一頁</Description>
+	</Script>
+	<Script author="ywzhaiqi@gmail.com" basedir="userscripts_只显示中文" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="在 userscripts、greasyfork 脚本页面只显示中文脚本，支持 AutoPager 和其它翻页脚本。" enabled="true" filename="userscripts_%E5%8F%AA%E6%98%BE%E7%A4%BA%E4%B8%AD%E6%96%87.user.js" installTime="1439467257575" modified="1460470367000" name="userscripts 只显示中文" namespace="https://github.com/ywzhaiqi" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="51f4fece-31b0-48e8-aed9-3121e30879c5" version="1.7.3" installurl="https://greasyfork.org/scripts/305-userscripts-%E5%8F%AA%E6%98%BE%E7%A4%BA%E4%B8%AD%E6%96%87/code/userscripts%20%E5%8F%AA%E6%98%BE%E7%A4%BA%E4%B8%AD%E6%96%87.user.js" homepageurl="https://greasyfork.org/scripts/305" updateurl="https://greasyfork.org/scripts/305-userscripts-%E5%8F%AA%E6%98%BE%E7%A4%BA%E4%B8%AD%E6%96%87/code/userscripts%20%E5%8F%AA%E6%98%BE%E7%A4%BA%E4%B8%AD%E6%96%87.user.js">
+		<Grant>GM_getValue</Grant>
+		<Grant>GM_setValue</Grant>
+		<Include>http*://greasyfork.org/scripts*</Include>
+		<Include>http*://greasyfork.org/*/scripts*</Include>
+		<Include>http*://userscripts.org*/scripts*</Include>
+		<Include>http*://userscripts-mirror.org*/scripts*</Include>
+		<Include>http*://www.webextender.net*/scripts*</Include>
+	</Script>
+	<Script author="网络中二行客" basedir="Automatically_Pause_Video" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="" enabled="false" filename="Automatically_Pause_Video.user.js" installTime="1439618547979" modified="1460470367000" name="Automatically Pause Video" namespace="http://tieba.baidu.com/f?kw=firefox" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="fe5dea6c-09e1-465c-ba3e-eda12f05f836" version="0.1" installurl="https://github.com/FirefoxBar/userscript/raw/master/Automatically_Pause_Video/Automatically_Pause_Video.user.js" updateurl="https://github.com/FirefoxBar/userscript/raw/master/Automatically_Pause_Video/Automatically_Pause_Video.meta.js">
+		<Grant>none</Grant>
+		<Include>http://www.tudou.com/*</Include>
+		<Include>http://www.iqiyi.com/*</Include>
+		<Include>http://v.qq.com/*</Include>
+		<Include>http://www.letv.com/*</Include>
+		<Include>http://v.youku.com/*</Include>
+		<Include>http://tv.sohu.com/*</Include>
+		<Include>http://vod.xunlei.com/*</Include>
+		<Include>http://vod.kankan.com/*</Include>
+		<Include>http://pan.baidu.com/play/*</Include>
+		<Include>http://www.56.com/*</Include>
+	</Script>
+	<Script author="ywzhaiqi" basedir="Douban_Download_Search" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="增加豆瓣电影、图书的下载搜索链接" enabled="false" filename="Douban_Download_Search.user.js" installTime="1451283892643" modified="1460470367000" name="Douban Download Search" namespace="https://github.com/ywzhaiqi" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="9eddcf59-704e-4ed1-b51c-92f56c28a4a0" version="1.3" installurl="https://greasyfork.org/scripts/14029-douban-download-search/code/Douban%20Download%20Search.user.js" updateurl="https://greasyfork.org/scripts/14029-douban-download-search/code/Douban%20Download%20Search.user.js">
+		<Grant>none</Grant>
+		<Include>http://movie.douban.com/subject/*</Include>
+		<Include>http://book.douban.com/subject/*</Include>
+	</Script>
+	<Script author="NLF" basedir="flashViewer" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="围观Flash（support firefox，chrome)" enabled="false" filename="flashViewer.user.js" installTime="1451285584500" modified="1460470367000" name="flashViewer" namespace="http://userscripts.org/users/NLF" noframes="false" runAt="document-start" updateMetaStatus="ok" uuid="4cc25231-bc62-48ea-9055-f4d371eb48d1" version="1.2.1.3" installurl="https://greasyfork.org/scripts/4285-flashviewer/code/flashViewer.user.js" updateurl="https://greasyfork.org/scripts/4285-flashviewer/code/flashViewer.user.js">
+		<Grant>none</Grant>
+		<Include>*</Include>
+		<Match>*://*/*</Match>
+	</Script>
+	<Script author="JayXon" basedir="MoreMovieRatings" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="Show IMDb ratings on Douban, and vice versa" enabled="true" filename="MoreMovieRatings.user.js" installTime="1455532161726" modified="1460470367000" name="MoreMovieRatings" namespace="http://www.jayxon.com/" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="03945fdd-6deb-4c6f-9fbb-bbdd99877d4d" version="0.2.6" installurl="https://greasyfork.org/scripts/7687-moremovieratings/code/MoreMovieRatings.user.js" updateurl="https://greasyfork.org/scripts/7687-moremovieratings/code/MoreMovieRatings.user.js">
+		<Grant>GM_xmlhttpRequest</Grant>
+		<Match>*://movie.douban.com/subject/*</Match>
+		<Match>http://www.imdb.com/title/tt*</Match>
+		<Description lang="zh-CN">豆瓣和IMDb互相显示评分</Description>
+	</Script>
+	<Script basedir="YouTube_+" checkRemoteUpdates="1" dependhash="f9b70de836d91e6bfc7ea113c76ff06613b48cbf" description="YouTube with more freedom" enabled="false" filename="YouTube_+.user.js" installTime="1459068944766" modified="1460470367000" name="YouTube +" namespace="https://github.com/ParticleCore" noframes="true" runAt="document-start" updateMetaStatus="ok" uuid="d76fac59-a74a-48b4-bae4-8ee161ab6c7a" version="1.2.0" installurl="https://greasyfork.org/scripts/9932-youtube/code/YouTube%20+.user.js" homepageurl="https://github.com/ParticleCore/Particle" updateurl="https://greasyfork.org/scripts/9932-youtube/code/YouTube%20+.user.js" icon="YT%2Bicon.png">
+		<Exclude>*://www.youtube.com/embed/*</Exclude>
+		<Grant>GM_getValue</Grant>
+		<Grant>GM_setValue</Grant>
+		<Match>*://www.youtube.com/*</Match>
+	</Script>
+	<Script author="cts" basedir="斗鱼TV开启CDN加速" checkRemoteUpdates="1" dependhash="d7ac4e23cc84f814bd1e934690db8517a5d80018" description="斗鱼TV开启CDN加速，提升画质，减少卡顿" enabled="true" filename="%E6%96%97%E9%B1%BCTV%E5%BC%80%E5%90%AFCDN%E5%8A%A0%E9%80%9F.user.js" installTime="1451283646510" modified="1460470367000" name="斗鱼TV开启CDN加速" namespace="http://www.cdn.dou.yu.tv.com/" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="0bf5fdfd-bc4f-405b-b793-4d5dbeecf6d4" version="0.2.0" installurl="https://greasyfork.org/scripts/4952-%E6%96%97%E9%B1%BCtv%E5%BC%80%E5%90%AFcdn%E5%8A%A0%E9%80%9F/code/%E6%96%97%E9%B1%BCTV%E5%BC%80%E5%90%AFCDN%E5%8A%A0%E9%80%9F.user.js" updateurl="https://greasyfork.org/scripts/4952-%E6%96%97%E9%B1%BCtv%E5%BC%80%E5%90%AFcdn%E5%8A%A0%E9%80%9F/code/%E6%96%97%E9%B1%BCTV%E5%BC%80%E5%90%AFCDN%E5%8A%A0%E9%80%9F.user.js" icon="favicon.ico">
+		<Grant>unsafeWindow</Grant>
+		<Match>http://www.douyutv.com/*</Match>
+	</Script>
+	<Script author="Keijack" basedir="亮度调节修改版的修改版_by_xplsy" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="减低页面的亮度，在黑暗中查看页面有助于保护眼睛，快捷键：Alt+上/下调节亮度，Alt+F5开关遮罩" enabled="false" filename="byxplsy@commozestkeijack.user.js" installTime="1439618789090" modified="1460470367000" name="亮度调节修改版的修改版 by xplsy" namespace="com.mozest.keijack" noframes="false" runAt="document-end" updateMetaStatus="fail" uuid="1a04f78e-7b7f-4541-8988-abb5a5c6e5d9" version="1.0.0" installurl="https://userscripts.org/scripts/source/154910.user.js" updateurl="https://userscripts.org/scripts/source/154910.meta.js">
+		<Grant>none</Grant>
+		<Include>*</Include>
+	</Script>
+	<Script basedir="去除CL1024需要插件提醒" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="去除1024论坛 播放在线视频需要安装插件的提示" enabled="false" filename="%E5%8E%BB%E9%99%A4CL1024%E9%9C%80%E8%A6%81%E6%8F%92%E4%BB%B6%E6%8F%90%E9%86%92.user.js" installTime="1452450231866" modified="1460470367000" name="去除CL1024需要插件提醒" namespace="times.eu.org" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="606a0109-3643-4dcb-92a0-2ab31064cdd1" version="2.0" installurl="https://greasyfork.org/scripts/12480-%E5%8E%BB%E9%99%A4cl1024%E9%9C%80%E8%A6%81%E6%8F%92%E4%BB%B6%E6%8F%90%E9%86%92/code/%E5%8E%BB%E9%99%A4CL1024%E9%9C%80%E8%A6%81%E6%8F%92%E4%BB%B6%E6%8F%90%E9%86%92.user.js" homepageurl="https://greasyfork.org/zh-CN/scripts/5998" updateurl="https://greasyfork.org/scripts/12480-%E5%8E%BB%E9%99%A4cl1024%E9%9C%80%E8%A6%81%E6%8F%92%E4%BB%B6%E6%8F%90%E9%86%92/code/%E5%8E%BB%E9%99%A4CL1024%E9%9C%80%E8%A6%81%E6%8F%92%E4%BB%B6%E6%8F%90%E9%86%92.user.js">
+		<Exclude>http://*baidu*</Exclude>
+		<Grant>none</Grant>
+		<Include>http://*cl*</Include>
+		<Include>http://*184*</Include>
+		<Include>http://*t66y*</Include>
+		<Include>http://*1024*</Include>
+		<Include>http://*caoliu*</Include>
+		<Include>http://wo.yao.cl</Include>
+		<Include>http://*shenyingwang*</Include>
+	</Script>
+	<Script author="Jixun.Moe&lt;Yellow Yoshi&gt;" basedir="跳过网站等待、验证码及登录" checkRemoteUpdates="1" dependhash="7af96902572e159ccfc4d5e42af3dc8646f8e2c1" description="移除各类网站验证码、登录、倒计时及更多!" enabled="true" filename="%E8%B7%B3%E8%BF%87%E7%BD%91%E7%AB%99%E7%AD%89%E5%BE%85%E3%80%81%E9%AA%8C%E8%AF%81%E7%A0%81.user.js" installTime="1458723265362" modified="1460470367000" name="跳过网站等待、验证码及登录" namespace="http://jixun.org/" noframes="false" runAt="document-start" updateMetaStatus="ok" uuid="2714e7cb-fa0a-4bfb-a986-b9573f8e7f2c" version="3.0.547" installurl="https://greasyfork.org/scripts/2600-%E8%B7%B3%E8%BF%87%E7%BD%91%E7%AB%99%E7%AD%89%E5%BE%85-%E9%AA%8C%E8%AF%81%E7%A0%81%E5%8F%8A%E7%99%BB%E5%BD%95/code/%E8%B7%B3%E8%BF%87%E7%BD%91%E7%AB%99%E7%AD%89%E5%BE%85%E3%80%81%E9%AA%8C%E8%AF%81%E7%A0%81%E5%8F%8A%E7%99%BB%E5%BD%95.user.js" updateurl="https://greasyfork.org/scripts/2600-%E8%B7%B3%E8%BF%87%E7%BD%91%E7%AB%99%E7%AD%89%E5%BE%85-%E9%AA%8C%E8%AF%81%E7%A0%81%E5%8F%8A%E7%99%BB%E5%BD%95/code/%E8%B7%B3%E8%BF%87%E7%BD%91%E7%AB%99%E7%AD%89%E5%BE%85%E3%80%81%E9%AA%8C%E8%AF%81%E7%A0%81%E5%8F%8A%E7%99%BB%E5%BD%95.user.js">
+		<Grant>unsafeWindow</Grant>
+		<Grant>GM_xmlhttpRequest</Grant>
+		<Grant>GM_openInTab</Grant>
+		<Grant>GM_registerMenuCommand</Grant>
+		<Grant>GM_getValue</Grant>
+		<Grant>GM_setValue</Grant>
+		<Grant>GM_info</Grant>
+		<Include>http://d.119g.com/*</Include>
+		<Include>http://123564.com/*</Include>
+		<Include>http://m.123564.com/*</Include>
+		<Include>http://7958.com/*</Include>
+		<Include>http://*.7958.com/*</Include>
+		<Include>http://qjwm.com/*</Include>
+		<Include>http://*.qjwm.com/*</Include>
+		<Include>http://www.9pan.net/*</Include>
+		<Include>http://*.www.9pan.net/*</Include>
+		<Include>http://yun.baidu.com/*</Include>
+		<Include>http://*.yun.baidu.com/*</Include>
+		<Include>http://pan.baidu.com/*</Include>
+		<Include>http://*.pan.baidu.com/*</Include>
+		<Include>http://bx0635.com/*</Include>
+		<Include>http://*.bx0635.com/*</Include>
+		<Include>http://colayun.com/*</Include>
+		<Include>http://*.colayun.com/*</Include>
+		<Include>http://colafile.com/*</Include>
+		<Include>http://*.colafile.com/*</Include>
+		<Include>http://coladrive.com/*</Include>
+		<Include>http://*.coladrive.com/*</Include>
+		<Include>http://400gb.com/*</Include>
+		<Include>http://*.400gb.com/*</Include>
+		<Include>http://ctdisk.com/*</Include>
+		<Include>http://*.ctdisk.com/*</Include>
+		<Include>http://pipipan.com/*</Include>
+		<Include>http://*.pipipan.com/*</Include>
+		<Include>http://bego.cc/*</Include>
+		<Include>http://*.bego.cc/*</Include>
+		<Include>http://ctfile.com/*</Include>
+		<Include>http://*.ctfile.com/*</Include>
+		<Include>http://t00y.com/*</Include>
+		<Include>http://*.t00y.com/*</Include>
+		<Include>http://dlkoo.com/*</Include>
+		<Include>http://*.dlkoo.com/*</Include>
+		<Include>http://howfile.com/*</Include>
+		<Include>http://*.howfile.com/*</Include>
+		<Include>http://www.lepan.cc/*</Include>
+		<Include>http://www.sx566.com/*</Include>
+		<Include>http://rayfile.com/*</Include>
+		<Include>http://*.rayfile.com/*</Include>
+		<Include>http://sudupan.com/*</Include>
+		<Include>http://*.sudupan.com/*</Include>
+		<Include>http://vdisk.cn/*</Include>
+		<Include>http://*.vdisk.cn/*</Include>
+		<Include>http://yimuhe.com/*</Include>
+		<Include>http://*.yimuhe.com/*</Include>
+		<Include>http://douban.fm/*</Include>
+		<Include>http://jing.fm/*</Include>
+		<Include>http://moe.fm/*</Include>
+		<Include>http://fm.qq.com/*</Include>
+		<Include>http://music.163.com/*</Include>
+		<Include>http://www.1ting.com/*</Include>
+		<Include>http://www.565656.com/*</Include>
+		<Include>http://5sing.com/*</Include>
+		<Include>http://*.5sing.com/*</Include>
+		<Include>http://5sing.kugou.com/*</Include>
+		<Include>http://*.5sing.kugou.com/*</Include>
+		<Include>http://www.9ku.com/*</Include>
+		<Include>http://music.baidu.com/*</Include>
+		<Include>http://play.baidu.com/*</Include>
+		<Include>http://*.play.baidu.com/*</Include>
+		<Include>http://yinyueyun.baidu.com/*</Include>
+		<Include>http://www.djcc.com/*</Include>
+		<Include>http://www.djkk.com/*</Include>
+		<Include>http://www.djye.com/*</Include>
+		<Include>http://music.douban.com/*</Include>
+		<Include>http://www.duole.com/*</Include>
+		<Include>http://ear.duomi.com/*</Include>
+		<Include>http://web.kugou.com/*</Include>
+		<Include>http://kugou.com/*</Include>
+		<Include>http://www.kugou.com/*</Include>
+		<Include>http://oyinyue.com/*</Include>
+		<Include>http://*.oyinyue.com/*</Include>
+		<Include>http://y.qq.com/*</Include>
+		<Include>http://*.y.qq.com/*</Include>
+		<Include>http://i.y.qq.com/*</Include>
+		<Include>http://*.i.y.qq.com/*</Include>
+		<Include>http://fm.qq.com/*</Include>
+		<Include>http://*.fm.qq.com/*</Include>
+		<Include>http://y.qq.com/*</Include>
+		<Include>http://soso.music.qq.com/*</Include>
+		<Include>http://songtaste.com/*</Include>
+		<Include>http://*.songtaste.com/*</Include>
+		<Include>http://www.xiami.com/*</Include>
+		<Include>http://yinyuetai.com/*</Include>
+		<Include>http://*.yinyuetai.com/*</Include>
+		<Include>http://79pan.com/*</Include>
+		<Include>http://*.79pan.com/*</Include>
+		<Include>http://03xg.com/*</Include>
+		<Include>http://*.03xg.com/*</Include>
+		<Include>http://7mv.cc/*</Include>
+		<Include>http://*.7mv.cc/*</Include>
+		<Include>http://pan.52zz.org/*</Include>
+		<Include>http://*.pan.52zz.org/*</Include>
+		<Include>http://258pan.com/*</Include>
+		<Include>http://*.258pan.com/*</Include>
+		<Include>http://huimeiku.com/*</Include>
+		<Include>http://*.huimeiku.com/*</Include>
+		<Include>http://wpan.cc/*</Include>
+		<Include>http://*.wpan.cc/*</Include>
+		<Include>http://ypan.cc/*</Include>
+		<Include>http://*.ypan.cc/*</Include>
+		<Include>http://azpan.com/*</Include>
+		<Include>http://*.azpan.com/*</Include>
+		<Include>http://gxdisk.com/*</Include>
+		<Include>http://*.gxdisk.com/*</Include>
+		<Include>http://2kuai.com/*</Include>
+		<Include>http://*.2kuai.com/*</Include>
+		<Include>http://1wp.me/*</Include>
+		<Include>http://*.1wp.me/*</Include>
+		<Include>http://77pan.cc/*</Include>
+		<Include>http://*.77pan.cc/*</Include>
+		<Include>http://vvpan.com/*</Include>
+		<Include>http://*.vvpan.com/*</Include>
+		<Include>http://fmdisk.com/*</Include>
+		<Include>http://*.fmdisk.com/*</Include>
+		<Include>http://bx0635.com/*</Include>
+		<Include>http://*.bx0635.com/*</Include>
+		<Include>http://10pan.cc/*</Include>
+		<Include>http://*.10pan.cc/*</Include>
+		<Include>https://jixunmoe.github.io/cuwcl4c/config/</Include>
+		<Require filename="jquery.js"/>
+		<Require filename="underscore.js"/>
+		<Require filename="core-min.js"/>
+		<Require filename="enc-base64-min.js"/>
+		<Require filename="md5-min.js"/>
+		<Require filename="CryptoJS-ByteArray.js"/>
+		<Require filename="Interval-Looper.js"/>
+		<Require filename="gm2-port-v104.js"/>
+		<Require filename="Aria2-RPC-build-9.js"/>
+		<Name lang="en">Bypass Wait, Code &amp; Login on Websites</Name>
+		<Description lang="en">Remove verify code, login requirement, counting down... and more!</Description>
+		<Name lang="zh-CN">跳过网站等待、验证码及登录</Name>
+		<Description lang="zh-CN">移除各类网站验证码、登录、倒计时及更多!</Description>
+		<Name lang="zh-TW">繞過站點等待、識別碼及登錄</Name>
+		<Description lang="zh-TW">移除各類站點識別碼、登錄、倒計時及更多!</Description>
+	</Script>
+	<Script author="864907600cc" basedir="网易云音乐高音质支持" checkRemoteUpdates="1" dependhash="e4fc94afdb464ed4ef018f025c38351f354b274c" description="去除网页版网易云音乐仅可播放低音质（96Kbps）的限制，强制播放高音质版本" enabled="true" filename="%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E9%AB%98%E9%9F%B3%E8%B4%A8%E6%94%AF%E6%8C%81.user.js" installTime="1458215220099" modified="1460470367000" name="网易云音乐高音质支持" namespace="http://ext.ccloli.com" noframes="false" runAt="document-start" updateMetaStatus="ok" uuid="db8767d3-2669-49e3-a9ed-0005909df42e" version="2.4" installurl="https://greasyfork.org/scripts/10582-%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E9%AB%98%E9%9F%B3%E8%B4%A8%E6%94%AF%E6%8C%81/code/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E9%AB%98%E9%9F%B3%E8%B4%A8%E6%94%AF%E6%8C%81.user.js" updateurl="https://greasyfork.org/scripts/10582-%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E9%AB%98%E9%9F%B3%E8%B4%A8%E6%94%AF%E6%8C%81/code/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E9%AB%98%E9%9F%B3%E8%B4%A8%E6%94%AF%E6%8C%81.user.js" icon="147834caf9ccb0a66b2505c753747867">
+		<Grant>none</Grant>
+		<Include>*://music.163.com/*</Include>
+		<Match>*://music.163.com/*</Match>
+	</Script>
+	<Script author="有一份田" basedir="虾米音乐助手" checkRemoteUpdates="1" dependhash="6d67dcf433c05133119bb33da0578ec63c66d19b" description="虾米音乐助手带您下载虾米音乐" enabled="true" filename="%E8%99%BE%E7%B1%B3%E9%9F%B3%E4%B9%90%E5%8A%A9%E6%89%8B.user.js" installTime="1443363896164" modified="1460470367000" name="虾米音乐助手" namespace="http://userscripts.org/scripts/show/175716" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="df702741-bb26-4ff8-a9b7-66a3a59700e7" version="1.1.0" installurl="https://greasyfork.org/scripts/987-%E8%99%BE%E7%B1%B3%E9%9F%B3%E4%B9%90%E5%8A%A9%E6%89%8B/code/%E8%99%BE%E7%B1%B3%E9%9F%B3%E4%B9%90%E5%8A%A9%E6%89%8B.user.js" updateurl="https://greasyfork.org/scripts/987-%E8%99%BE%E7%B1%B3%E9%9F%B3%E4%B9%90%E5%8A%A9%E6%89%8B/code/%E8%99%BE%E7%B1%B3%E9%9F%B3%E4%B9%90%E5%8A%A9%E6%89%8B.user.js" icon="script_xiamimusicscript_icon_48.png">
+		<Grant>GM_setClipboard</Grant>
+		<Grant>GM_xmlhttpRequest</Grant>
+		<Include>http://www.xiami.com/download/*</Include>
+	</Script>
+	<Script author="NLF" basedir="search_engineJump" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="方便的在各个搜索引擎之间跳转" enabled="true" filename="%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E8%B7%B3%E8%BD%AC-%E6%96%87%E7%A7%91%E7%89%88.user.js" installTime="1459328206606" modified="1460470367000" name="search_engineJump" namespace="https://greasyfork.org/zh-CN/users/54-%E6%96%87%E7%A7%91" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="3288da04-b9d7-48d8-84fc-6d01623657da" version="3.0.6.5" installurl="https://greasyfork.org/scripts/2739-%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E8%B7%B3%E8%BD%AC-%E6%96%87%E7%A7%91%E7%89%88/code/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E8%B7%B3%E8%BD%AC-%E6%96%87%E7%A7%91%E7%89%88.user.js" updateurl="https://greasyfork.org/scripts/2739-%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E8%B7%B3%E8%BD%AC-%E6%96%87%E7%A7%91%E7%89%88/code/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E8%B7%B3%E8%BD%AC-%E6%96%87%E7%A7%91%E7%89%88.user.js">
+		<Grant>none</Grant>
+		<Include>http://*</Include>
+		<Include>https://*</Include>
+		<Match>*://*/*</Match>
+		<Name lang="zh-CN">搜索引擎跳转-文科版</Name>
+		<Description lang="zh-CN">方便的在各个搜索引擎之间跳转</Description>
+		<Name lang="zh-TW">搜索引擎跳轉-文科版</Name>
+		<Description lang="zh-TW">方便的在各個搜索引擎之間跳轉</Description>
+		<Name lang="vi">搜索引擎跳轉-文科版</Name>
+		<Description lang="vi">https://greasyfork.org/vi/scripts/2739</Description>
+	</Script>
+	<Script author="NLF &amp;&amp; ywzhaiqi" basedir="picviewer_CE" checkRemoteUpdates="1" dependhash="8afde16be00ddda872f5db5a714c9e5c1615e427" description="NLF 的围观图修改版" enabled="true" filename="picviewer_CE.user.js" installTime="1442555851711" modified="1460470367000" name="picviewer CE" namespace="http://userscripts.org/users/NLF" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="15838ce4-d5e5-481b-ac37-6a598db2bfca" version="2015.7.10.0" installurl="https://greasyfork.org/scripts/5199-picviewer-ce/code/picviewer%20CE.user.js" updateurl="https://greasyfork.org/scripts/5199-picviewer-ce/code/picviewer%20CE.user.js">
+		<Exclude>http://www.toodledo.com/tasks/*</Exclude>
+		<Exclude>http*://maps.google.com*/*</Exclude>
+		<Exclude>*://www.google.*/_/chrome/newtab*</Exclude>
+		<Grant>GM_getValue</Grant>
+		<Grant>GM_setValue</Grant>
+		<Grant>GM_addStyle</Grant>
+		<Grant>GM_openInTab</Grant>
+		<Grant>GM_setClipboard</Grant>
+		<Grant>GM_xmlhttpRequest</Grant>
+		<Grant>GM_registerMenuCommand</Grant>
+		<Include>http://*</Include>
+		<Include>https://*</Include>
+		<Require filename="GM_config_CN.js"/>
+	</Script>
+	<Script basedir="网易云音乐下载" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="网易云音乐下载地址。在歌曲页面上所属专辑下面会出现歌词和歌曲的下载链接。 该脚本 fork 自 https://greasyfork.org/scripts/1099-netease-music-download/code/Netease%20Music%20Download.user.js 。该脚本受 GPL V2.0 许可证保护。" enabled="true" filename="%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E4%B8%8B%E8%BD%BD.user.js" installTime="1443364096444" modified="1460470367000" name="网易云音乐下载" namespace="http://suselinks.us" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="a7683dd5-1625-4d0b-9e5c-eefe59232543" version="20150621181000" installurl="https://greasyfork.org/scripts/10548-%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E4%B8%8B%E8%BD%BD/code/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E4%B8%8B%E8%BD%BD.user.js" updateurl="https://greasyfork.org/scripts/10548-%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E4%B8%8B%E8%BD%BD/code/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E4%B8%8B%E8%BD%BD.user.js">
+		<Grant>none</Grant>
+		<Include>http://music.163.com/*</Include>
+	</Script>
+	<Script author="Weiran Shen" basedir="DownloadBaiduMusic" checkRemoteUpdates="1" dependhash="2c2b4cf73ecbb5f2b8cfbc847f9ec082a5159a2f" description="解析百度音乐下载地址" enabled="true" filename="DownloadBaiduMusic.user.js" installTime="1443846783497" modified="1460470367000" name="DownloadBaiduMusic" namespace="DownloadBaiduMusic" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="9c806fba-5286-4e61-ac0a-e2aa551790b5" version="1.0" installurl="https://greasyfork.org/scripts/12206-downloadbaidumusic/code/DownloadBaiduMusic.user.js" updateurl="https://greasyfork.org/scripts/12206-downloadbaidumusic/code/DownloadBaiduMusic.user.js" icon="2013-08-07013655-_1375853815850_0843.png">
+		<Grant>GM_xmlhttpRequest</Grant>
+		<Include>http://music.baidu.com/song/*</Include>
+		<Require filename="jquery-2.1.1.min.js"/>
+	</Script>
+	<Script author="CoolCmd" basedir="Fix_Firefox_smooth_scrolling" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="Attempt to fix Firefox bug 995728 (https://bugzilla.mozilla.org/show_bug.cgi?id=995728)" enabled="false" filename="Fix_Firefox_smooth_scrolling.user.js" installTime="1444708049456" modified="1460470367000" name="Fix Firefox smooth scrolling" namespace="CoolCmd" noframes="false" runAt="document-start" updateMetaStatus="ok" uuid="3eef2364-a151-42fc-b735-9028c9643cb3" version="2014.7.22" installurl="https://greasyfork.org/scripts/3508-fix-firefox-smooth-scrolling/code/Fix%20Firefox%20smooth%20scrolling.user.js" updateurl="https://greasyfork.org/scripts/3508-fix-firefox-smooth-scrolling/code/Fix%20Firefox%20smooth%20scrolling.user.js">
+		<Grant>none</Grant>
+		<Include>http://*</Include>
+		<Include>https://*</Include>
+	</Script>
+	<Script author="AC" basedir="AC-从Google_Baidu_Bing等搜索引擎结果中屏蔽自定义网站" checkRemoteUpdates="1" dependhash="68d7fc41c4a475d08ba3b902be022c5967e8c17a" description="从Google Baidu Bing等搜索引擎结果中屏蔽自定义的网站" enabled="true" filename="%E4%BB%8EGoogle_Baidu_Bing%E7%AD%89%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%BB%93%E6%9E%9C%.user.js" installTime="1454839096776" modified="1460470367000" name="AC-从Google Baidu Bing等搜索引擎结果中屏蔽自定义网站" namespace="BlockKafanTopicinGoogle" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="f0bdfd1d-ce9d-4e55-ac81-25c973da2da5" version="0.6.0" installurl="https://greasyfork.org/scripts/13408-%E4%BB%8Egoogle-baidu-bing%E7%AD%89%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%BB%93%E6%9E%9C%E4%B8%AD%E5%B1%8F%E8%94%BD%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BD%91%E7%AB%99/code/%E4%BB%8EGoogle%20Baidu%20Bing%E7%AD%89%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%BB%93%E6%9E%9C%E4%B8%AD%E5%B1%8F%E8%94%BD%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BD%91%E7%AB%99.user.js" updateurl="https://greasyfork.org/scripts/13408-%E4%BB%8Egoogle-baidu-bing%E7%AD%89%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%BB%93%E6%9E%9C%E4%B8%AD%E5%B1%8F%E8%94%BD%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BD%91%E7%AB%99/code/%E4%BB%8EGoogle%20Baidu%20Bing%E7%AD%89%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%BB%93%E6%9E%9C%E4%B8%AD%E5%B1%8F%E8%94%BD%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BD%91%E7%AB%99.user.js" icon="icon.jpg">
+		<Grant>note 2016.2.6 更新了：根据反馈，增加了新的搜索点：Disconnect.ME搜索点，建立了一个简单的搜索结果</Grant>
+		<Grant>note 2015.11.22 更新了：采用了新的事件触发MutationObserver，替代之前经常被出触发的DOMinsert事件，大大减少了触发的情况，减轻了浏览器负担</Grant>
+		<Grant>note 2015.11.21 更新了：之前由于偷懒，所以简单的写了些大部分功能，这次基本上是完善了总的功能，应该不会有漏网之鱼了，如果出现问题请及时反馈邮箱1353464539@qq.com，如果没有问题的话应该来说这是最后一版了，除非以后代码失效了我会进行修改的</Grant>
+		<Grant>note 2015.11.4 更新了：谷歌干掉搜索结果留下的空白--注意先备份以前的修改</Grant>
+		<Grant>note 2015.10.31-4 一定程度上再次调整了卡顿的几率，同时加入函数tryto_del_specificEle(url_d, spec_d, spec_f_d, index_d)，还有删除了百度的软件推广</Grant>
+		<Grant>note 2015.10.31-3 看来都不喜欢卡饭，我就直接写好了不要www.kafan.cn好了，之前只是针对www.kafan.cn/topic</Grant>
+		<Grant>note 2015.10.31-2 修正了(因修改谷歌页面卡顿)导致的百度卡死情况,蛋疼的百度在某个f13标签卡死了</Grant>
+		<Grant>note 2015.10.31 更新处理谷歌页面卡顿的情况-求测试和反馈</Grant>
+		<Include>/^https?\:\/\/encrypted.google.[^\/]+/</Include>
+		<Include>/^https?\:\/\/www.google.[^\/]+/</Include>
+		<Include>/^https?\:\/\/www.baidu.[^\/]+/</Include>
+		<Include>/^https?\:\/\/[\w]+.bing.[^\/]+/</Include>
+		<Include>/^https?\:\/\/www.haosou.com+/</Include>
+		<Include>/^https?\:\/\/www.youdao.com/</Include>
+		<Include>/^https?:\/\/www.sogou.com/</Include>
+		<Include>/^https?:\/\/search.disconnect.me/</Include>
+	</Script>
+	<Script author="xinggsf~gmail。com" basedir="vipVideos_skipAd" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="油库、土逗 VIP免费看；配合ABP去视频广告；开启GPU加速" enabled="false" filename="vipVideos_skipAd.user.js" installTime="1458874775115" modified="1460470367000" name="vipVideos_skipAd" namespace="vipVideos_skipAd-xinggsf" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="e126dbc8-3a08-49c5-a7f1-bf85532b721b" version="2016.3.20" installurl="https://greasyfork.org/scripts/8561-vipvideos-skipad/code/vipVideos_skipAd.user.js" homepageurl="https://greasyfork.org/scripts/8561" updateurl="https://greasyfork.org/scripts/8561-vipvideos-skipad/code/vipVideos_skipAd.user.js">
+		<Exclude>http://www.dj92cc.com/*</Exclude>
+		<Exclude>http://www.hunantv.com/*</Exclude>
+		<Exclude>http://*.yinyuetai.com/*</Exclude>
+		<Grant>unsafeWindow</Grant>
+		<Include>http://*</Include>
+	</Script>
+	<Script author="QIQI" basedir="绕过百度网盘大文件下载限制" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="绕过百度网盘大文件下载限制，不用装云管家，直接下载" enabled="true" filename="%E7%BB%95%E8%BF%87%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%A4%A7%E6%96%87%E4%BB%B6%E4%B8%8B.user.js" installTime="1451282406653" modified="1460470367000" name="绕过百度网盘大文件下载限制" namespace="https://greasyfork.org/users/16216" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="8bf16d05-2aa3-45b7-8f5c-612dfca8c483" version="1.0" installurl="https://greasyfork.org/scripts/13736-%E7%BB%95%E8%BF%87%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%A4%A7%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E9%99%90%E5%88%B6/code/%E7%BB%95%E8%BF%87%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%A4%A7%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E9%99%90%E5%88%B6.user.js" updateurl="https://greasyfork.org/scripts/13736-%E7%BB%95%E8%BF%87%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%A4%A7%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E9%99%90%E5%88%B6/code/%E7%BB%95%E8%BF%87%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%A4%A7%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E9%99%90%E5%88%B6.user.js">
+		<Grant>none</Grant>
+		<Match>*://pan.baidu.com/*</Match>
+		<Match>*://yun.baidu.com/*</Match>
+	</Script>
+	<Script basedir="Baidu_Tieba_No_Login" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="View Baidu Tieba without login." enabled="true" filename="Baidu_Tieba_No_Login.user.js" installTime="1452077888244" modified="1460470367000" name="Baidu Tieba: No Login" namespace="VA_i" noframes="false" runAt="document-start" updateMetaStatus="ok" uuid="9f71585f-a571-417d-bc85-f6cec16a7420" version="1.0.1.20160106" installurl="https://greasyfork.org/scripts/14151-baidu-tieba-no-login/code/Baidu%20Tieba:%20No%20Login.user.js" updateurl="https://greasyfork.org/scripts/14151-baidu-tieba-no-login/code/Baidu%20Tieba:%20No%20Login.user.js">
+		<Grant>unsafeWindow</Grant>
+		<Include>http://tieba.baidu.com/*</Include>
+		<Name lang="zh-CN">百度贴吧：不登录即可看贴</Name>
+		<Description lang="zh-CN">百度贴吧看贴（包括楼中楼）无须登录。</Description>
+		<Name lang="zh-TW">百度贴吧：不登入即可看貼</Name>
+		<Description lang="zh-TW">百度贴吧看貼（包括樓中樓）无須登入。</Description>
+	</Script>
+	<Script author="xinggsf~gmail。com" basedir="delBDMusic_Ad-JS" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="删除百度音乐盒广告脚本,禁止插播音频广告" enabled="true" filename="delBDMusic_Ad-JS.user.js" installTime="1451284537126" modified="1460470367000" name="delBDMusic_Ad-JS" namespace="delBDMusic_Ad-JS" noframes="false" runAt="document-start" updateMetaStatus="ok" uuid="f5c7b0df-2eb2-4b79-ac4a-07ed63d89aeb" version="2015.9.23" installurl="https://greasyfork.org/scripts/14101-delbdmusic-ad-js/code/delBDMusic_Ad-JS.user.js" updateurl="https://greasyfork.org/scripts/14101-delbdmusic-ad-js/code/delBDMusic_Ad-JS.user.js">
+		<Grant>unsafeWindow</Grant>
+		<Include>http://play.baidu.com/*</Include>
+	</Script>
+	<Script author="极品小猫" basedir="网盘自动填写密码【增强版】" checkRemoteUpdates="1" dependhash="d45fa799231a685a10294f9237038c385d179ea4" description="网盘自动填写提取密码【增强版】+网盘超链接与提取码融合。" enabled="true" filename="%E7%BD%91%E7%9B%98%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%86%99%E5%AF%86%E7%A0%81%E3%80%90%E5%A2%9E.user.js" installTime="1458361524889" modified="1460470367000" name="网盘自动填写密码【增强版】" namespace="http://www.cnblogs.com/hkmhd/" noframes="false" runAt="document-idle" updateMetaStatus="ok" uuid="0b423394-045a-4c9b-a3d1-98fc7980d948" version="2.2.0" installurl="https://greasyfork.org/scripts/13463-%E7%BD%91%E7%9B%98%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%86%99%E5%AF%86%E7%A0%81-%E5%A2%9E%E5%BC%BA%E7%89%88/code/%E7%BD%91%E7%9B%98%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%86%99%E5%AF%86%E7%A0%81%E3%80%90%E5%A2%9E%E5%BC%BA%E7%89%88%E3%80%91.user.js" updateurl="https://greasyfork.org/scripts/13463-%E7%BD%91%E7%9B%98%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%86%99%E5%AF%86%E7%A0%81-%E5%A2%9E%E5%BC%BA%E7%89%88/code/%E7%BD%91%E7%9B%98%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%86%99%E5%AF%86%E7%A0%81%E3%80%90%E5%A2%9E%E5%BC%BA%E7%89%88%E3%80%91.user.js">
+		<Exclude>/https?://www.baidu.com/(?:s|baidu)\?/</Exclude>
+		<Exclude>https://*.evernote.com/*</Exclude>
+		<Exclude>https://*.yinxiang.com/*</Exclude>
+		<Grant>unsafeWindow</Grant>
+		<Include>http://pan.baidu.com/share/init?*</Include>
+		<Include>http://yun.baidu.com/share/init?*</Include>
+		<Include>http://www.kuaipan.cn/file/id_*</Include>
+		<Include>/^https?://.+\.yunpan.cn/lk//</Include>
+		<Include>http://vdisk.weibo.com/lc/*</Include>
+		<Include>http://*</Include>
+		<Include>https://*</Include>
+		<Require filename="jquery-2.1.4.js"/>
+	</Script>
+	<Script author="AC" basedir="AC-Baidu：绕过百度重定向直接访问网页" checkRemoteUpdates="1" dependhash="f43b0371f91d95c9e2b53e0a7583a4b24c0e3ecf" description="繞過百度搜索結果中的自己的跳轉鏈接，直接訪問原始網頁-反正都能看懂" enabled="true" filename="AC-Baidu%EF%BC%9A%E7%BB%95%E8%BF%87%E7%99%BE%E5%BA%A6%E9%87%8D%E5%AE%9A%E5%90%91%E7%9B%B4%.user.js" installTime="1451582463297" modified="1460470367000" name="AC-Baidu：绕过百度重定向直接访问网页" namespace="1353464539@qq.com" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="3a28c163-5e3a-4ace-9cdd-792633ee4f36" version="6.2" installurl="https://greasyfork.org/scripts/14178-ac-baidu-%E7%BB%95%E8%BF%87%E7%99%BE%E5%BA%A6%E9%87%8D%E5%AE%9A%E5%90%91%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AE%E7%BD%91%E9%A1%B5/code/AC-Baidu%EF%BC%9A%E7%BB%95%E8%BF%87%E7%99%BE%E5%BA%A6%E9%87%8D%E5%AE%9A%E5%90%91%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AE%E7%BD%91%E9%A1%B5.user.js" updateurl="https://greasyfork.org/scripts/14178-ac-baidu-%E7%BB%95%E8%BF%87%E7%99%BE%E5%BA%A6%E9%87%8D%E5%AE%9A%E5%90%91%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AE%E7%BD%91%E9%A1%B5/code/AC-Baidu%EF%BC%9A%E7%BB%95%E8%BF%87%E7%99%BE%E5%BA%A6%E9%87%8D%E5%AE%9A%E5%90%91%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AE%E7%BD%91%E9%A1%B5.user.js" icon="icon.jpg">
+		<Grant>GM_xmlhttpRequest</Grant>
+		<Include>http://www.baidu.com/*</Include>
+		<Include>https://www.baidu.com/*</Include>
+		<Include>http://www.sogou.com/*</Include>
+		<Include>https://www.sogou.com/*</Include>
+	</Script>
+	<Script basedir="挊" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="自动获取磁链接并自动离线下载" enabled="true" filename="%E6%8C%8A.user.js" installTime="1458106044493" modified="1460470367000" name="挊" namespace="撸" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="ee031fa4-9804-4cb0-80f5-858125985731" version="1.32" installurl="https://greasyfork.org/scripts/8392-%E6%8C%8A/code/%E6%8C%8A.user.js" updateurl="https://greasyfork.org/scripts/8392-%E6%8C%8A/code/%E6%8C%8A.user.js">
+		<Grant>GM_xmlhttpRequest</Grant>
+		<Grant>GM_setClipboard</Grant>
+		<Grant>GM_setValue</Grant>
+		<Grant>GM_getValue</Grant>
+		<Grant>GM_addStyle</Grant>
+		<Include>http*://www.avmoo.com/*</Include>
+		<Include>http*://www.avsox.com/*</Include>
+		<Include>http*://www.avmemo.com/*</Include>
+		<Include>http*://*5avlib.com/*</Include>
+		<Include>http*://*look4lib.com/*</Include>
+		<Include>http*://javlib3.com/*</Include>
+		<Include>http*://www.javlibrary.com/*</Include>
+		<Include>http*://www.libredmm.com/products/*</Include>
+		<Include>http*://www.javbus.in/*</Include>
+		<Include>http*://www.javbus.me/*</Include>
+		<Include>http*://avdb.la/movie/*</Include>
+		<Include>http*://www.141jav.com/view/*</Include>
+		<Include>http*://www.av4you.net/work/*.htm</Include>
+		<Include>http*://www.dmmy18.com/*</Include>
+		<Include>http*://pan.baidu.com/disk/home*</Include>
+		<Include>http*://115.com/?tab=offline&amp;mode=wangpan</Include>
+		<Include>http*://cloud.letv.com/webdisk/home/index</Include>
+		<Include>http*://disk.yun.uc.cn/</Include>
+		<Include>http*://www.furk.net/users/files/add</Include>
+		<Include>*.yunpan.360.cn/my/</Include>
+		<Include>http://www.dmm.co.jp/digital/videoa/*</Include>
+		<Include>http://www.btcherry.org/*</Include>
+		<Include>https://btdigg.org/search*</Include>
+	</Script>
+	<Script author="Gantt" basedir="Download_YouTube_Videos_as_MP4" checkRemoteUpdates="1" dependhash="734b32e3bd42b025e72b9ea26f02171c23893210" description="Adds a button that lets you download YouTube videos." enabled="false" filename="Download_YouTube_Videos_as_MP4.user.js" installTime="1458388016241" modified="1460470367000" name="Download YouTube Videos as MP4" namespace="http://googlesystem.blogspot.com" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="9d3058b3-0aba-4abf-a7e7-1e4d87569522" version="1.8.7" installurl="https://greasyfork.org/scripts/1317-download-youtube-videos-as-mp4/code/Download%20YouTube%20Videos%20as%20MP4.user.js" homepageurl="https://github.com/gantt/downloadyoutube" updateurl="https://greasyfork.org/scripts/1317-download-youtube-videos-as-mp4/code/Download%20YouTube%20Videos%20as%20MP4.user.js" icon="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAB3RJTUUH2wMOCgIoGUYEAQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAARnQU1BAACxjwv8YQUAAAGSUExURfi/JO/v797e3sbGxq2traWlpZSUlJycnNbW1oyEhIRaWow5OZQhIZwYGKUQEKUICK0ICJQxMYxKSoxzc4x7e4RCQpQYGKUAAK0AALUAAL0AAK0QEIxra5QpKa0YGIxSUsYAAKUhIZR7e87Ozr0ICJRSUr29vYxjY6U5OaUpKa0hIb21tZwAALUICO/Ozu/GxqUxMZSEhLUYGO/W1r0YGKVCQpQQEL0pKffe3vfW1pxra5Q5OcZCQvfn585CQr2trZx7e8ZSUs5SUq05Oc5jY9ZjY84AAKWMjM5zc957e60pKdaMjOelpbWcnLWUlLVCQsYYGMYICNbOzpQICMYhIbV7e5xaWt6cnPfv79bGxt6lpe+9vc5KSs6lpb0xMc6EhM69vbUxMbUhIb1aWs61tcZaWuecnMYxMb1KSsZjY96UlNa1td7W1r17e9a9vZwQEN6trb1jY8YQENZra+fOzr1zc85aWufe3t6MjMY5OdZaWt61tdZ7e+/n5+e9vc6MjMZra+/e3ue1tdalpd7GxrUpKalL4aAAAAABdFJOUwBA5thmAAACxklEQVR42uXX/1/SQBgH8NuAoEQ2ijgbBivJLznBAiUUKiyJSgOVAk0tKZKw75mRRt/7v4MBY8ezjW39Vs8v8rqHz/u1jbvbidC/XL8KmcpOqVT6nSjXjooGw8WfFd+QWGfE4oLbtbr++PdMOy0BDYLjEj/0xevfWIyVAI7b/aIj/9WHsRrA8Yf9bqSexVgD4Lic9kWE/LgPwPGfNfJHDO4P8Iuq+S2M9QD8oUp+nxEAcFCtfgIA/14x/9ElAKDQbNQAwN9VAiYEABy0OgsAWAnB/AcBAtVWawkAfJ4CD0BQADZavYcQgI9h3CCQjpD5PcEgwG+SwLRhIL0vz78SjAPEU3hrHODfyX4I6rUJIP0G3oExoNwFXpoB+HwXmDEFpF9IwKA5YK+Tp9fMAdUOsC6YA553gKcmgdTfAhV1oMQqADndQDmJ0AZLAsFnCIV3VYDHJLAjDkZKciAaFz/lCeBJB1glgXBrNLndBWLJ9uZGAI+keTBLANL8SnWAzWRniAC2pG+6lQF0hfjTqCIBrEvjDwiggFSLuIUoLY0vEwAbUcsnc/LlnO02HGvEz+hXEeJ5Yj+4L2vNkxOJDSnlQzliIq2synr3embiUBjmw0FyU83KX04Ob+9aAK/Ppd5deZloz4HFlCHzt3sX0x2a6LcvQb4ab8r7i+DVdqvnCq/D5ZzqdhfAcr5B9wD0PNwPEu0ZnLwK9oPgNfCQJ2fhhhITJ3E8BjeUOXA+QNQlBh5xLjemVCgKjzgzNIJFjWF4yJoKhafgIWt6VHGmjgR0HvMuTipPdWQJ6AImbBRSE8aY/sC4er5xFx5vHyB4YRRpFWUf0AL4c+dHkHZRFo9TDeB9Aa3Llwjr8FlFwB+wO/rHm0VbPae9mPini/O5h/XGxatw2I6fGHAOuhiGZVxO98lTdgutP94yaIvVdqxZdpvFYTT9X9UfqQQlTXlm8wkAAAAASUVORK5CYII=">
+		<Exclude>http://www.youtube.com/embed/*</Exclude>
+		<Exclude>https://www.youtube.com/embed/*</Exclude>
+		<Grant>GM_xmlhttpRequest</Grant>
+		<Grant>GM_getValue</Grant>
+		<Grant>GM_setValue</Grant>
+		<Include>http://www.youtube.com/*</Include>
+		<Include>https://www.youtube.com/*</Include>
+		<Match>http://www.youtube.com/*</Match>
+		<Match>https://www.youtube.com/*</Match>
+		<Match>http://s.ytimg.com/yts/jsbin/html5player*</Match>
+		<Match>https://s.ytimg.com/yts/jsbin/html5player*</Match>
+		<Match>http://manifest.googlevideo.com/*</Match>
+		<Match>https://manifest.googlevideo.com/*</Match>
+		<Match>http://*.googlevideo.com/videoplayback*</Match>
+		<Match>https://*.googlevideo.com/videoplayback*</Match>
+		<Match>http://*.youtube.com/videoplayback*</Match>
+		<Match>https://*.youtube.com/videoplayback*</Match>
+	</Script>
+	<Script basedir="Google_Images_direct_link" checkRemoteUpdates="1" dependhash="a7d21f3c0b80c80384e142bd15d7f3227680b9c5" description="Adds direct link to images and pages in google image search" enabled="true" filename="Google_Images_direct_link.user.js" installTime="1458802962762" modified="1460470367000" name="Google Images direct link" namespace="https://github.com/Lorentz83" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="c77610e5-a98c-4487-9a58-e46dbae596fa" version="6.1" installurl="https://greasyfork.org/scripts/3187-google-images-direct-link/code/Google%20Images%20direct%20link.user.js" updateurl="https://greasyfork.org/scripts/3187-google-images-direct-link/code/Google%20Images%20direct%20link.user.js" icon="icon.png">
+		<Grant>none</Grant>
+		<Include>http*://images.google.*/images*</Include>
+		<Include>http*://www.google.*/images*</Include>
+		<Include>http*://www.google.*/webhp*</Include>
+		<Include>http*://www.google.*/search?*</Include>
+		<Include>http*://www.google.*/imgres*</Include>
+		<Include>http*://images.google.*/search?*</Include>
+		<Include>https://encrypted.google.com/search?*</Include>
+	</Script>
+	<Script author="zanetu" basedir="Direct_Baidu" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="不用点击继续访问您选择的百度结果，去除百度搜索跳转，兼容AutoPager等自动翻页扩展和脚本" enabled="false" filename="Direct_Baidu.user.js" installTime="1452450496776" modified="1460470367000" name="Direct Baidu" namespace="http://userscripts.org/users/92143" noframes="false" runAt="document-start" updateMetaStatus="ok" uuid="a4936717-28c2-4cb5-82d8-3be159d21452" version="1.3" installurl="https://greasyfork.org/scripts/558-direct-baidu/code/Direct%20Baidu.user.js" updateurl="https://greasyfork.org/scripts/558-direct-baidu/code/Direct%20Baidu.user.js">
+		<Grant>GM_xmlhttpRequest</Grant>
+		<Include>/^https?\:\/\/www\.baidu\.com\/search\/ressafe\.html\?.*\&amp;url\=/</Include>
+		<Include>/^https?\:\/\/www\.baidu\.com\/(?=(s|baidu)\?|$)/</Include>
+	</Script>
+	<Script basedir="Zhihu_Visitor" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="知乎免登录查看回答全文" enabled="true" filename="Zhihu_Visitor.user.js" installTime="1458875048095" modified="1460470367000" name="Zhihu Visitor" namespace="https://github.com/tiansh" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="62bb4247-40cc-42f0-b306-c0aa99000973" version="3.3" installurl="https://greasyfork.org/scripts/6489-zhihu-visitor/code/Zhihu%20Visitor.user.js" homepageurl="https://tiansh.github.io/us-else/zhihu_visitor/" updateurl="https://greasyfork.org/scripts/6489-zhihu-visitor/code/Zhihu%20Visitor.user.js">
+		<Grant>GM_addStyle</Grant>
+		<Grant>GM_xmlhttpRequest</Grant>
+		<Include>*://www.zhihu.com/*</Include>
+		<Name lang="en">Zhihu Visitor</Name>
+		<Description lang="en">View zhihu.com answers without sign in</Description>
+		<Name lang="zh">知乎免登录</Name>
+		<Description lang="zh">知乎免登录查看回答全文并显示更多回答</Description>
+		<Name lang="zh-CN">知乎免登录</Name>
+		<Description lang="zh-CN">知乎免登录查看回答全文并显示更多回答</Description>
+	</Script>
+	<Script author="congxz6688" basedir="tiebaAllsign" checkRemoteUpdates="1" dependhash="ac9a5808e6774d58bb100a4376423fc405cf7d2f" description="贴吧集中签到" enabled="true" filename="tiebaAllsign.user.js" installTime="1458875182511" modified="1460470367000" name="tiebaAllsign" namespace="https://greasyfork.org/scripts/152" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="78904bc0-4352-43e5-90b2-bba11195c083" version="2016.3.21.1" installurl="https://greasyfork.org/scripts/152-tiebaallsign/code/tiebaAllsign.user.js" updateurl="https://greasyfork.org/scripts/152-tiebaallsign/code/tiebaAllsign.user.js" icon="4e2ed7f8bbb3d4f2c2d2bb21">
+		<Grant>GM_getValue</Grant>
+		<Grant>GM_setValue</Grant>
+		<Grant>GM_deleteValue</Grant>
+		<Grant>GM_xmlhttpRequest</Grant>
+		<Include>http://www.baidu.com/</Include>
+		<Include>https://www.baidu.com/</Include>
+		<Include>http://www.baidu.com/?vit=1</Include>
+		<Include>http://www.baidu.com/index.php?tn=baiduhome_pg</Include>
+		<Include>http://tieba.baidu.com/f?kw=*</Include>
+		<Include>http://tieba.baidu.com/f?ie=gbk&amp;kw=*</Include>
+		<Include>http://tieba.baidu.com/f?ie=utf-8&amp;kw=*</Include>
+		<Include>http://tieba.baidu.com/f?tp=0&amp;kw=*</Include>
+	</Script>
+	<Script author="lzghzr" basedir="惠惠购物助手" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="在您网购浏览商品的同时，自动对比其他优质电商同款商品价格，并提供商品价格历史，帮您轻松抄底，聪明网购不吃亏！" enabled="true" filename="%E6%83%A0%E6%83%A0%E8%B4%AD%E7%89%A9%E5%8A%A9%E6%89%8B.user.js" installTime="1458875254167" modified="1460470367000" name="惠惠购物助手" namespace="https://github.com/lzghzr/GreasemonkeyJS" noframes="false" runAt="document-end" updateMetaStatus="fail" uuid="35fbaec9-15a0-4e94-ac60-03036087c12f" version="0.0.0.3" installurl="https://greasyfork.org/scripts/18069-%E6%83%A0%E6%83%A0%E8%B4%AD%E7%89%A9%E5%8A%A9%E6%89%8B/code/%E6%83%A0%E6%83%A0%E8%B4%AD%E7%89%A9%E5%8A%A9%E6%89%8B.user.js" updateurl="https://greasyfork.org/scripts/18069-%E6%83%A0%E6%83%A0%E8%B4%AD%E7%89%A9%E5%8A%A9%E6%89%8B/code/%E6%83%A0%E6%83%A0%E8%B4%AD%E7%89%A9%E5%8A%A9%E6%89%8B.user.js">
+		<Grant>GM_getValue</Grant>
+		<Grant>GM_setValue</Grant>
+		<Grant>GM_xmlhttpRequest</Grant>
+		<Include>http://*</Include>
+		<Include>https://*</Include>
+	</Script>
+	<Script basedir="豆瓣电影直搜" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="在影评界面加入多个较好用的直搜链接" enabled="true" filename="%E8%B1%86%E7%93%A3%E7%94%B5%E5%BD%B1%E7%9B%B4%E6%90%9C.user.js" installTime="1458876424459" modified="1460470367000" name="豆瓣电影直搜" namespace="https://greasyfork.org/zh-CN/users/31443-007dalin" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="78f750f1-ac82-45d1-b874-78317276f8da" version="1.1600306" installurl="https://greasyfork.org/scripts/17354-%E8%B1%86%E7%93%A3%E7%94%B5%E5%BD%B1%E7%9B%B4%E6%90%9C/code/%E8%B1%86%E7%93%A3%E7%94%B5%E5%BD%B1%E7%9B%B4%E6%90%9C.user.js" updateurl="https://greasyfork.org/scripts/17354-%E8%B1%86%E7%93%A3%E7%94%B5%E5%BD%B1%E7%9B%B4%E6%90%9C/code/%E8%B1%86%E7%93%A3%E7%94%B5%E5%BD%B1%E7%9B%B4%E6%90%9C.user.js">
+		<Grant>none</Grant>
+		<Include>http://movie.douban.com/subject/*</Include>
+		<Include>https://movie.douban.com/subject/*</Include>
+		<Include>http://book.douban.com/subject/*</Include>
+	</Script>
+</UserScriptConfig>

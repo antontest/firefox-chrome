@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://bamboo/skin/style.css" type="text/css"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://bamboo/locale/content.dtd">
+
+<dialog id="bamboo-dialog-error" title="&bamboo.dialog.error.title;" buttons="cancel" onload="onLoad()" buttonlabelcancel="&bamboo.dialog.error.label.close;" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" xmlns:html="http://www.w3.org/1999/xhtml" flex="1">
+
+  <script type="application/x-javascript">
+	<![CDATA[
+	
+	function onLoad()
+	{
+		var textError = window.document.getElementById('bamboo-dialog-text');
+		textError.value = window.arguments[0].error;
+	}
+	
+	function clearErrors()
+	{
+		window.arguments[0].caller.run('clear');
+		window.close();
+	}
+	
+	function reportErrors()
+	{
+		window.arguments[0].caller.run('report');
+		window.close();
+	}
+	
+	]]>
+  </script>
+  
+	<vbox flex="1">
+		<hbox flex="1">
+			<textbox id="bamboo-dialog-text" flex="1" multiline="true" readonly="true" />
+		</hbox>	
+		<hbox flex="0" align="right">
+			<button label="&bamboo.dialog.error.label.report;" align="center" oncommand="reportErrors()" />
+			<button label="&bamboo.dialog.error.label.clear;" align="center" oncommand="clearErrors()" />
+			<button label="&bamboo.dialog.error.label.close;" align="center" dlgtype="cancel" />
+		</hbox>
+	</vbox>
+
+</dialog>

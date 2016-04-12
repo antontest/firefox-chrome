@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>userChromeJS_Mix@develop.com</em:id>
+    <em:name>userChromeJS Mix</em:name>
+    <em:version>2.0</em:version>
+    <em:type>2</em:type>
+    <em:unpack>true</em:unpack>
+    <em:description></em:description>
+    <em:creator>ywzhaiqi</em:creator>
+    <em:contributor>alta88</em:contributor>
+    <em:contributor>zeniko (original author of userChrome.js)</em:contributor>
+    <em:contributor>Alice0775</em:contributor>
+    <em:contributor>dannylee</em:contributor>
+    <em:optionsURL>chrome://userchromejs/content/options.xul</em:optionsURL>
+    <em:iconURL>chrome://userchromejs/skin/img/icon32.png</em:iconURL>
+    <em:updateURL>
+        https://raw.githubusercontent.com/ywzhaiqi/userChromeJS/master/userChromeJS_Mix.xpi/update.rdf
+    </em:updateURL>
+    <em:homepageURL>https://github.com/ywzhaiqi/userChromeJS/tree/master/userChromeJS_Mix.xpi</em:homepageURL>
+
+
+    <em:targetApplication><!-- Firefox -->
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>36.*</em:minVersion>
+        <em:maxVersion>42.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+  </Description>
+</RDF>

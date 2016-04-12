@@ -1,0 +1,76 @@
+{
+ "abort_on_missing": false,
+ "check_memory": false,
+ "enable_e10s": false,
+ "is-sdk-bundled": false,
+ "jetpackID": "sarioNightmode@zhulinxizi",
+ "loader": "addon-sdk/lib/sdk/loader/cuddlefish.js",
+ "main": "main",
+ "mainPath": "night-mode/main",
+ "manifest": {
+  "night-mode/main": {
+   "docsSHA256": null,
+   "jsSHA256": "224e305aa6bd5f3636f15976bb9522a1e837674ce9b4bc6232719f629dd063ef",
+   "moduleName": "main",
+   "packageName": "night-mode",
+   "requirements": {
+    "chrome": "chrome",
+    "sdk/hotkeys": "sdk/hotkeys",
+    "sdk/l10n": "sdk/l10n",
+    "sdk/panel": "sdk/panel",
+    "sdk/self": "sdk/self",
+    "sdk/simple-storage": "sdk/simple-storage",
+    "sdk/tabs": "sdk/tabs",
+    "sdk/timers": "sdk/timers",
+    "sdk/ui/button/action": "sdk/ui/button/action",
+    "sdk/ui/button/toggle": "sdk/ui/button/toggle",
+    "setting": "night-mode/setting"
+   },
+   "sectionName": "lib"
+  },
+  "night-mode/setting": {
+   "docsSHA256": null,
+   "jsSHA256": "61dfbb46d1b2e2923cde2a29912a7ed61600fbfbeb4b0d63a004a113fc79d47b",
+   "moduleName": "setting",
+   "packageName": "night-mode",
+   "requirements": {
+    "chrome": "chrome",
+    "sdk/request": "sdk/request",
+    "sdk/simple-storage": "sdk/simple-storage",
+    "sdk/system/events": "sdk/system/events"
+   },
+   "sectionName": "lib"
+  }
+ },
+ "metadata": {
+  "addon-sdk": {
+   "description": "Add-on development made easy.",
+   "keywords": [
+    "javascript",
+    "engine",
+    "addon",
+    "extension",
+    "xulrunner",
+    "firefox",
+    "browser"
+   ],
+   "license": "MPL 2.0",
+   "name": "addon-sdk"
+  },
+  "night-mode": {
+   "author": "zhulinxizi",
+   "description": "Night mode to protect eyesight.",
+   "homepage": "http://roserio.com/",
+   "license": "MPL 2.0",
+   "main": "main",
+   "name": "night-mode",
+   "version": "1.0.0"
+  }
+ },
+ "name": "night-mode",
+ "parseable": false,
+ "preferencesBranch": "sarioNightmode@zhulinxizi",
+ "sdkVersion": "1.17",
+ "staticArgs": {},
+ "verbose": false
+}

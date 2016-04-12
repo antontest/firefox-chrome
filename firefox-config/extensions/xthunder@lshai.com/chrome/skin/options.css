@@ -1,0 +1,18 @@
+.caption-text{
+    font-weight:bold !important;
+}
+.caption-text-strong{
+    font-weight:bold !important;
+    color:red;
+}
+.agent-lbl{
+    width: 40px;
+}
+.agent-lastplace{
+    margin: 0;
+    width: 90px;
+}
+.agent-command-box{
+    margin: 0;
+    font-size: 8pt;
+}

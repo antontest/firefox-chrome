@@ -1,0 +1,3 @@
+content   mynewtab                 chrome/content/
+skin      mynewtab   classic/1.0   chrome/skin/
+locale    mynewtab   en-US         chrome/locale/en-US/

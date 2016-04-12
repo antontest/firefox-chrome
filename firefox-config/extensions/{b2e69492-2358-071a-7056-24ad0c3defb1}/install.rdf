@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+  
+    <em:name>Bamboo Feed Reader</em:name>
+    <em:version>2.2.8</em:version>
+    <em:id>{b2e69492-2358-071a-7056-24ad0c3defb1}</em:id>
+    <em:type>2</em:type>
+    <em:unpack>true</em:unpack>
+    <em:description>Feed reader | RSS - ATOM - OPML</em:description>
+
+    <em:targetApplication>
+      <!-- Firefox -->
+      <Description>
+       <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+       <em:minVersion>4.0</em:minVersion>
+       <em:maxVersion>48.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+    <em:targetApplication>
+      <!-- Thunderbird -->
+      <Description>
+       <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
+       <em:minVersion>3.0</em:minVersion>
+       <em:maxVersion>38.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+    <em:targetApplication>
+      <!-- Pale Moon -->
+      <Description>
+        <em:id>{8de7fcbb-c55c-4fbe-bfc5-fc555c87dbc4}</em:id>
+        <em:minVersion>25.0</em:minVersion>
+        <em:maxVersion>25.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+    <em:creator>Julien Fray</em:creator>
+    <em:translator>Mikael Hiort af Ornas (Swedish)</em:translator>
+    <em:translator>Matheus Willder dos Santos (Portuguese)</em:translator>
+    <em:translator>Stanislaw Bugalski (Polish)</em:translator>
+    <em:translator>Koulidis Panagiotis (Greek)</em:translator>
+    <em:translator>Philipp Hoppermann (German)</em:translator>
+    <em:translator>Daniele Valvo (Italian)</em:translator>
+    <em:translator>Oleg Kozlov (Russian)</em:translator>
+    <em:translator>Yichao Yu (Chinese)</em:translator>
+
+    <em:iconURL>chrome://bamboo/skin/img/logo.png</em:iconURL>
+
+  </Description>
+</RDF>

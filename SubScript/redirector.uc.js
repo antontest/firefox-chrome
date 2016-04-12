@@ -8,7 +8,7 @@
 // @homepageURL     https://github.com/Harv/userChromeJS/blob/master/redirector_ui.uc.js
 // @startup         Redirector.init();
 // @shutdown        Redirector.destroy(true);
-// @version         1.5.1
+// @version         1.5.5.1
 // ==/UserScript==
 (function() {
 	Cu.import("resource://gre/modules/XPCOMUtils.jsm");
@@ -16,13 +16,28 @@
 	Cu.import("resource://gre/modules/NetUtil.jsm");
 
 	function RedirectorUI() {
-		this.addIcon = true;                        // 是否添加按鈕
-		this.type = 2;                              // 0:按鈕 2:工具菜單
-		this.state = true;                          // 是否啟用腳本
-		this.enableIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAALVBMVEUAAADrTzjrTzjrTzjrTzjrTzjrTzjrTzjrTzjrTzjrTzjrTzjrTzjrTzjrTzj10k5XAAAADnRSTlMAQPjWcIJmvY136MiypU4mYUgAAAAzSURBVAjXYyAGOAoKirwDAgYBBgZGOOPRKSM7MONp2dQ4MOOF2Yw8iNTlTXVwxQjtRAAABE4ZqEHfczEAAAAASUVORK5CYII=";
-		this.disableIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAM1BMVEUAAAAzR18zR18zR18zR18zR18zR18zR18zR18zR18zR18zR18zR18zR18zR18zR18zR19hiS9UAAAAEHRSTlMAMNE/UBCG+vKTXt2+ceqn0Yx2hgAAAEhJREFUGNNjoAZgggIuZjDgZRCAAkaIPAtIgB0IEAIcXLycbJxs3HABPjYgn5+NA6GFh4eJg5sDyQwIwBRgZgUDLgZGNECGVwCwfgNV1IG+TgAAAABJRU5ErkJggg==";
+		this.addIcon = true;                        // 是否添加按钮
+		this.type = 2;                              // 0:按钮 2:工具菜单
+		this.state = true;                          // 是否启用脚本
+		this.enableIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAPFBMVEUAAABCtElCtElCtElCtElCtElCtElCtElCtElCtElCtElCtElCtElCtElCtElCtElCtElCtElCtElCtEm3gdr1AAAAE3RSTlMA+EQT0O8j1Cro3sighH4vAihDxZ0edAAAAFpJREFUGNNlzksOgCAMRdGnfCzfAu5/r6KGBOgZMLhJaSHQuSD4Y+Fxb74QUnYupzBCVFD66k98gzHa4g+w2hgw2zJCscwgmgPRMlL7iPxUrt3I02s7J61i9wAASgewmfVrUgAAAABJRU5ErkJggg==";
+		this.disableIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAANlBMVEVHR0kAAABHR0lHR0lHR0lHR0lHR0lHR0lHR0lHR0lHR0lHR0lHR0lHR0lHR0lHR0lHR0lHR0kamRIrAAAAEnRSTlP9AEQp2qbm3s/Fj3VLB5+GbDfTYnP1AAAAUUlEQVQY02WPRxLAIAwDpZjQSfn/ZxlzA+1FtmZcBB7Arg1Dwoa3Qqgtu+ZWg2sx8vHiJq0AsZP8v7gM9ggbJN8ALGOYGukYkaVyVpDXNRwPJlvCAoyr0qtnAAAAAElFTkSuQmCC";
 	}
 	RedirectorUI.prototype = {
+		hash: new Date().getTime(),
+		_mm: null,
+		_ppmm: null,
+		get mm() {
+			if (!this._mm) {
+				this._mm = Cc["@mozilla.org/childprocessmessagemanager;1"].getService(Ci.nsISyncMessageSender);
+			}
+			return this._mm;
+		},
+		get ppmm() {
+			if (!this._ppmm) {
+				this._ppmm = Cc["@mozilla.org/parentprocessmessagemanager;1"].getService(Ci.nsIMessageBroadcaster);
+			}
+			return this._ppmm;
+		},
 		get redirector() {
 			if (!Services.redirector) {
 				XPCOMUtils.defineLazyGetter(Services, "redirector", function() {
@@ -34,22 +49,28 @@
 		init: function() {
 			this.redirector.init(window);
 			this.drawUI();
+			// register self as a messagelistener
+			this.mm.addMessageListener("redirector:toggle", this);
+			this.mm.addMessageListener("redirector:toggle-item", this);
+			this.mm.addMessageListener("redirector:reload", this);
 		},
 		destroy: function(shouldDestoryUI) {
 			this.redirector.destroy(window);
 			if (shouldDestoryUI) {
 				this.destoryUI();
 			}
+			// this.mm.removeMessageListener("redirector:toggle", this);
+			// this.mm.removeMessageListener("redirector:toggle-item", this);
+			// this.mm.removeMessageListener("redirector:reload", this);
 		},
 		edit: function() {
-			let aFile = Cc["@mozilla.org/file/directory_service;1"].getService(Ci.nsIDirectoryService).QueryInterface(Ci.nsIProperties).get('UChrm', Ci.nsILocalFile);
-			aFile.appendRelativePath(this.redirector.rulesFile);
+			let aFile = FileUtils.getFile("UChrm", this.redirector.rulesFile, false);
 			if (!aFile || !aFile.exists() || !aFile.isFile()) return;
 			var editor;
 			try {
 				editor = Services.prefs.getComplexValue("view_source.editor.path", Ci.nsILocalFile);
 			} catch (e) {
-				alert("請設置編輯器的路徑。\nview_source.editor.path");
+				alert("请设置编辑器的路径。\nview_source.editor.path");
 				toOpenWindowByType('pref:pref', 'about:config?filter=view_source.editor.path');
 				return;
 			}
@@ -62,17 +83,23 @@
 				process.init(editor);
 				process.run(false, args, args.length);
 			} catch (e) {
-				alert("編輯器不正確！")
+				alert("编辑器不正确！")
 			}
 		},
-		toggle: function(i) {
+		toggle: function(i, callfromMessage) {
 			if (i) {
-				this.redirector.rules[i].state = !this.redirector.rules[i].state;
 				// update checkbox state
 				let item = document.getElementById("redirector-item-" + i);
+				if (!callfromMessage) {
+					this.redirector.rules[i].state = !this.redirector.rules[i].state;
+				}
 				if (item) item.setAttribute("checked", this.redirector.rules[i].state);
 				// clear cache
 				this.redirector.clearCache();
+				if (!callfromMessage) {
+					// notify other windows to update
+					this.ppmm.broadcastAsyncMessage("redirector:toggle-item", {hash: this.hash, item: i});
+				}
 			} else {
 				let menuitems = document.querySelectorAll("menuitem[id^='redirector-item-']");
 				this.state = !this.state;
@@ -87,12 +114,16 @@
 				let toggle = document.getElementById("redirector-toggle");
 				if (toggle) {
 					toggle.setAttribute("checked", this.state);
-					toggle.label = "重定向已" + (this.state ? "啟" : "停") + "用";
+					toggle.label = "重定向已" + (this.state ? "启" : "停") + "用";
 				}
 				// update icon state
 				let icon = document.getElementById("redirector-icon");
 				if (icon) {
 					icon.style.listStyleImage = "url(" + (this.state ? this.enableIcon : this.disableIcon) + ")";
+				}
+				if (!callfromMessage) {
+					// notify other windows to update
+					this.ppmm.broadcastAsyncMessage("redirector:toggle", {hash: this.hash});
 				}
 			}
 		},
@@ -116,13 +147,13 @@
 				icon.setAttribute("style", "padding: 0px; list-style-image: url(" + (this.state ? this.enableIcon : this.disableIcon) + ")");
 				icon.setAttribute("onclick", "Redirector.iconClick(event);");
 				icon.setAttribute("onDOMMouseScroll", "document.getElementById('redirector-toggle').doCommand();");
-				icon.setAttribute("tooltiptext", "左鍵：Redirector 選單\n中鍵：重載規則\n右鍵：編輯規則\n滾動：啟用 / 禁用");
+				icon.setAttribute("tooltiptext", "左鍵：Redirector 选单\n中鍵：重载规则\n右鍵：编辑规则\n滚动：启用 / 禁用");
 				// add menu
 				let xml = '\
 					<menupopup id="redirector-menupopup" onclick="event.preventDefault(); event.stopPropagation();">\
-						<menuitem label="重定向已啟用" id="redirector-toggle" type="checkbox" autocheck="false" key="redirector-toggle-key" checked="' + this.state + '" oncommand="Redirector.toggle();" onclick="if (event.button !== 0) {Redirector.toggle();}" />\
-						<menuitem label="重載規則" id="redirector-reload" oncommand="Redirector.reload();"/>\
-						<menuitem label="編輯規則" id="redirector-edit" oncommand="Redirector.edit();"/>\
+						<menuitem label="重定向已启用" id="redirector-toggle" type="checkbox" autocheck="false" key="redirector-toggle-key" checked="' + this.state + '" oncommand="Redirector.toggle();" onclick="if (event.button !== 0) {Redirector.toggle();}" />\
+						<menuitem label="重载规则" image="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADB0lEQVQ4jX2TX0hUeRTHv/fe373eae69c++MeUed5ro2pUO6RY6SFawoK1ZjFPUgpajVZrVIjP3BjMkRy9FozU0ogkoy20JQkowyrenfbn/sIQiWXtqeNojdh6KSMpjTQ2RZ1vf1fD/nHA7fA0yhiu3F9l8iufM2tcwNhg5llu7szghEenzaVN5JysmBuLjUDBaWmedLNjifrqjTXpc3q2M1Ha5n27uThyODKWWRGORv8QnJmWjwzuFfeLJ5+iHAU3Yx4sW/Il55gFHtcYV2n0scax5x7o/EoHxFqyY2GqncmJEqkOERyPDyTxItfse8JcLa6nZxuO6UTuEBNzVdco03XWW7AHATsOxAut3FPVKSeFJNnlSTH1fdQuXH+rYeV+6ePutZ65CfWkcsCl9mT6P3xNyJBqKCTaKCuKTxJOsc2Qzusc2AFwBCxzRnuNcX3Xc+6/mh63nU8VcGNd9kFL0t/tk6KpUBAMeL6BIURt6KGtIWFRCTcRuA+nFA3Qkz2HDG92/Htfn02x03NV4RqOIAe1jeDh8ASJwiDczcvINKLjygWS1nSQz8fAuYdCghb7nZG+pyU3hIomXbRJKTbHcBhwHH4dOGv/PkcNHIQwr0jlLa/kHStxz531bWtvqzQzFOcvan52tUsF4mOVEjMMcwgGnQrv+91H/x/g1/3924dTRG05v6SN3w+xs5WH8SBbWeD7zDEOzuUcHuJqaaJExLIiS42j7UYjEmdQ9lGZ2D/zij/aTX/0Hqus6XCSsjJRP7O6xVgjbjFdM8xNRU4pXk/8CcCyflQGzqqRW3Hn6TUHOEpPKDxIJ77rHZhfWSkdYi6tYTUbdI1C0SdCvO21PaAAiTkxRqt/GV0b1Y2fiaK20krriBhMUbScpaRnJ6Psne+SSkZI3zLt9xQHNOHeaCKhmFm6uxoPoB8qrecoEK4n5cRcgoegdv4BFMfwhwfvepOAB2qFY+3DlhpOR2ISm7C3paBEz5CYD9e/CnJmlVMrLXGJhdmojMIhfScxzweGwA+C/N7wF1/PIEbN4/SAAAAABJRU5ErkJggg==" class="menuitem-iconic" id="redirector-reload" oncommand="Redirector.reload();"/>\
+						<menuitem label="编辑规则" id="redirector-edit" oncommand="Redirector.edit();"/>\
 						<menuseparator id="redirector-sepalator"/>\
 					</menupopup>\
 				';
@@ -190,17 +221,40 @@
 				menu.removeChild(menuitems[i]);
 			}
 		},
-		reload: function() {
-			this.redirector.reload();
+		reload: function(callfromMessage) {
+			if (!callfromMessage) {
+				this.redirector.reload();
+			}
 			this.clearItems();
 			this.buildItems();
-//			XULBrowserWindow.statusTextField.label = "Redirector 規則已重新載入";
-			Cc['@mozilla.org/alerts-service;1'].getService(Ci.nsIAlertsService).showAlertNotification("", "Redirector", "規則已重新載入", false, "", null);
+//			XULBrowserWindow.statusTextField.label = "Redirector 规则已重新载入";
+			Cc['@mozilla.org/alerts-service;1'].getService(Ci.nsIAlertsService).showAlertNotification("", "Redirector", "规则已重新载入", false, "", null);
+			if (!callfromMessage) {
+				// notify other windows to update
+				this.ppmm.broadcastAsyncMessage("redirector:reload", {hash: this.hash});
+			}
+		},
+		// nsIMessageListener interface implementation
+		receiveMessage: function(message) {
+			if (this.hash == message.data.hash) {
+				return;
+			}
+			switch (message.name) {
+				case "redirector:toggle":
+					this.toggle(null, true);
+					break;
+				case "redirector:toggle-item":
+					this.toggle(message.data.item, true);
+					break;
+				case "redirector:reload":
+					this.reload(true);
+					break;
+			}
 		}
 	};
 
 	function Redirector() {
-		this.rulesFile = "local\\_redirector.js";
+		this.rulesFile = ["local", "_redirector.js"];
 		this.rules = [];
 	}
 	Redirector.prototype = {
@@ -249,8 +303,7 @@
 			this.loadRule();
 		},
 		loadRule: function() {
-			var aFile = Cc["@mozilla.org/file/directory_service;1"].getService(Ci.nsIDirectoryService).QueryInterface(Ci.nsIProperties).get('UChrm', Ci.nsILocalFile);
-			aFile.appendRelativePath(this.rulesFile);
+			var aFile = FileUtils.getFile("UChrm", this.rulesFile, false);
 			if (!aFile.exists() || !aFile.isFile()) return null;
 			var fstream = Cc["@mozilla.org/network/file-input-stream;1"].createInstance(Ci.nsIFileInputStream);
 			var sstream = Cc["@mozilla.org/scriptableinputstream;1"].createInstance(Ci.nsIScriptableInputStream);
@@ -271,12 +324,12 @@
 			this.rules = sandbox.rules;
 		},
 		getRedirectUrl: function(originUrl) {
-			let url = originUrl;
-			let redirectUrl = this._cache.redirectUrl[url];
+			let redirectUrl = this._cache.redirectUrl[originUrl];
 			if(typeof redirectUrl != "undefined") {
 				return redirectUrl;
 			}
 			redirectUrl = null;
+			let url, redirect;
 			let regex, from, to, exclude, decode;
 			for each (let rule in this.rules) {
 				if (typeof rule.state == "undefined") rule.state = true;
@@ -291,24 +344,22 @@
 					}
 					rule.computed = {regex: regex, from: from, to: to, exclude: exclude, decode: decode};
 				}
-				if (decode) {
-					url = this.decodeUrl(originUrl);
-				}
-				let redirect = regex
+				url = decode ? this.decodeUrl(originUrl) : originUrl;
+				redirect = regex
 					? from.test(url) ? !(exclude && exclude.test(url)) : false
 					: from == url ? !(exclude && exclude == url) : false;
 				if (redirect) {
-					let reurl = typeof to == "function"
+					url = typeof to == "function"
 						? regex ? to(url.match(from)) : to(from)
 						: regex ? url.replace(from, to) : to;
 					redirectUrl = {
-						url : decode ? reurl : this.decodeUrl(reurl),   // 避免二次解碼
+						url : decode ? url : this.decodeUrl(url),   // 避免二次解碼
 						resp: rule.resp
 					};
 					break;
 				}
 			}
-			this._cache.redirectUrl[url] = redirectUrl;
+			this._cache.redirectUrl[originUrl] = redirectUrl;
 			return redirectUrl;
 		},
 		decodeUrl: function(encodedUrl) {
@@ -361,7 +412,7 @@
 			// don't redirect clicking links with "_blank" target attribute
 			// cause links will be loaded in current tab/window
 			if (this._cache.clickUrl[contentLocation.spec]) {
-				delete this._cache.clickUrl[contentLocation.spec];
+				this._cache.clickUrl[contentLocation.spec] = false;
 				return Ci.nsIContentPolicy.ACCEPT;
 			}
 			// only redirect documents

@@ -1,0 +1,287 @@
+@namespace html url(http://www.w3.org/1999/xhtml);
+@namespace xul url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@-moz-document regexp("((?!http://sunbox.cc/*|mynewtab/content/index.html).)*") {
+/* Browser Background */
+browser[type="content-primary"] {
+	background-color:#002b36 !important;
+}
+@-moz-document url-prefix(http://),url-prefix(https://),url-prefix(ftp://),url-prefix(file://) {
+	/*No background images. try to exclude icons,other misc items.
+*:not(:empty):not([onclick*="open"]):not(SPAN):not([class*="stars"]):not([id*="stars"]):not([id="rating"]):not([class="rating"]):not([class*="SPRITE"]):not([id*="SPRITE"]):not([id*="lbImage"]) {
+	background-image:none !important
+}
+*/
+/* Basic Bodies */
+HTML,BODY {
+	background:none #002b36 !important
+}
+/* Make descendents of the body element transparent.  Formerly "DIV + SPAN" rules. */
+BODY * {
+	background-color:transparent !important
+}
+/* Give id's BG hopefully */
+DIV[id] {
+	background-color:inherit !important
+}
+/* Filter non-icons */
+SPAN:not(:empty):not([class*="icon"]):not([id*="icon"]):not([class*="star"]):not([id*="star"]):not([id*="rating"]):not([class*="rating"]):not([class*="Sprite"]):not([class*="sprite"]) {
+	background:none transparent !important;
+	border-color:#000 !important
+}
+/* Try to contrast containers */
+html:root > BODY > * > * > * > *:not(INPUT):not([onclick]) > DIV:not(:empty):not([id]) {
+	background:none #002B36 !important
+}
+/*::::::::Text Presentation::::::::*/
+SUMMARY,DETAILS {
+	background-color:inherit !important
+}
+ABBR,PROGRESS,TIME,LABEL,.date {
+	color:#859900 !important
+}
+MARK,CODE,PRE,BLOCKQUOTE,[class*="quote"],TD[style*="inset"][class="alt2"] {
+	background-color:#002B36 !important
+}
+/*:No BG:*/
+*:not(:empty):not(span):not([class="html5-volume-slider html5-draggable"]):not([class="html5-player-chrome html5-stop-propagation"]),*::before,*::after,td:empty,p:empty,div:empty:not([role]):not([style*="flashblock"]):not([class^="html5"]):not([class*="noscriptPlaceholder"]) {
+	background-image:none !important;
+}
+/*::::::::Headings + Header::::::::*/
+/* Header gradient rules */
+HEADER,#header {
+	background-color:#002b36 !important
+}
+#header h1 {
+	background-color:transparent !important;
+}
+H1,H2 {
+	background:none #002B36 !important;
+	border-radius:5px !important;
+	border-radius:5px !important;
+}
+H3,H4 {
+	background:none #002B36 !important;
+	border-radius:5px !important;
+}
+H5,H6 {
+	background:none #002B36 !important
+}
+/*::::::::Lists::::::::*/
+DT {
+	background-color:#073642 !important
+}
+DL,DD {
+	background-color:#073642 !important
+}
+LI,UL {
+	background-color:inherit !important
+}
+LI A:not([class*="icon"]):not([id*="icon"]):not([onclick]),DT A:not([class*="icon"]):not([id*="icon"]):not([onclick]) {
+	background-image:none !important;
+	text-indent:0 !important
+}
+/*::::::::list Item highlight::::::::*/
+LI[class*="item"] A:hover,LI[class*="item"]:hover,[class*="menuitem"]:hover  /* Not list item,but still useful*/ {
+	background-color:#073642 !important
+}
+/*::::::::Tables,cells::::::::*/
+TABLE {
+	background-color:#073642 !important;
+	border-color:#333 !important
+}
+TABLE TABLE {
+	background:#073642 !important;
+}
+TH,CAPTION {
+	background-color:#073642 !important
+}
+/*::::::::Input::::::::*/
+/*Basic*/
+INPUT *,TEXTAREA * {
+	color:#DDD !important;
+}
+/* anonymous divs */
+HTML BODY INPUT:not([type="image"]),button,HTML BODY TEXTAREA {
+	background:none #073642 !important;
+	-moz-appearance:none !important;
+	-webkit-appearance:none !important;
+	color:#DDD  !important;
+	border:solid 1px #777 !important;
+	border-radius:0 !important;
+	border-radius:0 !important;
+	opacity:1 !important;
+}
+/* Style reset. */
+HTML BODY INPUT[type="checkbox"] {
+	-moz-appearance:checkbox !important;
+	-webkit-appearance:checkbox !important;
+}
+HTML BODY INPUT[type="radio"] {
+	-moz-appearance:radio !important;
+	-webkit-appearance:radio !important;
+}
+/*::::::::Custom styling::::::::*/
+HTML:root INPUT[type="button"],HTML:root INPUT[type="submit"],HTML:root INPUT[type="reset"],HTML:root BUTTON {
+	color:#EEE !important;
+	background-color:#073642 !important;
+	box-shadow:inset 0 1px rgba(255,255,255,0.2),inset 0 10px rgba(255,255,255,0.1),inset 0 10px 20px rgba(255,255,255,0.15),inset 0 -15px 30px rgba(0,0,0,0.2) !important;
+}
+HTML:root INPUT[type="button"]:hover,HTML:root INPUT[type="submit"]:hover,HTML:root INPUT[type="reset"]:hover,HTML:root BUTTON:hover {
+	color:#FFF !important;
+	background-color:#002B36 !important;
+	border-color:#5F687F !important;
+	box-shadow:inset 0 1px rgba(255,255,255,0.3),inset 0 10px rgba(255,255,255,0.2),inset 0 10px 20px rgba(255,255,255,0.25),inset 0 -15px 30px rgba(0,0,0,0.3) !important;
+}
+HTML:root INPUT[type="image"] {
+	opacity:.85 !important
+}
+HTML:root INPUT[type="image"]:hover {
+	opacity:.95 !important
+}
+/* Drop-down menu */
+SELECT,OPTION,optgroup {
+	background:none #383838 !important;
+	border-color:#555 !important;
+	color:#f1f1f1 !important;
+	-moz-appearance:none !important;
+}
+/*::::::::Misc::::::::*/
+ADDRESS {
+	background:none #333 !important
+}
+HR {
+	background:none #073642 !important
+}
+.current {
+	color:#FFF !important;
+}
+/*currently viewed page*/
+/* Remove Rounded Corners,Borders,Spacer,Padding images */
+IMG[src*="spacer"]:empty,[id*="round"]:empty,[id*="bottom"]:empty,[class*="bottom"]:empty,[class*="Bottom"]:empty,[id*="top"]:empty,[class*="top"]:empty,[class*="Top"]:empty,[class*="spacer"]:empty {
+	background-image:none !important;
+}
+/* Menus and Navigation */
+NAV,MENU,/*Common naming conventions - in case previous declarations fail to give solid BG*/
+HTML BODY [class*="open"],HTML BODY [id*="Dropdown"],HTML BODY [id*="dropdown"],HTML BODY [class*="Dropdown"],HTML BODY [class*="dropdown"],HTML BODY [id*="menu"]:not(SELECT),HTML BODY [class*="menu"]:NOT(SELECT),HTML BODY [class*="tooltip"],HTML BODY [class*="popup"],HTML BODY [id*="popup"],/* Notes,details,etc.  Maybe useful */
+HTML BODY [class*="note"],HTML BODY [class*="detail"],HTML BODY [class*="description"] {
+	background-color:#073642 !important
+}
+/* Also common */
+[class*="content"],[class*="container"] {
+	background-color:#002B36 !important
+}
+/* Headers,Logos */
+[id*="masthead"] a,[id*="header"] a,[id*="logo"] a,[class*="logo"] a {
+	text-indent:0 !important;
+}
+/* Instead of increasing specificity rating by using:not,set rules separately */
+HTML:root BODY [class*="layer"],HTML:root BODY #lightbox-nav,HTML:root BODY #imageContainer {
+	background-color:transparent !important
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/* Universal - sets color of text,border */
+* {
+	color:#93a1a1 !important;
+	border-color:#073642 !important;
+	outline-color:#073642 !important;
+	text-shadow:none !important;
+}
+html *:after,html *:before {
+	color:#b58900 !important;
+	border-color:#666 !important;
+	background:none transparent !important
+}
+/* Link */
+a:link,a:link *:not(IMG) {
+	color:#268bd2 !important;
+	background-color:transparent !important;
+	border-color:#666 !important;
+}
+a:visited,a:visited * {
+	color:#6c71c4 !important;
+}
+a:hover,a:hover *:not(IMG) {
+	color:#FFE900 !important;
+	background-color:transparent !important;
+	border-color:#999 !important
+}
+html [href*="#"]:hover {
+	color:#FFE900 !important;
+	background-color:transparent !important;
+}
+/* Event Handlers/Attributes */
+[onclick],[ondblclick],[onmousedown] {
+	color:#b58900 !important;
+	text-indent:0 !important
+}
+[onclick]:hover,[ondblclick]:hover,[onmousedown]:hover {
+	color:#b58900 !important;
+}
+/* Make images transparent */
+IMG {
+	opacity:.75 !important;
+}
+IMG:hover {
+	opacity:1 !important;
+	background-color:#002B36 !important;
+}
+svg {
+	background:none #666 !important;
+}
+/* Highlight */::-moz-selection {
+	background-color:#626F61 !important;
+	color:#F6F7B9 !important;
+}
+/*::::::::Specific Fixes::::::::*/
+/* google search link fix */
+.g .r {
+	background-color:transparent !important;
+}
+/* google result hover highlight*/
+div.vsc:hover > .vspi,div.vso > .vspi {
+	background:none transparent !important;
+	border:none !important;
+}
+}/*::::::::About...::::::::*/
+@-moz-document url(about:newtab) {
+	window {
+	background:#002b36 !important;
+}
+#newtab-scrollbox {
+	background-color:transparent !important;
+	background-image:url("chrome://browser/skin/newtab/noise.png"),-moz-linear-gradient(transparent,transparent) !important
+}
+.newtab-title {
+	background-color:rgba(0,0,0,.75) !important;
+	color:#eee !important;
+}
+}@-moz-document url(about:blank) {
+	html,html * {
+	background:none #002b36 !important;
+	color:#93a1a1 !important;
+}
+}@-moz-document url-prefix("about:neterror") {
+	html,body {
+	background-color:#073642 !important;
+	color:#93a1a1 !important
+}
+#errorPageContainer {
+	background-color:#073642 !important;
+	border-color:#666 !important
+}
+#errorPageContainer button {
+	opacity:.8 !important
+}
+/*resurrect pages FF extension*/
+#resurrect {
+	background-color:#333 !important;
+	border-color:#000 !important
+}
+}/*鼠标*/
+* {
+	cursor:url("data:image/x-icon;base64,AAACAAEAICAAAAAAAACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD39/eX9/f3w/f39yz///8A////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////APf397glJSXM9/f3w/f39yz///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A9/f3uAoKCswlJSXM9/f3w/f39ywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD39/e4BwcHzAoKCswlJSXM9/f3w/f39yz///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////APf397gEBATMBwcHzAoKCswlJSXM9/f3w/f395f39/eX9/f3l/f395f39/eX9/f3l////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A9/f3uAICAswEBATMBwcHzAoKCswODg7MERERzBUVFcwZGRnMHR0dzDU1Ncz39/eX////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD39/e4AAAAzAICAswEBATMBwcHzAoKCswODg7MERERzBUVFcwvLy/M9/f3l/f39yz///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////APf397gAAADMAAAAzAICAswEBATMBwcHzAoKCswODg7MKCgozPf395f39/cs////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A9/f3uAAAAMwAAADMAAAAzAICAswEBATMBwcHzCIiIsz39/eX9/f3LP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD39/e4AAAAzAAAAMwAAADMAAAAzAICAswcHBzM9/f3l/f39yz///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////APf397gAAADMAAAAzAAAAMwAAADMGRkZzPf395f39/cs////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A9/f3uAAAAMwAAADMAAAAzBkZGcz39/eX9/f3LP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD39/e4AAAAzAAAAMwZGRnM9/f3l/f39yz///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////APf397gAAADMGRkZzPf395f39/cs////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A9/f3uBkZGcz39/eX9/f3LP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD39/e49/f3l/f39yz///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////APf397j39/cs////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////////////////////////////////////////////////////////////////////////////////P////x////8P////B////wAP//8AD///AB///wA///8Af///AP///wH///8D////B////w////8f////P////3////8="),default !important
+}
+a,a * {
+	cursor:url("data:image/x-icon;base64,AAACAAEAICAAAAUAAQCoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A9/f3lPf398z39/fM9/f3zPf398z39/fM9/f3zPf398z39/fM9/f3lP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////APf39wT39/exFRUVzBkZGcwdHR3MICAgzCQkJMwnJyfMKioqzCwsLMz39/e0////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A9/f3T/f392wRERHMFRUVzBkZGcwdHR3MICAgzCQkJMwnJyfMKioqzPf397H39/cm////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////APf39wT39/exPDw8zA4ODswRERHMFRUVzBkZGcwdHR3MICAgzCQkJMwnJyfM9/f3bPf392z///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A9/f3T/f395AHBwfMCgoKzA4ODswRERHMFRUVzBkZGcwdHR3MICAgzCQkJMxSUlLM9/f3qv///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////APf39wT39/exNTU1zAQEBMwHBwfMCgoKzA4ODswRERHMFRUVzBkZGcwdHR3MICAgzCQkJMz39/ex9/f3Jv///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A9/f3T/f395AAAADMAgICzAQEBMwHBwfMCgoKzA4ODswRERHMFRUVzBkZGcwdHR3MICAgzPf392z39/ds////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD39/exNDQ0ywAAAMwAAADMAgICzAQEBMwHBwfMCgoKzA4ODswRERHMFRUVzBkZGcwdHR3MTU1NzPf396r///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A9/f3T/f395AAAADMNDQ0ywAAAMwAAADMAgICzAQEBMwHBwfMCgoKzA4ODswRERHMFRUVzBkZGcwdHR3M9/f3zP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////APf39yv39/eUGRkZzAAAAMyDg4PMAAAAzAAAAMwAAADMAgICzAQEBMwHBwfMCgoKzA4ODswRERHMFRUVzBkZGcz39/fM////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A9/f3lBkZGcwAAADMAAAAzPf398wAAADMAAAAzAAAAMwAAADMAgICzAQEBMwHBwfMCgoKzA4ODswRERHMFRUVzPf398z///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD39/fMGRkZzBkZGcz39/eU9/f3zAAAAMwAAADMAAAAzAAAAMwAAADMAgICzAQEBMwHBwfM9/f3zA4ODswRERHM9/f3zP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////APf395T39/fM9/f3lPf39yv39/fMAAAAzAAAAMz39/fMAAAAzAAAAMz39/fMAgICzAQEBMz39/fMCgoKzD8/P8z39/eU////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////APf398wAAADMAAAAzPf398wAAADMAAAAzPf398wAAADMAgICzPf398w5OTnM9/f3lPf39xT///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A9/f3zAAAAMwAAADM9/f3zAAAAMwAAADM9/f3zAAAAMw0NDTM9/f3zPf395T39/cU////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD39/fMAAAAzAAAAMz39/fMAAAAzDQ0NMz39/eU9/f3zPf395T39/cr////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////APf398wAAADMAAAAzPf398z39/fM9/f3lPf39yv///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A9/f3zAAAAMwAAADM9/f3zP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD39/fMAAAAzAAAAMz39/fM////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////APf398wAAADMAAAAzPf398z///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A9/f3lAAAAMwAAADM9/f3lP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD39/cr9/f3lPf395T39/cr////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//////////////////////////////////////////////////////gB///4Af///AH///AD///wAP//4AD//+AB///AAH//wAB//4AAf/8AAH//AAB//xAAf//wAP//8AH///AH///wP///8P////D////w////8P////n///8="),pointer !important
+}
+}

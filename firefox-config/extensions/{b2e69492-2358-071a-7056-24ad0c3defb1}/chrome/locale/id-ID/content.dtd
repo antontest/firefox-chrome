@@ -1,0 +1,10 @@
+
+<!ENTITY bamboo.toolbar.tooltip.feed "Buka Bamboo">
+<!ENTITY bamboo.toolbar.tooltip.error "Tampilan modul kesalahan Bamboo">
+
+<!ENTITY bamboo.dialog.error.label.report "Kirim ini ke pengembang">
+<!ENTITY bamboo.dialog.error.label.clear "Bersihkan dan tutup">
+<!ENTITY bamboo.dialog.error.label.close "Tutup">
+<!ENTITY bamboo.dialog.error.title "Modul kesalahan Bamboo">
+
+<!ENTITY bamboo.contextmenu.message.blockimage "Halau gambar ini di Bamboo">

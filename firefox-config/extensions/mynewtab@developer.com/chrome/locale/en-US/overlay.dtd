@@ -1,0 +1,8 @@
+<!ENTITY mynewtab.label "Your localized menuitem">
+<!ENTITY mynewtabContext.label "Your Menuitem">
+<!ENTITY mynewtabContext.accesskey "Y">
+<!ENTITY mynewtabToolbarButton.label "Your Toolbar Button">
+<!ENTITY mynewtabToolbarButton.tooltip "This is your toolbar button!">
+<!ENTITY mynewtabSidebar.label "Your Sidebar">
+<!ENTITY mynewtabToolbar.name  "example">
+<!ENTITY mynewtabToolbar.label "This is an example toolbar. You can hide it under View &gt; toolbars &gt; &mynewtabToolbar.name;">

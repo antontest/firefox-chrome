@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>我的主页</title>
+		<link rel="shortcut icon" href="img/logo.png"  type="image/x-icon"/>
+		<link href="style.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery.min.js"></script>	
+		<script type="text/javascript" src="js/rili.js"></script>
+		<style>.snow-container{position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 100001;}</style>
+	</head>
+	<body>
+		<div id="searchModule">
+			<div id="Searchtype">
+				<ul><li><a class="Bing" lang="Bing" href="javascript:void(0);">必应</a></li>
+					<li class="active"><a class="baidu" lang="baidu" href="javascript:void(0);">百度</a></li>
+					<li><a class="tieba" lang="tieba" href="javascript:void(0);">贴吧</a></li>
+					<li><a class="baiduyun" lang="baiduyun" href="javascript:void(0);">百度云</a></li>
+					<li><a class="kafan" lang="kafan" href="javascript:void(0);">卡饭</a></li>
+					<li><a class="image" lang="image" href="javascript:void(0);">图片</a></li>
+					<li><a class="video" lang="video" href="javascript:void(0);">视频</a></li>
+					<li><a class="YTB" lang="YTB" href="javascript:void(0);">YTB</a></li>
+					<li><a class="music" lang="music" href="javascript:void(0);">音乐</a></li>
+					<li><a class="shop" lang="shop" href="javascript:void(0);">淘宝</a></li>
+					<li><a class="map" lang="map" href="javascript:void(0);">地图</a></li>
+					<li><a class="wiki" lang="wiki" href="javascript:void(0);">WiKi</a></li>
+				</ul>
+			</div>
+			<div id="Searchbox">
+				<form method="get" action="http://www.baidu.com/baidu">
+					<input class="search_wd" type="text" name="wd" autofocus="autofocus" baiduSug="2" maxlength="100" value="">
+					<input class="search_go" type="submit" value="搜一下">
+				</form>
+			</div>
+		</div>
+		<div id="navs">
+			<div id="navtitle">
+				<span>我的导航</span>
+				<a id="nav_edit" hidefocus="" title="编辑配置文件" onclick="edit();" href="javascript:;">
+					<img width="16" height="16" src="img/setting.png">编辑
+				</a>
+				<a id="nav_random" hidefocus="" title="切换或下载背景图片" onclick="changeImg();" href="javascript:;">
+					<img width="16" height="16" src="img/change.png">切换
+				</a>
+				<a id="nav_openfolder" hidefocus="" title="打开配置文件夹" onclick="openDir();" href="javascript:;">
+					<img width="16" height="16" src="img/add.png">定位
+				</a>&nbsp;&nbsp;&nbsp;
+				<TD height="24" noWrap bgcolor="E8E8E8"><script language="JavaScript">showcal(0)</script></TD>
+			</div>
+			<table id="navtable"></table>
+		</div>
+		<!-- 
+		<div class="snow-container"></div>
+		<script type="text/javascript" src="js/sunbox.js"></script>
+		-->
+	</body>
+	<script type="text/javascript" src="data.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	<script charset=gbk type="text/javascript" src="js/opensug.js"></script>
+
+</html>

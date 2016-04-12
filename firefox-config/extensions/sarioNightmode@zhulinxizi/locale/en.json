@@ -1,0 +1,19 @@
+{
+ "button_string_nightModeDisabled": "夜间模式关闭",
+ "button_string_nightModeEnabled": "夜间模式激活",
+ "shortcut_title": "快捷方式:",
+ "shortcut_description": "选择切换夜间模式的组合键.",
+ "shortcut_options.ctrl-f1": "CTRL + F1",
+ "shortcut_options.ctrl-alt-n": "CTRL + ALT + N",
+ "shortcut_options.alt-shift-n": "ALT + SHIFT + N",
+ "shortcut_options.disabled": "禁用",
+ "nightMode_title": "夜间模式:",
+ "dimBrowserGUI_title": "对界面生效:",
+ "dimBrowserGUI_description": "降低浏览器界面亮度（如：标签栏、导航栏）.",
+ "websiteContent_title": "对网页生效:",
+ "websiteContent_description": "降低网页各元素（除图片）亮度.",
+ "dimImages_title": "对图像生效:",
+ "dimImages_description": "降低图像亮度.",
+ "activeTime_title": "自动切换时间:",
+ "activeTime_description": "设定何时自动激活夜间模式"
+}

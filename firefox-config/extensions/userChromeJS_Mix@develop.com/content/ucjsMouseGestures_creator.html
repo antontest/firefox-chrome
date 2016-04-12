@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>鼠标手势 UserChromeJS 脚本生成器 -- 紫云飞</title>
+    <link type="text/css" rel="stylesheet" href="style/ziyunfei_creator.css">
+    <script type="text/javascript" src="http://common.cnblogs.com/script/jquery.js"></script>
+</head>
+
+<body>
+    <!-- 来源：http://www.cnblogs.com/ziyunfei/archive/2011/12/15/2289504.html -->
+    <div id="topics">
+        <div class="post">
+            <div class="postTitle">
+                <h1>鼠标手势 UserChromeJS 脚本生成器</h1>
+                <em>
+                    <a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/ziyunfei/archive/2011/12/15/2289504.html">作者：紫云飞</a>
+                    （修改版）
+                </em>
+            </div>
+
+            <div class="postBody">
+                <form id="ucjsMouseGestures">
+                    <label>手势方向:
+                        <select id="gesturesChain" onchange="MouseGestures.onChange()">
+                            <option title="U" value="U">上</option>
+                            <option title="D" value="D">下</option>
+                            <option title="L" value="L">左</option>
+                            <option title="R" value="R">右</option>
+                            <option title="UD" value="UD">上下</option>
+                            <option title="UL" value="UL">上左</option>
+                            <option title="UR" value="UR">上右</option>
+                            <option title="DU" value="DU">下上</option>
+                            <option title="DL" value="DL">下左</option>
+                            <option title="DR" value="DR">下右</option>
+                            <option title="LR" value="LR">左右</option>
+                            <option title="LU" value="LU">左上</option>
+                            <option title="LD" value="LD">左下</option>
+                            <option title="RL" value="RL">右左</option>
+                            <option title="RU" value="RU">右上</option>
+                            <option title="RD" value="RD">右下</option>
+                            <option title="L&lt;R" value="L&lt;R">按住右键点左键</option>
+                            <option title="L&gt;R" value="L&gt;R">按住左键点右键</option>
+                            <option title="W+" value="W+">按住右键向上滚轮</option>
+                            <option title="W-" value="W-">按住右键向下滚轮</option>
+                        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <label>手势命令:
+                        <select id="gesturesCommand" onchange="MouseGestures.doNotGenerate()"></select>
+                    </label>&nbsp;&nbsp;&nbsp;
+                    <label>
+                        <input id="generateScript" onclick="MouseGestures.generateScript()" type="button" value="添加" />
+                    </label>&nbsp;
+                    <label>
+                        <input id="deleteScript" onclick="MouseGestures.generateScript(1)" type="button" value="删除" disabled="disabled" />
+                    </label>&nbsp;
+                    <label>
+                        <input id="copyScript" onclick="MouseGestures.copyScript()" type="button" value="复制脚本" />
+                    </label>&nbsp;
+                 <!--    <label title="Firefox3.6可用">
+                        <input id="runScript" onclick="MouseGestures.runScript()" type="button" value="运行脚本" />
+                    </label>&nbsp; -->
+                    <label>
+                        <input id="openChromeDir" onclick="MouseGestures.openChrome()" type="button" value="打开chrome目录" />
+                    </label>&nbsp;&nbsp;&nbsp;
+                    <label title="直接保存到 chrome 目录下">
+                        <input id="saveUC" onclick="MouseGestures.saveUC()" type="button" value="直接保存uc脚本" />
+                    </label>&nbsp;
+                    <label title="在桌面生成xpi文件">
+                        <input id="makeXPI" onclick="MouseGestures.makeXPI()" type="button" value="生成扩展" />
+                    </label>
+                    <label title="否则汉字可能成为乱码">
+                        <input id="escapeunicode" onclick="MouseGestures.generateScript(0,1)" type="checkbox" />转义汉字</label>&nbsp;
+                    <label title="中文注释不会引起乱码">
+                        <input id="showComment" onclick="MouseGestures.generateScript(0,1)" type="checkbox" checked="checked" />添加注释</label>&nbsp;
+                    <label title="绿色">
+                        <input id="showline" onclick="MouseGestures.generateScript(0,1)" type="checkbox" />描绘轨迹
+                    </label>
+                    <script type="text/javascript">
+                    // <![CDATA[
+                    (function($) {
+                        $.fn.extend({
+                            colorpicker: function(options) {
+                                //Settings list and the default values
+                                var defaults = {
+                                    label: '',
+                                    size: 20,
+                                    count: 6,
+                                    hide: true
+                                };
+                                var options = $.extend(defaults, options);
+                                var obj;
+                                var colors = {};
+                                var wrap = $('<div class="colorpicker-wrap"></div>');
+                                var label = $('<div class="colorpicker-label"></div>');
+                                var trigger = $('<div class="colorpicker-trigger"></div>');
+                                var picker = $('<div style="width: ' + (options.size + 4) * options.count + 'px" class="colorpicker-picker"></div>');
+                                var info = $('<div class="colorpicker-picker-info"></div>');
+                                var clear = $('<div style="clear:both;"></div>');
+                                return this.each(function() {
+                                    obj = this;
+                                    //build an array of colors
+                                    $(obj).children('option').each(function(i, elm) {
+                                        colors[i] = {};
+                                        colors[i].color = $(elm).text();
+                                        colors[i].value = $(elm).val();
+                                    });
+                                    create_wrap();
+                                    if (options.label != '') create_label();
+                                    create_trigger();
+                                    create_picker();
+                                    wrap.append(label);
+                                    wrap.append(trigger);
+                                    wrap.append(picker);
+                                    wrap.append(clear);
+                                    $(obj).after(wrap);
+                                    if (options.hide) $(obj).css({
+                                        position: 'absolute',
+                                        left: -10000
+                                    });
+                                });
+
+                                function create_wrap() {
+                                    wrap.mouseleave(function() {
+                                        picker.fadeOut('slow');
+                                    });
+                                }
+
+                                function create_label() {
+                                    label.text(options.label);
+                                    label.click(function() {
+                                        trigger.click()
+                                    });
+                                }
+
+                                function create_trigger() {
+                                    trigger.click(function() {
+                                        var offset = $(this).position();
+                                        var top = offset.top + 15;
+                                        var left = offset.left - $(this).width() - 50;
+                                        $(picker).css({
+                                            'top': top,
+                                            'left': left
+                                        }).fadeIn('slow');
+                                    });
+                                }
+
+                                function create_picker() {
+                                    picker.append(info);
+                                    for (var i in colors) {
+                                        picker.append('<span class="colorpicker-picker-span ' + (colors[i].color == $(obj).children(":selected").text() ? ' active' : '') + '" rel="' + colors[i].value + '" style="background-color: #' + colors[i].color + '; width: ' + options.size + 'px; height: ' + options.size + 'px;"></span>');
+                                    }
+                                    trigger.css('background-color', '#' + $(obj).children(":selected").text());
+                                    info.text('#' + $(obj).children(":selected").text());
+                                    picker.children(".colorpicker-picker-span").hover(function() {
+                                        info.text('#' + $(this).attr('rel'));
+                                    }, function() {
+                                        info.text('#' + picker.children('.colorpicker-picker-span.active').attr('rel'));
+                                    });
+                                    picker.delegate(".colorpicker-picker-span", "click", function() {
+                                        $(obj).val($(this).attr('rel'));
+                                        $(obj).change();
+                                        if ($("#showline:checked").length) {
+                                            MouseGestures.generateScript(0, 1)
+                                        }
+                                    });
+                                    $(obj).change(function() {
+                                        var val = $(obj).val();
+                                        info.text('#' + val);
+                                        picker.children('.colorpicker-picker-span.active').removeClass('active');
+                                        var active = $(picker).find('span.colorpicker-picker-span[rel="' + val + '"]');
+                                        $(active).addClass('active');
+                                        trigger.css('background-color', '#' + val);
+                                    });
+                                    $(obj).after(picker);
+                                }
+                            }
+                        });
+                    })(jQuery);
+                    $(document).ready(function() {
+                        $("head").append('<link type="text/css" rel="stylesheet" href="data:text/css;charset=UTF-8;base64,LmNvbG9ycGlja2VyLXBpY2tlci1zcGFuewogICAgZGlzcGxheTogYmxvY2s7CiAgICB3aWR0aDogMjBweDsKICAgIGhlaWdodDogMjBweDsKICAgIGZsb2F0OiBsZWZ0OwogICAgYm9yZGVyOiAxcHggc29saWQgIzAwMDsKICAgIG1hcmdpbi1yaWdodDogMnB4OwogICAgY3Vyc29yOiBwb2ludGVyOwp9CgouY29sb3JwaWNrZXItcGlja2VyLWluZm97CiAgICBwYWRkaW5nOiAwIDAgMnB4OwogICAgY29sb3I6ICNmZmY7CiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOwp9CgouY29sb3JwaWNrZXItcGlja2VyLXNwYW46aG92ZXIgewogICAgYm9yZGVyOiAxcHggc29saWQgI2ZmZjsKfQoKLmNvbG9ycGlja2VyLXBpY2tlci1zcGFuLmFjdGl2ZSB7CiAgICBib3JkZXI6IDFweCBzb2xpZCAjZmZmOwp9CgouY29sb3JwaWNrZXItcGlja2VyIHsKICAgIGJhY2tncm91bmQtY29sb3I6ICMzNTM1MzQ7CiAgICBwYWRkaW5nOiA1cHg7CiAgICBkaXNwbGF5OiBub25lOwogICAgcG9zaXRpb246IGFic29sdXRlOwogICAgdG9wOiAwOwogICAgLW1vei1ib3JkZXItcmFkaXVzOiA1cHg7CiAgICBib3JkZXItcmFkaXVzOiA1cHg7CiAgICBib3gtc2hhZG93OiAycHggMnB4IDVweCAjMTExOwogICAgLW1vei1ib3gtc2hhZG93OiAycHggMnB4IDVweCAjMTExOwogICAgLXdlYmtpdC1ib3gtc2hhZG93OiAycHggMnB4IDVweCAjMTExOwp9CgouY29sb3JwaWNrZXItdHJpZ2dlciB7CiAgICBkaXNwbGF5OiBibG9jazsKICAgIHdpZHRoOiAxNXB4OwogICAgaGVpZ2h0OiAxNXB4OwogICAgZmxvYXQ6IGxlZnQ7CiAgICBib3JkZXI6IDFweCBzb2xpZCAjMDAwOwogICAgY3Vyc29yOiBwb2ludGVyOwogICAgYmFja2dyb3VuZC1jb2xvcjogIzgwODA4MDs7Cn0KCgouY29sb3JwaWNrZXItd3JhcCB7CiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7CiAgICBwb3NpdGlvbjogcmVsYXRpdmU7CiAgICB0b3A6IDJweDsKfQoKLmNvbG9ycGlja2VyLWxhYmVsIHsKICAgIGZsb2F0OiBsZWZ0OwogICAgbWFyZ2luLXJpZ2h0OiAycHg7Cn0="/>');
+                        $('#picker').colorpicker({
+                            size: 20,
+                            label: '    ',
+                            hide: true
+                        });
+                    });
+                     // ]]>
+                    </script>
+                    <select id="picker">
+                        <option value="FFFFFF">FFFFFF</option>
+                        <option value="FFDFDF">FFDFDF</option>
+                        <option value="FFBFBF">FFBFBF</option>
+                        <option value="FF9F9F">FF9F9F</option>
+                        <option value="FF7F7F">FF7F7F</option>
+                        <option value="FF5F5F">FF5F5F</option>
+                        <option value="FF3F3F">FF3F3F</option>
+                        <option value="FF1F1F">FF1F1F</option>
+                        <option value="FF0000">FF0000</option>
+                        <option value="DF1F00">DF1F00</option>
+                        <option value="C33B00">C33B00</option>
+                        <option value="A75700">A75700</option>
+                        <option value="8B7300">8B7300</option>
+                        <option value="6F8F00">6F8F00</option>
+                        <option value="53AB00">53AB00</option>
+                        <option value="37C700">37C700</option>
+                        <option value="1BE300">1BE300</option>
+                        <option selected="selected" value="33ff33">33ff33</option>
+                        <option value="00DF1F">00DF1F</option>
+                        <option value="00C33B">00C33B</option>
+                        <option value="00A757">00A757</option>
+                        <option value="008B73">008B73</option>
+                        <option value="006F8F">006F8F</option>
+                        <option value="0053AB">0053AB</option>
+                        <option value="0037C7">0037C7</option>
+                        <option value="001BE3">001BE3</option>
+                        <option value="0000FF">0000FF</option>
+                        <option value="0000df">0000df</option>
+                        <option value="0000c3">0000c3</option>
+                        <option value="0000a7">0000a7</option>
+                        <option value="00008b">00008b</option>
+                        <option value="00006f">00006f</option>
+                        <option value="000053">000053</option>
+                        <option value="000037">000037</option>
+                        <option value="00001b">00001b</option>
+                        <option value="000000">000000</option>
+                    </select>&nbsp;
+                    <label title="只会显示手势命令对应的代码">
+                        <input id="doNotGenerate" onclick="MouseGestures.doNotGenerate()" type="checkbox" />代码片段
+                    </label>
+                    <script type="text/javascript">
+                    // <![CDATA[
+                    !window.netscape && ($("#gesturesChain").closest(".postCon").length ? $("#gesturesChain").closest(".postCon") : $("#gesturesChain").closest(".postBody")).html('<b style="color:black;line-height:1em;font-size: 100px;">FIREFOX ONLY</b>').css({
+                        "padding": "50px"
+                    })
+                     // ]]>
+                    </script>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="http://files.cnblogs.com/ziyunfei/js_beautify.js"></script>
+    <script type="text/javascript" src="script/ucjsMouseGestures_creator.js"></script>
+</body>
+
+</html>

@@ -49,12 +49,10 @@
 location == "chrome://browser/content/browser.xul" && (function(){
 
     var buttons = [
-		{ id: "aup-toolbarbutton", bar: "TabsToolbar_aidBar", pos: 1 },// 翻墙扩展
-		{ id: "stylish-toolbar-button", bar: "TabsToolbar_aidBar", pos: 2 },//stylish 扩展
-		{ id: "loop-button", bar: "TabsToolbar_aidBar", pos: 3 },// hello功能
-		{ id: "panic-button", bar: "TabsToolbar_aidBar", pos: 4 },// 清除缓存		
-		{ id: "lpt_lastpass-compact-btn", bar: "TabsToolbar_aidBar", pos: 5},// Lastpass 扩展
-		
+    /*{ id: "lpt_lastpass-compact-btn", insertBefore: "uAutoPagerize-icon"},*/// Lastpass3.X 扩展
+		{ id: "urlbar-speedmonitor", insertBefore: "reader-mode-button" },//网速监控
+		{ id: "pocket-button", insertBefore: "uAutoPagerize-icon" },//pocket
+		/*{ id: "anoBtn_Icon", insertAfter: "forward-button" },*///anoBt
 
         //改 Greasemonkey 按钮为右键弹出菜单
         {id: "greasemonkey-tbb",
@@ -105,7 +103,7 @@ location == "chrome://browser/content/browser.xul" && (function(){
                 label: "Movebutton 重新运行",
                 tooltiptext: "重新按照脚本内的设置移动按钮的位置",
                 oncommand: "MyMoveButton.delayRun();",
-				image: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAA3lBMVEUAAADqTzfsUzrqVjjrSzfrTTjtTjjpTzrsTjnqUDruUDbwTzjsUTrnUjztTDboUDroUTfwOinrSDbrRjTwRzXrVD7rTznrTjfsTzjqTTjsTTjsTjfuTDvwWTnqTjvuYDzrTTf4TD3wPyrqWznrTzjpTDnpVTzpUDrmSjvqXkDuSTXsRzLvOy3sTjjpTTbsTzjrTzfzVTnsVzDnXkTrUDTnW0HwQiPzQjD8ZyzxOirrWj7yUDP1FxTsOCvpTjvkV0TwNyrsTzjqUDfrVDrqTTnsTzfpVjzoUTvqUDvoXD8bykCHAAAAQXRSTlMAd209/vW/m49iVFBHODUdFw0KBgP97d3HsayAcWFZQzAqExH49/Lt4trW1sK1qKGflpKKgHx6dWVkWFdSQDIjH7OzCN8AAAC/SURBVBjTVc3VksJQEIThP+4kkAALi7Pu7sKcJMj7vxB6AV/VXExVVzdbsVbjQKCs3t57LCJl8cQuNbosLhw57dKejQCy69kjycsY7OlRFXjOO8MPA/iJQvUKkTRI/2yDSR9uVYhWuoDncBWs2zXuTf1rAK1cJ/E64uLW39IxeHcAPXnAn95AFSCOcU4CUjv/H+gAw++KWu9GxXkIFX11phgAXbP+XkuMTJsvPtn4PVNzqyGl1Ycdv91stvwMYAkrxhOaPQYF8gAAAABJRU5ErkJggg=='
+				image: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAdVBMVEUAAABCtElCtElHR0lCtElCtElCtElHR0lCr0lHSklHR0lHR0lCtElCtElCtElCtElHR0lCtElHR0lHR0lHR0lHR0lCtUlHRklCtElHR0lCtElCtElHR0lDp0lGVElCtElCtElDqElGU0lCtElCtElHR0lHR0kCJptcAAAAJ3RSTlMA/dLu7dcQ0i8v+taueF4+E5qZeVg8GRkJrVcgCevr3sarq4+Ja0/fB06vAAAAkElEQVQY01WLVQ7DUAwE14+xYWzKcP8jNooVRZ2v9WgMpneux0FRaaV0VYAZsyKRkiCVx01kErMBzElTNsXaK+E4dVrdb0BFM1Y4IYFeC8PinIgowV0ewJ4IesFfn9vF0fuEIdoSByNQhxZ/dNJ6Xv7DbRNsu66yjfK7iaWRwU6TDbJZ9q86ShnrDgeD9wOvH0B7BnmkJ5m3AAAAAElFTkSuQmCC'
             });
 
             let ins = $('devToolsSeparator');

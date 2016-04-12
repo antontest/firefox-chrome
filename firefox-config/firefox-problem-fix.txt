@@ -1,0 +1,2 @@
+1 firefox插件“未验证通过”
+    地址栏输入“about:config”，将“xpinstall.signatures.required”修改为“false”

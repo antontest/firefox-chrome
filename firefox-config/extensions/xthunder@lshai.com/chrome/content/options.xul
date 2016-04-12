@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://xthunder/skin/options.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://xthunder/locale/options.dtd" >
+<dialog id="xThunder-prefs"
+    title="&options;"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+    onload="xThunderOptions.loadPrefs();"
+    buttons="extra2,accept,cancel"
+    buttonlabelextra2="&restoreDefault;"
+    ondialogaccept="xThunderOptions.savePrefs();"
+    ondialogextra2="xThunderOptions.restoreDefPrefs();"
+    persist="screenX screenY">
+
+    <script type="application/javascript" src="chrome://xthunder/content/pref.js"/>
+    <script type="application/javascript" src="chrome://xthunder/content/options.js"/>
+
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="xThunderAgentStrings" src="chrome://xthunder/locale/agent.properties"/>
+    </stringbundleset>
+
+    <prefpane id="prepaneMain">
+        <preferences>
+            <preference id="pref_supportExt" name="extensions.xthunder.supportExt" type="string"/>
+            <preference id="pref_filterExt" name="extensions.xthunder.filterExt" type="bool"/>
+            <preference id="pref_includeImages" name="extensions.xthunder.includeImages" type="bool"/>
+            <preference id="pref_ctrlNoMonitor" name="extensions.xthunder.ctrlNoMonitor" type="bool"/>
+            <preference id="pref_ctrlAltDecode" name="extensions.xthunder.ctrlAltDecode" type="bool"/>
+            <preference id="pref_useCandidate" name="extensions.xthunder.useCandidate" type="bool"/>
+            <preference id="pref_showStatusIcon" name="extensions.xthunder.showStatusIcon" type="bool"/>
+            <preference id="pref_showMenuIcons" name="extensions.xthunder.showMenuIcons" type="bool"/>
+            <preference id="pref_compactMenu" name="extensions.xthunder.compactMenu" type="bool"/>
+            <preference id="pref_downInCxtMenu" name="extensions.xthunder.downInCxtMenu" type="bool"/>
+            <preference id="pref_downSubMenu" name="extensions.xthunder.downSubMenu" type="bool"/>
+            <preference id="pref_downAllInCxtMenu" name="extensions.xthunder.downAllInCxtMenu" type="bool"/>
+            <preference id="pref_downInSaveFile" name="extensions.xthunder.downInSaveFile" type="bool"/>
+            <preference id="pref_downBtnInSaveFile" name="extensions.xthunder.downBtnInSaveFile" type="bool"/>
+            <preference id="pref_downListInSaveFile" name="extensions.xthunder.downListInSaveFile" type="bool"/>
+            <preference id="pref_downOffLineInCxtMenu" name="extensions.xthunder.downOffLineInCxtMenu" type="bool"/>
+            <preference id="pref_downOffLineAnyway" name="extensions.xthunder.downOffLineAnyway" type="bool"/>
+            <preference id="pref_downOffLineSubMenu" name="extensions.xthunder.downOffLineSubMenu" type="bool"/>
+            <preference id="pref_downOffLineInSaveFile" name="extensions.xthunder.downOffLineInSaveFile" type="bool"/>
+            <preference id="pref_downOffLineSep" name="extensions.xthunder.downOffLineSep" type="bool"/>
+            <preference id="pref_qqOffLineWeb" name="extensions.xthunder.qqOffLineWeb" type="bool"/>
+            <preference id="pref_vodOffLine" name="extensions.xthunder.vodOffLine" type="bool"/>
+        </preferences>
+
+        <tabbox class="text">
+            <tabs>
+                <tab label="&tab.general;"/>
+                <tab label="&tab.interface;"/>
+                <tab label="&tab.downloader;"/>
+            </tabs>
+            <tabpanels flex="1">
+                <tabpanel orient="vertical" flex="1">
+                    <groupbox>
+                        <caption label="&lbl.supClick;" />
+                        <grid>
+                            <columns>
+                                <column/>
+                                <column/>
+                                <column/>
+                            </columns>
+                            <rows>
+                                <row align="baseline">
+                                    <checkbox id="thunder" label="&pro.thunder;"/>
+                                    <checkbox id="flashget" label="&pro.flashget;"/>
+                                    <checkbox id="qqdl" label="&pro.qqdl;"/>
+                                </row>
+                                <row align="baseline">
+                                    <checkbox id="ed2k" label="&pro.ed2k;"/>
+                                    <checkbox id="magnet" label="&pro.magnet;"/>
+                                    <checkbox id="fs2you" label="&pro.fs2you;"/>
+                                </row>
+                                <row align="baseline">
+                                    <checkbox id="udown" hidden="true" label="&pro.udown;"/>
+                                    <checkbox id="115" hidden="true" label="&pro.115;"/>
+                                </row>
+                            </rows>
+                        </grid>
+                        <checkbox id="remember" label="&remember;"/>
+                        <textbox id="supportExt" preference="pref_supportExt" multiline="true" rows="3" cols="37"/>
+                    </groupbox>
+
+                    <groupbox>
+                        <caption label="&lbl.downloadAll;"/>
+                        <checkbox id="filterext" label="&filterext;" preference="pref_filterExt"/>
+                        <checkbox id="downincludeimages" label="&includeImages;" preference="pref_includeImages"/>
+                    </groupbox>
+                                         
+                    <groupbox>
+                        <caption label="&lbl.monitor;"/>
+                        <checkbox id="ctrlNoMonitor" label="&ctrlNoMonitor;" preference="pref_ctrlNoMonitor"/>
+                        <checkbox id="ctrlAltDecode" label="&ctrlAltDecode;" preference="pref_ctrlAltDecode"/>
+                        <checkbox id="useCandidate" label="&useCandidate;" preference="pref_useCandidate"/>
+                    </groupbox>
+                </tabpanel>
+
+                <tabpanel orient="vertical" flex="1">
+                    <groupbox>
+                        <caption label="&lbl.showMenu;"/>
+                        <checkbox id="showStatusIcon" label="&showStatusIcon;" preference="pref_showStatusIcon"/>
+                        <checkbox id="showMenuIcons" label="&showMenuIcons;" preference="pref_showMenuIcons"/>
+                        <checkbox id="compactMenu" label="&compactMenu;" preference="pref_compactMenu"/>
+                        <checkbox id="downInCxtMenu" label="&downInCxtMenu;" preference="pref_downInCxtMenu" oncommand="document.getElementById('downSubMenu').disabled = !this.checked;"/>
+                        <checkbox id="downSubMenu" label="&downSubMenu;" style="margin-left:22px;"  preference="pref_downSubMenu"/>
+                        <checkbox id="downOffLineInCxtMenu" label="&downOffLineInCxtMenu;" preference="pref_downOffLineInCxtMenu"/>
+                        <checkbox id="downAllInCxtMenu" label="&downAllInCxtMenu;" preference="pref_downAllInCxtMenu"/>
+                        <checkbox id="downInSaveFile" label="&downInSaveFile;" preference="pref_downInSaveFile"/>
+                        <checkbox id="downBtnInSaveFile" label="&downBtnInSaveFile;" preference="pref_downBtnInSaveFile"/>
+                        <checkbox id="downListInSaveFile" label="&downListInSaveFile;" style="margin-left:22px;" preference="pref_downListInSaveFile"/>
+                    </groupbox>
+                     
+                    <groupbox>
+                        <caption label="&lbl.offLine;"/>
+                        <checkbox id="downOffLineSubMenu" label="&downOffLineSubMenu;" preference="pref_downOffLineSubMenu"/>
+                        <checkbox id="downOffLineInSaveFile" label="&downOffLineInSaveFile;" preference="pref_downOffLineInSaveFile"/>
+                        <checkbox id="downOffLineSep" label="&downOffLineSep;" preference="pref_downOffLineSep"/>
+                        <checkbox id="vodOffLine" label="&vodOffLine;" preference="pref_vodOffLine"/>
+                        <checkbox id="qqOffLineWeb" label="&qqOffLineWeb;" preference="pref_qqOffLineWeb"/>
+                    </groupbox>
+                </tabpanel>
+
+                <tabpanel orient="vertical" flex="1">
+                    <hbox>
+                        <vbox flex="1">
+                            <listbox id="agentListBox" rows="13" onselect="xThunderOptions.agentListSelect()" flex="1"/>
+                        </vbox>
+                        <vbox>
+                            <button id="moveUpButton" label="&moveUpButton;" oncommand="xThunderOptions.moveSelAgent(-1);"/>
+                            <button id="moveDownButton" label="&moveDownButton;" oncommand="xThunderOptions.moveSelAgent(1);"/>
+                            <spacer flex="1"/>
+                            <button id="editButton" label="&editButton;" oncommand="xThunderOptions.editCustAgent();"/>
+                            <button id="removeButton" label="&removeButton;" oncommand="xThunderOptions.removeCustAgent();"/>
+                            <button id="newButton" label="&newButton;" oncommand="xThunderOptions.showCustAgent(true);"/>
+                        </vbox>
+                    </hbox>
+                    <groupbox id="tipGroup">
+                        <caption label="&lbl.agentTip;" class="caption-text-strong"/>
+                        <label id="tipLClickList" value="&tip.lClickList;" style="margin-top:5px;"/>
+                        <label id="tipRClickList" value="&tip.rClickList;"/>
+                        <label id="tipLClickMenu" value="&tip.lClickMenu;" style="margin-top:26px;"/>
+                        <label id="tipRClickMenu" value="&tip.rClickMenu;"/>
+                    </groupbox>
+                    <groupbox id="newAgentGroup" hidden="true">
+                        <caption label="&lbl.newAgent;" class="caption-text-strong"/>
+                        <hbox>
+                            <label value="&agentName;" class="agent-lbl"/>
+                            <textbox id="agentName" flex="1"/>
+                            <label value="" class="agent-lastplace"/>
+                        </hbox>
+                        <hbox>
+                            <label value="&agentExe;" class="agent-lbl"/>
+                            <textbox id="agentExe" flex="1" readonly="true"/>
+                            <button label="&agentBrowse;" class="agent-lastplace" oncommand="xThunderOptions.locateExe();" />
+                        </hbox>
+                        <hbox>
+                            <label value="&agentArgs;" class="agent-lbl"/>
+                            <textbox id="agentArgs" flex="1"/>
+                            <toolbarbutton label="&agentArgsPH;" class="agent-lastplace" type="menu">
+                                <menupopup>
+                                    <menuitem id="agentArgsPHURL" class="menuitem-non-iconic" label="Url" oncommand="xThunderOptions.insertAgentPH('[URL]');"/>
+                                    <menuitem id="agentArgsPHREFERER" class="menuitem-non-iconic" label="Referer" oncommand="xThunderOptions.insertAgentPH('[REFERER]');"/>
+                                    <menuitem id="agentArgsPHCOOKIE" class="menuitem-non-iconic" label="Cookie" oncommand="xThunderOptions.insertAgentPH('[COOKIE]');"/>
+                                    <menuitem id="agentArgsPHCOMMENT" class="menuitem-non-iconic" label="Comment" oncommand="xThunderOptions.insertAgentPH('[COMMENT]');"/>
+                                    <menuitem id="agentArgsPHCBURL" class="menuitem-non-iconic" label="ClipBoard Url" oncommand="xThunderOptions.insertAgentPH('[CBURL]');"/>
+                                    <menuitem id="agentArgsPHUFILE" class="menuitem-non-iconic" label="Url File" oncommand="xThunderOptions.insertAgentPH('[UFILE]');"/>
+                                    <menuitem id="agentArgsPHCFILE" class="menuitem-non-iconic" label="Cookie File" oncommand="xThunderOptions.insertAgentPH('[CFILE]');"/>
+                                </menupopup>
+                            </toolbarbutton>
+                        </hbox>
+                        <hbox class="agent-command-box">
+                            <label value="" class="agent-lbl"/>
+                            <button label="&agentFinishBtn;" oncommand="xThunderOptions.customizeAgent();" />
+                            <button label="&agentCancelBtn;" oncommand="xThunderOptions.ignoreCustAgent();" />
+                        </hbox>
+                    </groupbox>
+                </tabpanel>  
+            </tabpanels>
+        </tabbox>
+    </prefpane>
+
+</dialog>

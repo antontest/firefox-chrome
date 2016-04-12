@@ -1,7 +1,7 @@
 //指定相对路径文本编辑器
 location == 'chrome://browser/content/browser.xul' && (function(){
 
-    var PATH = '/chrome/Local/Notepad2.exe';
+    var PATH = '/chrome/Software/Notepad2.exe';
 
     var handleRelativePath = function (path) {
         if (path) {

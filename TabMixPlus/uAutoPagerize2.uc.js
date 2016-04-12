@@ -6,12 +6,10 @@
 // @modified       ywzhaiqi
 // @compatibility  Firefox 17
 // @charset        UTF-8
-// @version        2014.10.13
+// @version        2014.9.8
 // version        0.3.0
-// @inspect        window.uAutoPagerize
 // @startup        window.uAutoPagerize.init();
 // @shutdown       window.uAutoPagerize.destroy();
-// @config         window.uAutoPagerize.edit(uAutoPagerize.file_CN, null, true);uAutoPagerize.edit(uAutoPagerize.file);
 // @homepageURL    https://github.com/ywzhaiqi/userChromeJS/tree/master/uAutoPagerize2
 // @downloadURL    https://github.com/ywzhaiqi/userChromeJS/raw/master/uAutoPagerize2/uAutoPagerize2.uc.js
 // @reviewURL      http://bbs.kafan.cn/thread-1555846-1-1.html
@@ -885,9 +883,6 @@ var ns = window.uAutoPagerize = {
             var arr = Array.slice(df.querySelectorAll('a[href]:not([href^="mailto:"]):not([href^="javascript:"]):not([href^="#"])'));
             arr.forEach(function (elem){
                 elem.setAttribute('target', '_blank');
-                if (elem.getAttribute('onclick') == 'atarget(this)') {  // 卡饭论坛的控制是否在新标签页打开
-                    elem.removeAttribute('onclick');
-                }
             });
         });
 
@@ -1387,33 +1382,40 @@ var ns = window.uAutoPagerize = {
         }
         return SP.autoGetLink(doc);
     },
-    edit: function(aFile, aLineNumber, showError) {
-        if (!aFile || !aFile.exists() || !aFile.isFile()) return;
-        var editor;
-        try {
-            editor = Services.prefs.getComplexValue("view_source.editor.path", Ci.nsILocalFile);
-        } catch(e) {}
-
-        if (!editor || !editor.exists()) {
-            if (showError) {
-                alert("编辑器的路径未设置!!!\n请设置 view_source.editor.path");
-                toOpenWindowByType('pref:pref', 'about:config?filter=view_source.editor.path');
+    edit: function(aFile, aLineNumber) {
+    if (!aFile || !aFile.exists() || !aFile.isFile()) return;
+    var editor = Services.prefs.getCharPref("view_source.editor.path");
+    if (!editor) {
+        if (useScraptchpad) {
+            this.openScriptInScratchpad(window, aFile);
+            return;
+        } else {
+            alert("请先设置编辑器的路径!!!");
+            var fp = Cc['@mozilla.org/filepicker;1'].createInstance(Ci.nsIFilePicker);
+            fp.init(window, "设置全局脚本编辑器", fp.modeOpen);
+            fp.appendFilter("执行文件", "*.exe");
+            if (fp.show() == fp.returnCancel || !fp.file)
+                return;
+            else {
+                editor = fp.file;
+                Services.prefs.setCharPref("view_source.editor.path", editor.path);
             }
             return;
         }
-
-        // 调用自带的
-        var aURL = userChrome.getURLSpecFromFile(aFile);
-
-        var aDocument = null;
-        var aCallBack = null;
-        var aPageDescriptor = null;
-
-        if (/aLineNumber/.test(gViewSourceUtils.openInExternalEditor.toSource()))
-            gViewSourceUtils.openInExternalEditor(aURL, aPageDescriptor, aDocument, aLineNumber, aCallBack);
-        else
-            gViewSourceUtils.openInExternalEditor(aURL, aPageDescriptor, aDocument, aCallBack);
-    },
+        return;
+    }
+    var file = Cc['@mozilla.org/file/local;1'].createInstance(Ci.nsILocalFile);
+    var process = Cc['@mozilla.org/process/util;1'].createInstance(Ci.nsIProcess);
+    var UI = Cc["@mozilla.org/intl/scriptableunicodeconverter"].createInstance(Ci.nsIScriptableUnicodeConverter);
+    UI.charset = window.navigator.platform.toLowerCase().indexOf("win") >= 0 ? "BIG5" : "UTF-8";
+    try {
+        var path = UI.ConvertFromUnicode(aFile.path);
+        var args = [path]
+        file.initWithPath(editor);
+        process.init(file);
+        process.run(false, args, args.length);
+    } catch (e) {}
+},
     getElementsByXPath: getElementsByXPath,
     getElementMix: getElementMix,
     getElementsMix: getElementsMix
@@ -1873,21 +1875,17 @@ AutoPager.prototype = {
         // 修正延迟加载的图片
         var lazyImgSrc = (this.info.lazyImgSrc === undefined) ? prefs.lazyImgSrc : this.info.lazyImgSrc;
         if (lazyImgSrc) {
-            var lazyAttributes = lazyImgSrc.split('|');
-
-            var noLazyNode = function (node) {
-                lazyAttributes.some(function(attr) {
-                    if (!node.hasAttribute(attr)) return;
-
-                    var newSrc = node.getAttribute(attr);
-                    if (node.src != newSrc) {
-                        node.src = newSrc;
+            var imgAttrs = lazyImgSrc.split('|');
+            imgAttrs.forEach(function(attr){
+                attr = attr.trim();
+                [].forEach.call(fragment.querySelectorAll("img[" + attr + "]"), function(img){
+                    var newSrc = img.getAttribute(attr);
+                    if (newSrc && newSrc != img.src) {
+                        img.setAttribute("src", newSrc);
+                        img.removeAttribute(attr);
                     }
-                    return true;
                 });
-            };
-
-            [].map.call(fragment.querySelectorAll('img'), noLazyNode);
+            });
         }
 
         //收集所有图片

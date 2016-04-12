@@ -1,0 +1,48 @@
+<html>
+		<head>
+				<script type="text/javascript">
+
+				function getBamboo()
+				{
+				  var wm = Components.classes["@mozilla.org/appshell/window-mediator;1"].getService(Components.interfaces.nsIWindowMediator);
+				  var target = wm.getEnumerator("navigator:browser").getNext();
+				  if(!target)
+				  {
+				    target = wm.getEnumerator("mail:3pane").getNext();
+				  }
+				
+				  return target.bamboo;
+				}
+				
+				var url = document.location.href;
+				var feedUrl = url.substr(url.indexOf('=')+1);
+				
+				var b = getBamboo();
+				
+				b.ui.panel.get('add').run('addFeedFromURL', [decodeURIComponent(feedUrl)]);
+				
+				var tab = b.utils.browser.getTab();
+				if(tab)
+				{
+					 b.ui.openTab();
+					 window.close();
+				}
+				else
+				{
+					if(b.option.get('display-mode') == 'tab')
+					{
+						 document.location.href = 'about:bamboo';
+					}
+					else
+					{
+						 b.ui.show();
+						 b.utils.browser.openTabIfLast();
+						 
+						 window.close();
+					}
+				}
+				
+				</script>
+		</head>
+		<body></body>
+</html>

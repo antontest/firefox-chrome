@@ -1174,7 +1174,7 @@ window.gWHT.init();
 
 })('\
 .wordhighlight-toolbar-icon {\
-  list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAANUlEQVQ4jWNgGBTg6dOi/6RgrAb8/19PFB7EBlAUBoMDFD0t+k8qxjCgngQ4SA2gKAwGDAAAM3SE/usVkKQAAAAASUVORK5CYII=");\
+  list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAqFBMVEX/tAD/tAH9yUv39/f7wTf6xUb8vin9ux3+uxn9uBH09PTw7+zl5eXp6OTx7N/s5dLf29H24rLt27Ho1Kfy26Pr1qL93ZH614P80274z2z1yVz7wz34vjL+tw3/tgT48N7p5Nnw6NT468re18f05sPo3MDj2L/i06/r2Kz44arv1pvuzX/xyWn1y2f/0GL9z2L6y1v+zVfyw1X1xVP9xkL1wED9wTH9vSNc2ZJMAAAAgklEQVQY042ORQ7DQAwA1+5imDllZu7/f1bQbpVj5mSPRrJJLwCAXI7fQYsh3k9ZViBKk+B08GFUgBG5tXmK3Ar1SjG0mRR87p3Ln3jxxC5ly7wJrXVT+z5ViXsgBrZ1o3QcVa0529C14ywqrv6JSHf7+Nb5VcVBsHyQDs1qdgXSjzcxZAgRWs6vbwAAAABJRU5ErkJggg==");\
 }\
 .wordhighlight-toolbar-icon[state="disable"] {\
   filter: grayscale(100%);\

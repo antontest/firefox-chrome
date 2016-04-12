@@ -15,7 +15,7 @@
 //@1/2/13 第二版
 var FullZoomConfig = new function () {
   //默认的缩放级别
-  this.defaultLv = 110;
+  this.defaultLv = 100;
   //只缩放文字
   this.Textmode = false;
   //是否应用于本地文件?
@@ -1392,9 +1392,8 @@ function fullZoomUI() {
   button.setAttribute("onclick", "event.preventDefault();");
   button.setAttribute("onDOMMouseScroll", "fullZoomBtn.clickStatusLabel(event);");
   button.setAttribute("tooltiptext", "左键：切换缩放模式\n右键：设置缩放倍数");
-  button.style.margin = "0 -8px -2px -4px";
-  button.style.padding = "0 0 0 0";
-  button.style.color = "blue";//#BE4B82
+  button.style.margin = "0 0px 1px -5px";//上;地址栏向左靠;下;右;
+  button.style.color = "#FF002A";//#BE4B82
   //statusbar.appendChild(button);
   statusbar.insertBefore(button, statusbar.childNodes[1]);
 
@@ -1408,7 +1407,12 @@ function fullZoomUI() {
             if (event.target == this)\
           fullZoomBtn.onPopupShowing(event)");
   popupSet.appendChild(popup);
-
+    document.insertBefore(document.createProcessingInstruction('xml-stylesheet', 'type="text/css" href="data:text/css;utf-8,' + encodeURIComponent('\
+  #statusbarZoomLevel{\
+        font-size:13px;\
+      }\
+  #statusbarZoomLevel .statusbarpanel-text{margin: 0px !important;}\
+    ') + '"'), document.documentElement);
 }
 fullZoomUI();
 FullZoom.init();
