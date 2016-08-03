@@ -8,3 +8,21 @@
    box-shadow: none !important;
    background: none !important;
 }
+
+* {
+    font-size: 14pt !important
+}
+
+/*菜单字体大小*/
+menuitem,menu,.splitmenu-menu,.splitmenu-menuitem { 
+    font-size:16px !important;
+}
+
+.menu-iconic.bookmark-item, .menuitem-iconic.bookmark-item.menuitem-with-favicon {
+    font-size: 16px !important;
+}
+
+/* only needed once */
+#sidebar-box *, #bookmarksPanel *, #bookmarks-view *, #history-panel *, #historyTree { 
+    font-size:20pt !important; 
+}
